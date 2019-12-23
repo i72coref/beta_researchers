@@ -8,7 +8,6 @@
     <title>Acceso</title>
     <meta name="viewport" content="width-device-width">
     <link rel="stylesheet" href="../../css/styleacceso.css">
-    <html xmlns="http://www.w3.org/1999/xhtml"></html>
     <meta name="description" content="Web para crear grupos de investigacion con profesionales, conocer profesionales de tu entorno, noticias, etc.">
     <meta name="keywords" content="researchers,investigadores,grupos de investigacion,profesionales">
     <meta name="author" content="Antonio Sanchez,Carlos Freire, Francisco Cordoba, Angel Cañuelo">
