@@ -1,0 +1,121 @@
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: 6px auto;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-areas:  "nombre  nombre"
+                          "b1      b2"
+                          "espacio espacio";  
+    grid-template-rows: 1fr 7fr 1fr;  
+}
+
+.contenedor > div{
+    border: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    padding: 10px;
+}
+
+#p1, #p2{
+    display: inline-block;
+  }
+  
+  
+  #p0{
+    font-size: 2em;
+    margin-bottom: 0%;
+  }
+  
+  
+  #p1{
+      font-size: 0.7em;
+      color: #c4c4c4;
+  }
+  
+  #p2{
+  
+      font-size: 0.8em;
+      font-weight:bold;
+      margin-right: 4%;
+  }
+
+/*----------------------------------------------*/
+.contenedor .nombre-grupo{
+    grid-column-start: nombre;
+    grid-column-end: nombre;
+    display: grid;
+    grid-template-areas: "nombre  introduce";
+}
+
+.contenedor .nombre-grupo .introduce-nombre{
+    grid-column-start: introduce;
+    margin: auto;
+}
+
+/*----------------------------------------------*/
+
+.contenedor .bloque-izquierda{
+    grid-column-start: b1;
+    grid-row-start: b1;
+
+}
+
+.contenedor .bloque-derecha .fotos-grupo{
+
+}
+
+.contenedor .integrantes-grupo{
+    grid-column-start: personas;
+    grid-row-start: personas;
+}
+/*--------------------------------------------------*/
+.contenedor .bloque-derecha{
+    grid-column-start: b2;
+    grid-column-end: b2;
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+}
+
+.contenedor .bloque-derecha .descripcion-grupo{
+    grid-column-start: 1;
+}
+.contenedor .descripcion-grupo > input{
+
+    border-radius: 5px;
+    width: 400px;
+    height: 200px;
+}
+
+.contenedor .bloque-derecha .categoria-grupo{
+    grid-column-start: 1;
+    grid-row-start: 2;
+    margin: auto;
+}
+.contenedor .bloque-derecha .privacidad{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    margin: auto;
+}
+.contenedor .bloque-derecha .barra{
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-column: span 2;
+    margin: auto;
+}
+.contenedor .crearya{
+    grid-column-start: 1;
+    grid-column: span 2;
+    grid-row-start: 4;
+    margin: auto;
+}
+.contenedor .crearya > input{
+    width: 450px;
+    height: 75px;
+}
+
+/*@media screen and (max-width: 768px){
+
+}*/

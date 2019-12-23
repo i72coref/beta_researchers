@@ -1,0 +1,189 @@
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: 10px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+.contenedor > div{
+     padding: 10px;
+}
+
+#p1, #p2, #p{
+    display: inline-block;
+  }
+
+
+  #p0{
+    font-size: 2em;
+    margin-bottom: 0%;
+    margin: 20px auto;
+  }
+
+
+  #p1{
+      font-size: 0.7em;
+      color: #c4c4c4;
+  }
+
+  #p2{
+
+      font-size: 0.8em;
+      font-weight:bold;
+      margin-right: 4%;
+  }
+
+
+/*---------------------------------------*/
+.contenedor .banner-superior{
+    border-radius: 10px;
+    border: solid 1.5px;
+    grid-column: span 2;
+    display: grid;
+    padding: 2px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "foto     nombre   nombre"
+                         "miembro  estudios ubicacion";
+}
+
+.contenedor .banner-superior .foto-perfil{
+    grid-column-start: foto;
+    grid-column-end: foto;
+    text-align: center;
+}
+.contenedor .banner-superior .miembro-desde{
+    grid-column-start: miembro;
+    grid-row-start: miembro;
+    text-align: center;
+}
+.contenedor .banner-superior .nombre{
+    grid-row-start: nombre;
+    grid-column-start: nombre;
+    grid-column-end: nombre;
+}
+.contenedor .banner-superior .ubicacion{
+    grid-column-start: ubicacion;
+}
+.contenedor .banner-superior .estudios{
+    grid-column-start: estudios;
+    grid-row-start: estudios;
+}
+/*------------------------------------------------*/
+
+.contenedor .info-izquierda{
+  border-radius: 10px;
+  border: solid 1.5px;
+    grid-column-start: 1;
+}
+.contenedor .info-contacto{
+    grid-column-start: 2;
+    grid-row-start:23;
+}
+.contenedor .educacion{
+    grid-column: span 2;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-content: center;
+    align-items: center;
+}
+/*---------------------------------------------------*/
+.contenedor .info-derecha{
+  border-radius: 10px;
+  border: solid 1.5px;
+  grid-column-start: 2;
+}
+.contenedor .info-derecha .contactos{
+
+}
+.contenedor .info-derecha .grupos{
+
+}
+
+/*--------------------------------------------------------*/
+/*--------------------------------------Ventana Emergente*/
+.contenedor .banner-superior .miembro-desde .btn-abrir-popup{
+
+	transition: .3s ease all;
+	cursor: pointer;
+}
+
+.overlay{
+	background: rgba(0,0,0,.90);
+	position:fixed;
+    top: 10px;
+    bottom: 10px;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+    visibility: hidden;
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows: 2fr 1fr;
+    width: 100%;
+    overflow: auto;
+}
+
+.overlay.active {
+	visibility: visible;
+}
+
+.overlay .datos-overlay{
+    background: rgba(196, 191, 191, 0.5);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0px;
+    grid-column-start:2;
+}
+.overlay .datos-overlay .botones-overlay{
+	cursor: pointer;
+}
+
+.overlay input[type="email"],
+.overlay input[type="password"],
+.overlay input[type="text"]{
+
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 10px 0px;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    border-bottom: 4px solid #a8aa29;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 0px 0;
+}
+
+.overlay input[type="submit"]{
+    background: #a8aa29;
+    color: #fff;
+    border: none;
+    width: 50%;
+    padding: 10px 0;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .5s center;
+}
+
+.overlay input[type="password"]:focus,
+.overlay input[type="text"]:focus,
+.overlay input[type="date"]:focus,
+.overlay input[type="email"]:focus{
+     border-bottom: 4px solid #a8aa29;
+}
+
+
+
+/*@media screen and (max-width: 768px){
+
+}*/

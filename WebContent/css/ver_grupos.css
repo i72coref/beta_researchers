@@ -1,0 +1,172 @@
+#p1, #p2{
+  display: inline-block;
+}
+
+#p0{
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 0%;
+}
+
+
+#p1{
+  padding-left: 44.5%;
+  font-size: 0.7em;
+  color: #c4c4c4;
+}
+
+#p2{
+  font-size: 0.8em;
+  font-weight:bold;
+  margin-right:2%;
+}
+
+.principal{
+  display: grid;
+  grid-template-columns: 15% 90%;
+  grid-column-gap: 5%;
+  margin: 0px 15px 0px 50px;
+  margin-top: -20px;
+}
+
+.recomendados{
+  border: solid;
+  display: grid;
+  grid-rows: 5% 95%;
+  border-radius: 10px;
+  border-width: 2px;
+  height: 560px;
+
+}
+
+.recomendados .titulo p{
+  font-size: 0.8em;
+  text-align: center;
+  margin-bottom: -2%;
+  font-weight: 800;
+}
+
+.recomendados .info{
+  overflow: auto;
+}
+
+.recomendados .info .grupo-recomendado{
+  margin-bottom: 10px;
+}
+
+.recomendados .info .grupo-recomendado #foto-grupo{
+  margin-top: 5px;
+  margin-left: 40%;
+}
+
+.recomendados .info .grupo-recomendado #foto-estrella{
+  margin-left: 30%;
+}
+
+.recomendados .info .grupo-recomendado button{
+  margin-left: 33%;
+  margin-bottom: 10px;
+  border: 2px solid #0099CC;
+  width:90px;
+  height:30px;
+  background-color:transparent;
+  font-size: 0.65em;
+  font-weight: 800;
+  border-radius: 5px;
+}
+
+.recomendados .info .grupo-recomendado button:hover{
+  background-color: #008CBA;
+  color: white;
+}
+
+.grupos{
+  content: '';
+  display: table;
+  clear: both;
+  width:88%;
+  display: grid;
+  grid-template-rows: 15% 85%;
+
+}
+
+.grupos .filtros{
+  margin-left: 180px;
+  display: block; 
+}
+
+.grupo-individual{
+  border-top: solid;
+  border-bottom: solid;
+  border-width: 2px;
+  overflow: auto;
+  height: 440px;
+  width: 100%;
+}
+
+.grupo-individual .grupo{
+  border-bottom: solid;
+  display: grid;
+  grid-template-columns: 40% 20% 20% 10%;
+  height: 250px;
+  width: 100%;
+}
+
+.grupo-individual .grupo .texto{
+  overflow-y: auto;
+  text-indent: 50px;
+  font-size: 0.65em;
+  height: 90%;
+  margin-left: 10%;
+}
+
+.grupo-individual .grupo .texto p {
+  display: block;
+  padding: auto;
+}
+
+.grupo-individual .grupo .lista ul{
+  font-size: 0.9em;
+  list-style-type: circle;
+}
+
+.grupo-individual .grupo .lista li{
+  margin-top: 15px;
+}
+
+.grupo-individual .grupo .botones {
+  margin: auto;
+}
+
+.grupo-individual .grupo .botones #boton{
+  margin-left: 20%;
+  margin-top: 10%;
+  border: 2px solid black;
+  width:150px;
+  height:60px;
+  background-color:transparent;
+  font-size: 1em;
+  font-weight: 800;
+  border-radius: 20px;
+}
+
+.grupo-individual .grupo .botones #boton:hover{
+  background-color: black;
+  color: white;
+}
+
+.grupo-individual .grupo .slider img{
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  width: 150px;
+
+}
+
+.select-css{
+  padding: 5%;
+}
+
+.filtros nav a:hover::before {
+  width: 0%;
+}

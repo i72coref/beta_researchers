@@ -1,0 +1,80 @@
+.general{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns:  minmax(250px,min-content)
+                          minmax(400px,min-content)
+                          auto
+                          minmax(50px,min-content)
+                          minmax(400px,min-content)
+                          auto
+                          minmax(500px,min-content)
+
+
+}
+
+
+.bavanzada{
+  margin-top: 60px;
+}
+
+.bavanzada p{
+  margin-bottom: 1.5%;
+  font-size: 2em;
+}
+
+
+.c1{
+  margin-left: 100px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 25px;
+}
+
+.c2{
+  margin-top: 15px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 61px;
+
+
+}
+
+.c3{
+  margin-left: 150px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 25px;
+
+}
+
+.c4{
+  margin-top: 15px;
+  margin-left: 50px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 61px;
+}
+
+.boton #boton{
+
+  margin-top: 20px;
+  background-color: #f3f72e;
+  font-size: 20px;
+  border-radius: 20px;
+  width:200px;
+  height:60px;
+  background-color:#fbf5e5;
+}
+
+.boton:hover{
+  opacity: 0.80;
+  -moz-opacity: .80;
+  filter:alpha (opacity=80);
+}
+
+
+.boton a{
+  color:#060000;
+  text-decoration:none;
+  padding:5px 5px 5px 0;
+}

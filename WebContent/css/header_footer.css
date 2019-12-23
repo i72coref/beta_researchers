@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+body {
+  font-family: georgia, times, serif;
+  color:#333;
+  font-size: 1.2rem;
+  line-height: 1.4em;
+  margin:0;
+  background: white;
+}
+/* header */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background: #f3f72e;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+  border-bottom:solid 1px grey;
+  width:100%;
+}
+
+.logo {
+  float: left;
+}
+
+nav {
+  float: left;
+}
+
+nav ul {
+  float:left;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+/*footer*/
+.footer {
+  position: sticky;
+  width: 100%;
+}
+
+.footer-main-div{
+  width: 100%;
+  /*height:auto;*/
+  /*margin:auto;*/
+  background: #272727;
+  padding: 20px 0px;
+}
+
+.footer-social-icons{
+  width: 100%;
+  height:auto;
+  margin: auto;
+}
+
+.footer-social-icons ul{
+  margin:0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.footer-social-icons ul li{
+  display: inline-block;
+  width: 50px;
+  height:50px;
+  margin: 0px 10px;
+  border-radius: 100%;
+  background: #f3f72e;
+}
+
+.footer-social-icons ul li a{
+  color:#272727;
+  font-size: 25px;
+  display: block;
+}
+
+.footer-social-icons ul li a i{
+  line-height: 50px;
+}
+
+.footer-menu-one{
+  width:100%;
+  height: auto;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.footer-menu-one ul{
+  margin: 0px;
+  padding: 0px;
+  text-align:center;
+}
+
+.footer-menu-one ul li{
+  display: inline-block;
+  margin: 0px 20px;
+}
+
+.footer-menu-one ul li a{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

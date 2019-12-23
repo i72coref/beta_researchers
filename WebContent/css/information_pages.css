@@ -1,0 +1,29 @@
+body {
+  color: black;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr minmax(100px, min-content) 1fr;
+  padding-bottom: 30px;
+}
+
+.content .text h2 {
+  text-align: center;
+  margin-left: 300px;
+  margin-right: 30px;
+  border-bottom: grey 0.5px outset;
+  padding-bottom: 20px;
+}
+
+.content .text p {
+  text-align: justify;
+  margin-left: 300px;
+  margin-right: 30px;
+}
+
+.content .image {
+  display: block;
+  margin: auto;
+  margin-right: 300px;
+}
