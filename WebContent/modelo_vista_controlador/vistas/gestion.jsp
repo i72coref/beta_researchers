@@ -17,7 +17,7 @@
     <body>
             <header>
                     <div class="container">
-                      <a href="../index.html"><h1 class="logo">  <img src="../img/bueno.png" alt="" width="60px"></h1></a>
+                      <a href="../index.html"><h1 class="logo">  <img src="../../img/bueno.png" alt="" width="60px"></h1></a> 
                       <nav>
                         <ul>
                           <li><a href="../index-admin.html">Inicio</a></li>
@@ -101,7 +101,7 @@
                             </div>
                             <div class="imagen">
                                 <div class="imagen-imagen">
-                                <img src="../img/logo2.png" alt="" width="100px" >
+                                <img src="../../img/logo2.png" alt="" width="100px" >
                                 </div>
                                 <div class="botones">
                                     <div class="va"><button onclick="mensaje2()" style='width:70px; height:25px' >Validar</button></div>
@@ -123,12 +123,11 @@
                                     </div>
                                     <div class="imagen">
                                         <div class="imagen-imagen">
-                                        <img src="../img/logo2.png" alt="" width="100px" >
+                                        <img src="../../img/logo2.png" alt="" width="100px" >
                                         </div>
                                         <div class="botones">
                                             <div class="va"><button onclick="mensaje2()" style='width:70px; height:25px' >Validar</button></div>
-                                            <div class="elimin"><button onclick="mensaje3()" style='width:70px; height:25px' >Eliminar</button></div>
-
+                                            <div class="elimin"><button onclick="mensaje3()" style='width:70px; height:25px'</button></div>
                                         </div>
                                     </div>
                         </div>
@@ -146,7 +145,7 @@
                                     </div>
                                     <div class="imagen">
                                         <div class="imagen-imagen">
-                                        <img src="../img/logo2.png" alt="" width="100px" >
+                                        <img src="../../img/logo2.png" alt="" width="100px" >
                                         </div>
                                         <div class="botones">
                                             <div class="va"><button onclick="mensaje2()" style='width:70px; height:25px'>Validar</button></div>
@@ -168,7 +167,7 @@
                                     </div>
                                     <div class="imagen">
                                         <div class="imagen-imagen">
-                                        <img src="../img/logo2.png" alt="" width="100px" >
+                                        <img src="../../img/logo2.png" alt="" width="100px" >
                                         </div>
                                         <div class="botones">
                                             <div class="va"><button onclick="mensaje2()" style='width:70px; height:25px'>Validar</button></div>
@@ -190,7 +189,7 @@
                         </div>
                             <div class="equipo">
                                 <div class="logo">
-                                    <img src="../img/grupo.png" width="60" height="60"><img>
+                                    <img src="../../img/grupo.png" width="60" height="60"><img>
                                 </div>
                                 <div class="nombre"> Equipo 1</div>
                                 <div class="boton1"><a href="#"><img src="../img/correo.png" width="40" height="40"></a></div>
@@ -198,7 +197,7 @@
                             </div>
                             <div class="equipo">
                                 <div class="logo">
-                                    <img src="../img/grupo.png" width="60" height="60"><img>
+                                    <img src="../../img/grupo.png" width="60" height="60"><img>
                                 </div>
                                 <div class="nombre"> Equipo 2</div>
                                 <div class="boton1"><a href="#"><img src="../img/correo.png" width="40" height="40"></a></div>
@@ -206,7 +205,7 @@
                             </div>
                             <div class="equipo">
                                 <div class="logo">
-                                    <img src="../img/grupo.png" width="60" height="60"><img>
+                                    <img src="../../img/grupo.png" width="60" height="60"><img>
                                 </div>
                                 <div class="nombre"> Equipo 3</div>
                                 <div class="boton1"><a href="#"><img src="../img/correo.png" width="40" height="40"></a></div>
@@ -214,7 +213,7 @@
                             </div>
                             <div class="equipo">
                                 <div class="logo">
-                                    <img src="../img/grupo.png" width="60" height="60"><img>
+                                    <img src="../../img/grupo.png" width="60" height="60"><img>
                                 </div>
                                 <div class="nombre"> Equipo 4</div>
                                 <div class="boton1"><a href="#"><img src="../img/correo.png" width="40" height="40"></a></div>
@@ -232,7 +231,7 @@
                             <div class="lista">
                                 <div class="user">
                                     <div class="log-nom">
-                                        <img src="../img/logo3.png" width="90" height="90">
+                                        <img src="../../img/logo3.png" width="90" height="90">
                                         <p><strong>Juan Palomo</strong></p>
                                     </div>
                                     <div class="botons">
@@ -242,7 +241,7 @@
                                 </div>
                                 <div class="user">
                                         <div class="log-nom">
-                                                <img src="../img/logo3.png" width="90" height="90">
+                                                <img src="../../img/logo3.png" width="90" height="90">
                                                 <p><strong>Juan Palomo</strong></p>
                                             </div>
                                             <div class="botons">
@@ -252,7 +251,7 @@
                                 </div>
                                 <div class="user">
                                         <div class="log-nom">
-                                                <img src="../img/logo3.png" width="90" height="90">
+                                                <img src="../../img/logo3.png" width="90" height="90">
                                                 <p><strong>Juan Palomo</strong></p>
                                             </div>
                                             <div class="botons">
@@ -262,7 +261,7 @@
                                 </div>
                                 <div class="user">
                                         <div class="log-nom">
-                                                <img src="../img/logo3.png" width="90" height="90">
+                                                <img src="../../img/logo3.png" width="90" height="90">
                                                 <p><strong>Juan Palomo</strong></p>
                                             </div>
                                             <div class="botons">
@@ -271,7 +270,7 @@
                                             </div>
                                 </div>
                                 <div class="user"><div class="log-nom">
-                                        <img src="../img/logo3.png" width="90" height="90">
+                                        <img src="../../img/logo3.png" width="90" height="90">
                                         <p><strong>Juan Palomo</strong></p>
                                     </div>
                                     <div class="botons">
@@ -280,7 +279,7 @@
                                     </div>
                                 </div>
                                 <div class="user"><div class="log-nom">
-                                        <img src="./img/logo3.png" width="90" height="90">
+                                        <img src="../../img/logo3.png" width="90" height="90">
                                         <p><strong>Juan Palomo</strong></p>
                                     </div>
                                     <div class="botons">
@@ -300,11 +299,11 @@
                             <hr width=250 align="center" size=1.5 color="black" >
                     </div>
                     <div class="grafico1">
-                        <div class="log-graf"><img src="../img/grafico1.png" width="100" height="100"></div>
+                        <div class="log-graf"><img src="../../img/grafico1.png" width="100" height="100"></div>
                         <div class="text-graf"><i>Grupos pendientes por validar: 6</i></div>
                     </div>
                     <div class="grafico1">
-                        <div class="log-graf"><img src="../img/grafico2.png" width="100" height="100"></div>
+                        <div class="log-graf"><img src="../../img/grafico2.png" width="100" height="100"></div>
                         <div class="text-graf"><i>Noticias pendientes por validar: 4</i></div>
                     </div>
                 </div>
@@ -331,6 +330,7 @@
                 </div>
                 </div>
             </div>
-
+        
             </body>
         </html>
+        
