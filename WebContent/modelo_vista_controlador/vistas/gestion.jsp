@@ -7,9 +7,9 @@
         <title>Researchers Beta Web | Bienvenidos </title>
         <meta name="viewport" content="width-device-width"> <!--la etiqueta meta viewport para controlar la composición en los navegadores móviles, width es  para controlar el tamaño del viewport-->
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../css/index.css" >
-        <link rel="stylesheet" href="../css/contentgestion.css">
-        <script src="../js/gestion.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="../../css/index.css" >
+        <link rel="stylesheet" href="../../css/contentgestion.css">
+        <script src="../../js/gestion.js" type="text/javascript"></script>
         <meta name="description" content="Web para crear grupos de investigacion con profesionales, conocer profesionales de tu entorno, noticias, etc.">
         <meta name="keywords" content="researchers,investigadores,grupos de investigacion,profesionales">
         <meta name="author" content="Antonio Sanchez,Carlos Freire, Francisco Cordoba, Angel Cañuelo">
@@ -127,7 +127,8 @@
                                         </div>
                                         <div class="botones">
                                             <div class="va"><button onclick="mensaje2()" style='width:70px; height:25px' >Validar</button></div>
-                                            <div class="elimin"><button onclick="mensaje3()" style='width:70px; height:25px'</button></div>
+                                            <div class="elimin"><button onclick="mensaje3()" style='width:70px; height:25px' >Eliminar</button></div>
+
                                         </div>
                                     </div>
                         </div>
