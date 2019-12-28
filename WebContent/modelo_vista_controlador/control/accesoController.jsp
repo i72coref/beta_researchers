@@ -11,7 +11,7 @@
 <%
  String nextPage = "../vistas/errorpage.jsp";
 
-	//Capturamos los datos para la conexión a la base de datos que se encuentran en el xml
+	//Capturamos los datos para la conexión a la BD con los parametros del WEB-INF > XML
 	String jdbURL = getServletContext().getInitParameter("jdbURL");
 	String jdbUsername = getServletContext().getInitParameter("jdbUsername");
 	String jdbPassword = getServletContext().getInitParameter("jdbPassword");

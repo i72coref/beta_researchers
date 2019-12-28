@@ -20,9 +20,9 @@
 
         <div class="formulario">
         <h2> Iniciar Sesión </h2>
-        <form action="IniciaSesion" method="POST" >
+        <form action="../control/validaAccesoController.jsp" method="POST" >
                 Email<br>
-                <input type="text" placeholder="Introduce tu Email" id="log" name="username"required><br>
+                <input type="text" placeholder="Introduce tu Email" id="log" name="correoElectronico" required><br>
                 Contraseña<br>
                 <input type="password" placeholder="Introduce tu Contraseña" id="pass" name="password" required><br>
                 <input onclick=go() type="button" value="Iniciar Sesión">

@@ -13,9 +13,7 @@ public class accesoBean implements Serializable {
 	private String correoElectronico;
 	private String password;
 	
-	public accesoBean() {
-		
-	}
+	public accesoBean() {}
 
 	public String getNombre() {
 		return nombre;
