@@ -20,7 +20,7 @@
 
         <div class="formulario">
         <h2> Iniciar Sesión </h2>
-        <form action="../control/validaAccesoController.jsp" method="POST" >
+        <form action="../control/validaAccesoController.jsp" method="POST">
                 Email<br>
                 <input type="text" placeholder="Introduce tu Email" id="log" name="correoElectronico" required><br>
                 Contraseña<br>

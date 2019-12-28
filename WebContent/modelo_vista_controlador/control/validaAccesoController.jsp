@@ -51,7 +51,7 @@ boolean researcher;
 					
 					if(researcher)
 					{
-						response.sendRedirect("../view/researcherUserView.jsp");
+						response.sendRedirect("../vistas/EjemploViewSalida.jsp");
 					}
 					else
 					{
@@ -75,7 +75,7 @@ boolean researcher;
 			else{
 				
 				System.out.println("no se puede iniciar");
-				response.sendRedirect("../view/errorPages/register-error.jsp");
+				response.sendRedirect("../vistas/errorpage.jsp");
 
 			}
 						
