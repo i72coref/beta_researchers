@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@page import="es.uco.pw.display.beans.gestionBean"%>
+<%@page import="es.uco.pw.display.beans.customerBean"%> 
+<%@page import="java.util.ArrayList"%>   
+<%@page import="java.util.List"%>   
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -39,46 +45,22 @@
                                     <hr width=300 align="center" size=1.5 color="black" >
                                     <hr width=250 align="center" size=1.5 color="black" >
                                   </div>
-                            <div class="box1">
-                                    <div class="number">1 </div>
-                                    <div class="name">Informáticos64</div>
-                                    <div class="espacio"></div>
-                                    <div class="ver"> <button id="boton"style='width:70px; height:25px'>Ver</button></div>
-                                    <div class="eliminar"><button onclick="mensaje1()" style='width:70px; height:25px'>Eliminar</button></div>
-                                    <div class="valid"><button onclick="mensaje()" style='width:70px; height:25px'>Validar</button></div>
-                            </div>
-                            <div class="box1">
-                                    <div class="number">2 </div>
-                                    <div class="name">Informáticos64</div>
-                                    <div class="espacio"></div>
-                                    <div class="ver"> <button id="boton"style='width:70px; height:25px'>Ver</button></div>
-                                    <div class="eliminar"><button onclick="mensaje1()" style='width:70px; height:25px'>Eliminar</button></div>
-                                    <div class="valid"><button onclick="mensaje()" style='width:70px; height:25px'>Validar</button></div>
-                            </div>
-                            <div class="box1">
-                                    <div class="number">3 </div>
-                                    <div class="name">Informáticos64</div>
-                                    <div class="espacio"></div>
-                                    <div class="ver"> <button id="boton"style='width:70px; height:25px'>Ver</button></div>
-                                    <div class="eliminar"><button onclick="mensaje1()" style='width:70px; height:25px'>Eliminar</button></div>
-                                    <div class="valid"><button onclick="mensaje()" style='width:70px; height:25px'>Validar</button></div>
-                            </div>
-                            <div class="box1">
-                                    <div class="number">4 </div>
-                                    <div class="name">Informáticos64</div>
-                                    <div class="espacio"></div>
-                                    <div class="ver"> <button id="boton"style='width:70px; height:25px'>Ver</button></div>
-                                    <div class="eliminar"><button onclick="mensaje1()" style='width:70px; height:25px'>Eliminar</button></div>
-                                    <div class="valid"><button onclick="mensaje()" style='width:70px; height:25px'>Validar</button></div>
-                            </div>
-                            <div class="box1">
-                                    <div class="number">5 </div>
-                                    <div class="name" >Informáticos64</div>
-                                    <div class="espacio"></div>
-                                    <div class="ver"> <button id="boton"style='width:70px; height:25px'>Ver</button></div>
-                                    <div class="eliminar"><button onclick="mensaje1()" style='width:70px; height:25px'>Eliminar</button></div>
-                                    <div class="valid"><button onclick="mensaje()" style='width:70px; height:25px'>Validar</button></div>
-                            </div>
+                            <%
+                           	ArrayList<gestionBean> res=(ArrayList<gestionBean>)request.getAttribute("resultado");                         
+                           	for (int i=0; i<res.size();i++){
+                           	%>
+                           	
+                           		<div class="box1">
+                                <div class="number"><%out.println(res.get(i).getId_grupo());%> </div>
+                                <div class="name"><%out.println(res.get(i).getNombre_grupo());%></div>
+                                <div class="espacio"></div>
+                                <div class="ver"> <button id="boton"style='width:70px; height:25px'>Ver</button></div>
+                                <div class="eliminar"><button onclick="mensaje1()" style='width:70px; height:25px'>Eliminar</button></div>
+                                <div class="valid"><button onclick="mensaje()" style='width:70px; height:25px'>Validar</button></div>
+                        </div>
+                        	<%
+                           	}
+                            %>
                     </div>
                     <div class="espacio"></div>
                     <div class="control">
