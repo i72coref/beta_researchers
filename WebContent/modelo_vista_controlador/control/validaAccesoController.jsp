@@ -23,9 +23,6 @@
 		
 		System.out.println("login: "+status);
 		
-		try{
-			
-		System.out.println(getcorreoElectronico());
 		nextPage = "../../jsp/perfil.jsp";  
 	
 	} catch (Exception e) {

@@ -9,10 +9,10 @@ public class validaAccesoBean implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	public validaAccesoBean(){}
+	
 	private String correoElectronico;
 	private String password;
-	
-	public validaAccesoBean(){}
 
 	public String getCorreoElectronico() {
 		return correoElectronico;

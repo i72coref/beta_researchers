@@ -1,14 +1,12 @@
 package es.uco.pw.data.DAO;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 import es.uco.pw.data.BD.DBConexion;
 import es.uco.pw.display.beans.validaAccesoBean;
 
 public class validaAccesoDao {
+	
 	private DBConexion con;
 	private Connection connection;
 
@@ -47,8 +45,6 @@ public class validaAccesoDao {
 
 		return status;
 		}
-	
-	
 	
 }
 

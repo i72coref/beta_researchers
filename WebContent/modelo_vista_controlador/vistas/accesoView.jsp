@@ -25,7 +25,7 @@
                 <input type="text" placeholder="Introduce tu Email" id="log" name="correoElectronico" required><br>
                 Contraseña<br>
                 <input type="password" placeholder="Introduce tu Contraseña" id="pass" name="password" required><br>
-                <input onclick=go() type="button" value="Iniciar Sesión">
+                <input type="button" value="Iniciar Sesión">
         </form>
         <div class="olvido-password">
             <a href="#">Olvidé mi contraseña</a>
