@@ -29,7 +29,7 @@ String pathAvatar;
 	//////////////////////////////////////////Inicio Sesion
 		
 		try {
-			inicioSesionDao inicioSesionDao = new inicioSesionDao(jdbcURL, jdbcUsername, jdbcPassword);
+			validaAccesoDao validaAccesoDao = new inicioSesionDao(jdbcURL, jdbcUsername, jdbcPassword);
 
 			boolean status=inicioSesionDao.log(login);
 			System.out.println("login: "+status);

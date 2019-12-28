@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 
-<%@page import="es.uco.pw.data.DAO.validaAccesoDao"%>  
+<%@page import="es.uco.pw.data.DAO.validaAccesoDao"%>
+<%@page import="es.uco.pw.display.beans.validaAccesoBean"%>
+<%@page import="es.uco.pw.display.beans.sessionBean"%>
 
 <jsp:useBean id="login" class="es.uco.pw.display.beans.validaAccesoBean" scope="page"></jsp:useBean>
 <jsp:useBean id="usuarioSession" class="es.uco.pw.display.beans.sessionBean" scope="session"></jsp:useBean>
@@ -13,6 +15,7 @@ int id;
 String nombre;
 String apellidos;
 String correo;
+boolean researcher;
 %>
 
 <%
@@ -32,24 +35,19 @@ String correo;
 				
 				System.out.println("ok");
 				try {
-					validaAccesoDao validaAccesoDao2 = new validaAccesoDao(jdbURL, jdbUsername, jdbPassword);
+					validaAccesoDao validaAccesoDao2=new validaAccesoDao(jdbURL, jdbUsername, jdbPassword);
 
 					sessionBean Auxiliar=new sessionBean();
 
-					Auxiliar=inicioSesionDao2.logueoAplicacion(login);
+					Auxiliar=validaAccesoDao2.logueoAplicacion(login);
+					
 					System.out.println("aquí está el tamano: " +Auxiliar.getCorreoElectronico());
 
-					System.out.println(Auxiliar.getGithub());
 					System.out.println(Auxiliar.getIdUsuario());
 					System.out.println(Auxiliar.getCorreoElectronico());
-					System.out.println(Auxiliar.isInvestigador());
-					System.out.println(Auxiliar.getPathAvatar());
 
-					git=Auxiliar.getGithub();
 					id=Auxiliar.getIdUsuario();
-					researcher=Auxiliar.isInvestigador();
-					mail=Auxiliar.getCorreoElectronico();
-					pathAvatar=Auxiliar.getPathAvatar();
+					correo=Auxiliar.getCorreoElectronico();
 					
 					if(researcher)
 					{
@@ -61,12 +59,10 @@ String correo;
 
 						//response.sendRedirect("../view/resultadosBusquedaView.jsp");
 					}
-					%>
-					  <jsp:setProperty name="customerSesion" property="github" value="<%=git%>"/>  
-					  <jsp:setProperty name="customerSesion" property="idUsuario" value="<%=id%>"/>  
-					  <jsp:setProperty name="customerSesion" property="correoElectronico" value="<%=mail%>"/>  
-					  <jsp:setProperty name="customerSesion" property="investigador" value="<%=researcher%>"/>  
-					  <jsp:setProperty name="customerSesion" property="pathAvatar" value="<%=pathAvatar%>"/>  
+					%> 
+					  <jsp:setProperty name="usuarioSession" property="idUsuario" value="<%=id%>"/>  
+					  <jsp:setProperty name="usuarioSession" property="correoElectronico" value="<%=correo%>"/>  
+
 					<%
 								
 				}
