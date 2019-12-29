@@ -55,7 +55,7 @@ boolean researcher;
 					}
 					else
 					{
-						response.sendRedirect("../control/resultadosBusquedaController.jsp");
+						response.sendRedirect("../vistas/EjemploViewSalida.jsp");
 
 						//response.sendRedirect("../view/resultadosBusquedaView.jsp");
 					}
