@@ -20,6 +20,8 @@ public class gestionDao {
 		
 ArrayList<gestionBean> resultado=new ArrayList<gestionBean>();  
 		
+
+
 		try {
 			
 			//String sql = "SELECT idUsuario, nombre, apellidos, github, Institucion FROM Usuario WHERE nombre+apellidos COLLATE SQL_Latin1_General_Cp1_CI_AI like ? OR github COLLATE SQL_Latin1_General_Cp1_CI_AI like ? COLLATE ";

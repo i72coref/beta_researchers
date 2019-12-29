@@ -27,7 +27,7 @@
                       <li><a href="ver_grupos.html">Comunidad</a></li>
                       <li><a href="b_avanzada.html">Búsqueda Avanzada</a></li>
                         <li> 
-                        	<form action="./../control/b_avanzadaController.jsp">
+                        	<form action="./../control/b_avanzadaController.jsp" method="post">
                         		<input class="busqueda" type="search" name="palabrasclave" placeholder="Buscar Aquí..." size="20px" >
             					<button  type="submit"  data-placement="top" title="Click para buscar">Search</button></li>
             				</form>
