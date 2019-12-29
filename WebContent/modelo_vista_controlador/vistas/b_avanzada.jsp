@@ -8,8 +8,8 @@
         <title>Búsqueda Avanzada</title>
         <meta name="viewport" content="width-device-width"> <!--la etiqueta meta viewport para controlar la composición en los navegadores móviles, width es  para controlar el tamaño del viewport-->
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="./../css/index.css" >
-        <link rel="stylesheet" href="./../css/b_avanzada.css" >
+        <link rel="stylesheet" href="./../../css/index.css" >
+        <link rel="stylesheet" href="./../../css/b_avanzada.css" >
         <meta name="description" content="Web para crear grupos de investigacion con profesionales, conocer profesionales de tu entorno, noticias, etc.">
         <meta name="keywords" content="researchers,investigadores,grupos de investigacion,profesionales">
         <meta name="author" content="Antonio Sanchez,Carlos Freire, Francisco Cordoba, Angel Cañuelo">
@@ -26,7 +26,11 @@
                       <li><a href="perfil.html">Perfil</a></li>
                       <li><a href="ver_grupos.html">Comunidad</a></li>
                       <li><a href="b_avanzada.html">Búsqueda Avanzada</a></li>
-                      <li><a href="result_avanzada.html" class=""></a>  <input type="text" id="bar" placeholder="Buscar aquí"></li>
+                        <li> 
+                        	<form action="./../control/b_avanzadaController.jsp">
+                        		<input class="busqueda" type="search" name="palabrasclave" placeholder="Buscar Aquí..." size="20px" >
+            					<button  type="submit"  data-placement="top" title="Click para buscar">Search</button></li>
+            				</form>
                   </ul>
                   </nav>
               </div>
