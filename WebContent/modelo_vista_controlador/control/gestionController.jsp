@@ -22,6 +22,15 @@ catch (Exception e) {
 			// TODO: handle exception
 	}
 
+//"Eliminar es el name dado en la Vista para el div"
+String eliminar = request.getParameter("eliminar");
+if(eliminar != null){
+	gestionDao gestionDao = new gestionDao(jdbURL, jdbUsername, jdbPassword);
+	gestionDao.borrarGrupo(eliminar);
+	//Lo hemos borrado, pero hay que actualizar la página.
+	ArrayList<gestionBean> resultado=gestionDao.getGrupos();
+	request.setAttribute("resultado",resultado);
+}
 
 %>
 <jsp:forward page="../vistas/gestionView.jsp" />

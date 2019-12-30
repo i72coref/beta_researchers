@@ -57,6 +57,26 @@ ArrayList<gestionBean> resultado=new ArrayList<gestionBean>();
 		return resultado;
 	}
 	
+	public boolean borrarGrupo(String grupo) {
+try {
+			
+			con.conectar();
+			
+			connection = con.getJdbcConnection();
+			System.out.println(connection);
+			
+			PreparedStatement statement=connection.prepareStatement("delete from Grupos where id_grupo=?");
+			statement.setString(1,grupo);
+			statement.executeUpdate();
+			statement.close();
+			
+			con.desconectar();
+			
+		}catch(Exception e){return false;}
+		
+		return true;
+	}
+	
 }
 
 	

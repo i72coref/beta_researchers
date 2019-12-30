@@ -55,8 +55,10 @@
                                 <div class="name"><%out.println(res.get(i).getNombre_grupo());%></div>
                                 <div class="espacio"></div>
                                 <div class="ver"> <button id="boton"style='width:70px; height:25px'>Ver</button></div>
-                                <div class="eliminar"><button onclick="mensaje1()" style='width:70px; height:25px'>Eliminar</button></div>
-                                <div class="valid"><button onclick="mensaje()" style='width:70px; height:25px'>Validar</button></div>
+                                 <form action="../control/gestionController.jsp" method="POST">
+                                <div class="eliminar"><input type="submit" name="eliminar" value=<%out.println(res.get(i).getId_grupo());%>>Eliminar</div>
+                                </form>
+                                <div class="valid"><button  style='width:70px; height:25px'>Validar</button></div>
                         </div>
                         	<%
                            	}
