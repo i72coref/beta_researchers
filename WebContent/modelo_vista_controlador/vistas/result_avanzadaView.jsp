@@ -58,12 +58,11 @@
               <div class="f2">
                 <table class="tabla1" cellpadding="45">
                   <tr>
-                    <td><a href="perfil.html"><img src="./../../img/logo3.png" alt="" width="80px"></img></a><p>Angel Ortiz</p></td>
                             <%
                            	ArrayList<b_avanzadaBean> res=(ArrayList<b_avanzadaBean>)request.getAttribute("resultado");                         
                            	for (int i=0; i<res.size();i++){
                            	%>
-                           	<td><a href="perfil.html"><img src="./../../img/logo3.png" alt="" width="80px"></img></a><p><%out.println(res.get(i).getNombre());%></p></td>
+                           	<td><a href="perfil.html"><img src="./../../img/logo3.png" alt="" width="80px"></img></a><p><%out.println(res.get(i).getNombre() + " " + res.get(i).getApellidos());%></p></td>
                            	<%
                            	}
                             %>

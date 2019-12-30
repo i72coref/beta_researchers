@@ -9,6 +9,8 @@ public class b_avanzadaBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String nombre;
 	private String apellidos;
+
+	
 	
 	public b_avanzadaBean() { 
 		
@@ -20,6 +22,7 @@ public class b_avanzadaBean implements Serializable {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	
 	public String getApellidos() {
 		return apellidos;
 	}
