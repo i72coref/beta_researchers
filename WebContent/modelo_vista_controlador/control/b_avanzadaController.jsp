@@ -13,9 +13,9 @@ String jdbUsername = getServletContext().getInitParameter("jdbUsername");
 String jdbPassword = getServletContext().getInitParameter("jdbPassword");
 
 try {
-
+	String palabrasclave = request.getParameter("palabrasclave");
 	b_avanzadaDao b_avanzadaDao = new b_avanzadaDao(jdbURL, jdbUsername, jdbPassword);
-	ArrayList<b_avanzadaBean> resultado=b_avanzadaDao.getbusqueda();
+	ArrayList<b_avanzadaBean> resultado=b_avanzadaDao.getbusqueda(palabrasclave);
 	request.setAttribute("resultado",resultado);
 }
 
