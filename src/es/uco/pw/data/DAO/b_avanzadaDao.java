@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import es.uco.pw.data.BD.DBConexion;
 import es.uco.pw.display.beans.b_avanzadaBean;
+import es.uco.pw.display.beans.sessionBean;
 
 public class b_avanzadaDao {
 	
@@ -17,19 +18,18 @@ public class b_avanzadaDao {
 		}
 	
 	
-		public ArrayList<b_avanzadaBean> getbusqueda(String palabrasclave){
+		public ArrayList<b_avanzadaBean> getbusqueda(String nombreabuscar){
 		
 		ArrayList<b_avanzadaBean> resultado=new ArrayList<b_avanzadaBean>();  
 				
 				try {
-					String sql = "SELECT idUsuario, nombre, apellidos, correoElectronico FROM Usuario WHERE nombre = '?'";
 					con.conectar();
 					connection = con.getJdbcConnection();
 					System.out.println(connection);
 					
 					
-					PreparedStatement statement = connection.prepareStatement(sql);
-					statement.setString(1, palabrasclave);
+					PreparedStatement statement = connection.prepareStatement("SELECT idUsuario, nombre, apellidos, correoElectronico FROM Usuario WHERE nombre = ?");
+					statement.setString(1, nombreabuscar);
 					ResultSet rs=statement.executeQuery();
 
 					while(rs.next()){
@@ -41,7 +41,6 @@ public class b_avanzadaDao {
 						resultado.add(result);
 
 					}
-						System.out.println("Resultadooooo-> " + resultado.size() + "RES");
 					
 					statement.close();
 					con.desconectar();
