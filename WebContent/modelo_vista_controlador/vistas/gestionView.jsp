@@ -51,12 +51,11 @@
                            	%>
                            	
                            		<div class="box1">
-                                <div class="number"><%out.println(res.get(i).getId_grupo());%> </div>
                                 <div class="name"><%out.println(res.get(i).getNombre_grupo());%></div>
                                 <div class="espacio"></div>
                                 <div class="ver"> <button id="boton"style='width:70px; height:25px'>Ver</button></div>
                                  <form action="../control/gestionController.jsp" method="POST">
-                                <div class="eliminar"><input type="submit" name="eliminar" value=<%out.println(res.get(i).getId_grupo());%>>Eliminar</div>
+                                <div class="eliminar"><button><input type="submit" name="eliminar" value=<%out.println(res.get(i).getId_grupo());%>></button>Eliminar</div>
                                 </form>
                                 <div class="valid"><button  style='width:70px; height:25px'>Validar</button></div>
                         </div>

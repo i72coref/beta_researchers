@@ -27,7 +27,7 @@ body{
 
  .content .vali-cont .validar{
     display: grid;
-    grid-template-rows: 60px 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     border: black 3px outset;
     height: 300px;
     overflow: auto;
@@ -38,7 +38,7 @@ body{
  }
  .content .vali-cont .validar .box1{
     display:grid;
-    grid-template-columns: 10px 1fr 50px 1fr 1fr 1fr;
+    grid-template-columns: 20px 1fr 50px 1fr 1fr 1fr;
     text-align: center;
     margin:auto;
  }
@@ -56,6 +56,7 @@ body{
  .content .vali-cont .validar .box1 .eliminar button{
     background-color: red;
 }
+
 .content .vali-cont .validar .box1 .valid button{
     background-color: green;
 }
