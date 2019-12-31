@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+
+<%@page import="es.uco.pw.display.beans.sessionBean"%>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -51,7 +56,13 @@
 
              </div>
             <div class="nombre">
-                <h1>Francisco Javier Córdoba Rey</h1>
+
+                <h1><%
+                
+                
+                
+                
+                %></h1>
                 <h4>Edad: 20 años</h4>
             </div>
             <div class="estudios">

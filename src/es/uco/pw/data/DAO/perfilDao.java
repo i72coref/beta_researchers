@@ -1,11 +1,10 @@
 package es.uco.pw.data.DAO;
 
 import java.sql.*;
-import java.util.ArrayList;
 
 import es.uco.pw.data.BD.DBConexion;
-import es.uco.pw.display.beans.b_avanzadaBean;
-
+import es.uco.pw.display.beans.validaAccesoBean;
+import es.uco.pw.display.beans.sessionBean;
 
 public class perfilDao {
 	
@@ -15,71 +14,41 @@ public class perfilDao {
 	public  perfilDao(String jdbURL, String jdbUsername, String jdbPassword) throws SQLException {
 		System.out.println(jdbURL+jdbUsername);
 		con = new DBConexion(jdbURL, jdbUsername, jdbPassword);
-		}
+	}
 	
-	
-		public ArrayList<b_avanzadaBean> getbusqueda(String nombreabuscar){
+	public sessionBean logueoAplicacion(validaAccesoBean login) throws SQLException {
 		
-		ArrayList<b_avanzadaBean> resultado=new ArrayList<b_avanzadaBean>();  
-				
-				try {
-					con.conectar();
-					connection = con.getJdbcConnection();
-					System.out.println(connection);
-					
-					
-					PreparedStatement statement = connection.prepareStatement("SELECT idUsuario, nombre, apellidos, correoElectronico FROM Usuario WHERE nombre = ?");
-					statement.setString(1, nombreabuscar);
-					ResultSet rs=statement.executeQuery();
-
-					while(rs.next()){
-						//System.out.println("Entro si o si");
-						b_avanzadaBean result=new b_avanzadaBean();  
-						
-						result.setNombre(rs.getString("nombre"));  
-						result.setApellidos(rs.getString("apellidos"));  
-						resultado.add(result);
-
-					}
-					
-					statement.close();
-					con.desconectar();
-					
-				}catch(Exception e){}
-				
-				return resultado;
-			}
-		
-		
-		public ArrayList<b_avanzadaBean> getbusqueda_grupos(String nombreabuscar){
+		sessionBean session=null;
+		try {
 			
-		ArrayList<b_avanzadaBean> resultado_grupos=new ArrayList<b_avanzadaBean>();  
-				
-				try {
-					con.conectar();
-					connection = con.getJdbcConnection();
-					System.out.println(connection);
-					
-					
-					PreparedStatement statement = connection.prepareStatement("select nombre_grupo from Grupos where nombre_grupo = ?");
-					statement.setString(1, nombreabuscar);
-					ResultSet rs=statement.executeQuery();
+			String sql = "SELECT * from Usuario where correoElectronico=? and password=?";
+			con.conectar();
+			
 
-					while(rs.next()){
-						//System.out.println("Entro si o si");
-						b_avanzadaBean result=new b_avanzadaBean();  
-						
-						result.setNombre_grupo(rs.getString("nombre_grupo"));   
-						resultado_grupos.add(result);
+			connection = con.getJdbcConnection();
+		
+			PreparedStatement statement = connection.prepareStatement(sql);
+			
+			statement.setString(1, login.getCorreoElectronico());
+			statement.setString(2, login.getPassword());
+			
+			
+			ResultSet rs=statement.executeQuery();
+		
+			
+				System.out.println("Entro si o si");
+				session=new sessionBean();  
+				session.setIdUsuario(rs.getInt("idUsuario"));  
+				session.setNombre(rs.getString("nombre"));  
+				session.setApellidos(rs.getString("apellidos"));  
+				session.setCorreoElectronico(rs.getString("correoElectronico"));
+	        
+			statement.close();
+			con.desconectar();
+		}catch(Exception e){}
+		System.out.println(connection );
 
-					}
-					
-					statement.close();
-					con.desconectar();
-					
-				}catch(Exception e){}
-				
-				return resultado_grupos;
-			}
-	
+		
+		return session;
+	}
 }

@@ -62,7 +62,6 @@ boolean researcher;
 					%> 
 					  <jsp:setProperty name="usuarioSession" property="idUsuario" value="<%=id%>"/>  
 					  <jsp:setProperty name="usuarioSession" property="correoElectronico" value="<%=correo%>"/>  
-
 					<%
 								
 				}

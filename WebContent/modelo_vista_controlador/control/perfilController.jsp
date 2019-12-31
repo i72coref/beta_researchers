@@ -1,29 +1,73 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 
+<%@page import="es.uco.pw.data.DAO.validaAccesoDao"%>
+<%@page import="es.uco.pw.display.beans.validaAccesoBean"%>
+<%@page import="es.uco.pw.display.beans.sessionBean"%>
 
-<%@page import="es.uco.pw.data.DAO.AccesoDao"%>  
-<jsp:useBean id="accesoUsuario" class="es.uco.pw.display.beans.accesoBean" scope="page"></jsp:useBean>  
-<jsp:setProperty property="*" name="accesoUsuario"/>
+<jsp:useBean id="login" class="es.uco.pw.display.beans.validaAccesoBean" scope="page"></jsp:useBean>
+<jsp:useBean id="usuarioSession" class="es.uco.pw.display.beans.sessionBean" scope="session"></jsp:useBean>
+
+<jsp:setProperty property="*" name="login"/>
+
+<%!
+int id;
+String nombre;
+String apellidos;
+String correo;
+boolean researcher;
+%>
+
 <%
- String nextPage = "../vistas/errorpage.jsp";
-
-	//Capturamos los datos para la conexiÃ³n 
+	//Capturamos los datos para la conexión a la BD con los parametros del WEB-INF > XML
 	String jdbURL = getServletContext().getInitParameter("jdbURL");
 	String jdbUsername = getServletContext().getInitParameter("jdbUsername");
 	String jdbPassword = getServletContext().getInitParameter("jdbPassword");
-	try {
-		
-		AccesoDao AccesoDao = new AccesoDao(jdbURL, jdbUsername, jdbPassword);
-		System.out.println(accesoUsuario.getApellidos()+"--"+accesoUsuario.getCorreoElectronico());
-		
-		if(AccesoDao.insertarUsuario(accesoUsuario))
-			nextPage = "../../jsp/perfil.jsp";  
-		
 	
-	} catch (Exception e) {
-			// TODO: handle exception
-	}
- %>
- 
- <jsp:forward page="<%=nextPage%>"></jsp:forward>
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		try {
+			validaAccesoDao validaAccesoDao = new validaAccesoDao(jdbURL, jdbUsername, jdbPassword);
+
+			boolean status=validaAccesoDao.login(login);
+			System.out.println("login: "+status);
+			
+			if (status){
+				
+				System.out.println("ok");
+				try {
+					validaAccesoDao validaAccesoDao2=new validaAccesoDao(jdbURL, jdbUsername, jdbPassword);
+
+					sessionBean Auxiliar=new sessionBean();
+
+					Auxiliar=validaAccesoDao2.logueoAplicacion(login);
+					
+					id=Auxiliar.getIdUsuario();
+					correo=Auxiliar.getCorreoElectronico();
+					
+					%> 
+					  <jsp:setProperty name="usuarioSession" property="idUsuario" value="<%=id%>"/>  
+					  <jsp:setProperty name="usuarioSession" property="correoElectronico" value="<%=correo%>"/>  
+					<%
+					
+					request.setAttribute("session", session);
+				}
+				catch (Exception e) {
+						// TODO: handle exception
+					
+				}
+				
+			}
+			else{
+				
+				System.out.println("no se puede iniciar");
+				response.sendRedirect("../vistas/errorpage.jsp");
+
+			}
+						
+		} 
+		catch (Exception e) {
+				// TODO: handle exception
+			
+		}
+
+%>
