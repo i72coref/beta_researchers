@@ -16,6 +16,7 @@
 		
 		AccesoDao AccesoDao = new AccesoDao(jdbURL, jdbUsername, jdbPassword);
 		System.out.println(accesoUsuario.getApellidos()+"--"+accesoUsuario.getCorreoElectronico());
+		
 		if(AccesoDao.insertarUsuario(accesoUsuario))
 			nextPage = "../../jsp/perfil.jsp";  
 		
