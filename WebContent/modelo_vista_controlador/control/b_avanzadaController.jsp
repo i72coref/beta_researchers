@@ -16,9 +16,15 @@ String jdbPassword = getServletContext().getInitParameter("jdbPassword");
 try {
 	String palabraabuscar = request.getParameter("palabrasclave");
 	b_avanzadaDao b_avanzadaDao = new b_avanzadaDao(jdbURL, jdbUsername, jdbPassword);
+	
+	
 	ArrayList<b_avanzadaBean> resultado=b_avanzadaDao.getbusqueda(palabraabuscar);
-	System.out.println("Resultadooooo-> " + resultado.size() + "RES");
 	request.setAttribute("resultado",resultado);
+	
+	
+	
+	ArrayList<b_avanzadaBean> resultado_grupos=b_avanzadaDao.getbusqueda_grupos(palabraabuscar);
+	request.setAttribute("resultado_grupos",resultado_grupos);
 }
 
 catch (Exception e) {

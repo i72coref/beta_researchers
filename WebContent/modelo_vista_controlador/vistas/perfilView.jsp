@@ -4,9 +4,9 @@
 <html lang="es">
 <head>
 
-    <link rel="stylesheet" href="../css/styleperfil.css">
-    <link rel="stylesheet" href="../css/header_footer.css">
-    <link rel="stylesheet" href="../css/esto.css">
+    <link rel="stylesheet" href="../../css/styleperfil.css">
+    <link rel="stylesheet" href="../../css/header_footer.css">
+    <link rel="stylesheet" href="../../css/esto.css">
         <meta charset="utf-8">
         <title>Perfil </title>
         <meta name="viewport" content="width-device-width"> <!--la etiqueta meta viewport para controlar la composición en los navegadores móviles, width es  para controlar el tamaño del viewport-->
@@ -21,7 +21,7 @@
 <body>
         <header>
                 <div class="container">
-                  <a href="../index.html"><h1 class="logo">  <img src="../img/bueno.png" alt="" width="60px"></h1></a>
+                  <a href="../index.html"><h1 class="logo">  <img src="../../img/bueno.png" alt="" width="60px"></h1></a>
 
                   <nav>
                     <ul>
@@ -42,7 +42,7 @@
     <div class="contenedor">
         <div class="banner-superior">
             <div class="foto-perfil">
-                <img src="../img/foto_perfil.png" width="150px" border-radius="50%">
+                <img src="../../img/foto_perfil.png" width="150px" border-radius="50%">
             </div>
             <div class="miembro-desde">
                  <h6>miembro desde 03/11/2019</h6>

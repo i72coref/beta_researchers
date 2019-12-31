@@ -7,12 +7,12 @@ import es.uco.pw.data.BD.DBConexion;
 import es.uco.pw.display.beans.b_avanzadaBean;
 
 
-public class b_avanzadaDao {
+public class perfilDao {
 	
 	private DBConexion con;
 	private Connection connection;
 
-	public  b_avanzadaDao(String jdbURL, String jdbUsername, String jdbPassword) throws SQLException {
+	public  perfilDao(String jdbURL, String jdbUsername, String jdbPassword) throws SQLException {
 		System.out.println(jdbURL+jdbUsername);
 		con = new DBConexion(jdbURL, jdbUsername, jdbPassword);
 		}
