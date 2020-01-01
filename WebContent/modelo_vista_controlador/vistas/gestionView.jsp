@@ -3,6 +3,7 @@
     
 <%@page import="es.uco.pw.display.beans.gestionBean"%>
 <%@page import="es.uco.pw.display.beans.customerBean"%> 
+<%@page import="es.uco.pw.display.beans.gestionNoticiasBean"%>
 <%@page import="java.util.ArrayList"%>   
 <%@page import="java.util.List"%>   
 
@@ -70,38 +71,21 @@
                                 <hr width=300 align="center" size=1.5 color="black" >
                                 <hr width=250 align="center" size=1.5 color="black" >
                         </div>
-                        <div class="notice">
-                            <div class="texto">
-                                <div class="titulo-notice">
-                                    <strong>Avances en Química</strong>
-                                </div>
-                                <div class="texto-notice">
-                                    <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</p>
-                                </div>
-                                <div class="autor">
-                                    <strong><i>Publicado por:Miguel Angel Arroyo</i></strong>
-                                </div>
-                            </div>
-                            <div class="imagen">
-                                <div class="imagen-imagen">
-                                <img src="../../img/logo2.png" alt="" width="100px" >
-                                </div>
-                                <div class="botones">
-                                    <div class="va"><button onclick="mensaje2()" style='width:70px; height:25px' >Validar</button></div>
-                                    <div class="elimin"><button onclick="mensaje3()" style='width:70px; height:25px'>Eliminar</button></div>
-                                </div>
-                            </div>
-                        </div>
+                <%
+                  ArrayList<gestionNoticiasBean> rest=(ArrayList<gestionNoticiasBean>)request.getAttribute("result");   
+                  System.out.println("Noticias Vista: " + rest.size());
+                  for (int i=0; i<rest.size();i++){
+                 %>
                         <div class="notice">
                                 <div class="texto">
                                         <div class="titulo-notice">
-                                            <strong>Avances en Química</strong>
+                                            <strong><%out.println(rest.get(i).getTitulo());%></strong>
                                         </div>
                                         <div class="texto-notice">
-                                            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</p>
+                                            <p><%out.println(rest.get(i).getDescripcion());%></p>
                                         </div>
                                         <div class="autor">
-                                            <strong><i>Publicado por:Miguel Angel Arroyo</i></strong>
+                                            <strong><i>Publicado por:<%out.println(rest.get(i).getUsuario());%></i></strong>
                                         </div>
                                     </div>
                                     <div class="imagen">
@@ -110,54 +94,15 @@
                                         </div>
                                         <div class="botones">
                                             <div class="va"><button onclick="mensaje2()" style='width:70px; height:25px' >Validar</button></div>
-                                            <div class="elimin"><button onclick="mensaje3()" style='width:70px; height:25px'</button></div>
+                                            <form action="../control/gestionController.jsp" method="POST">
+                                				<div class="elimin"><button><input type="submit" name="delet" value=<%out.println(rest.get(i).getIdNoticia());%>></button>Eliminar</div>
+                                			</form>
                                         </div>
-                                    </div>
-                        </div>
-                        <div class="notice">
-                                <div class="texto">
-                                        <div class="titulo-notice">
-                                            <strong>Avances en Química</strong>
-                                        </div>
-                                        <div class="texto-notice">
-                                            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</p>
-                                        </div>
-                                        <div class="autor">
-                                            <strong><i>Publicado por:Miguel Angel Arroyo</i></strong>
-                                        </div>
-                                    </div>
-                                    <div class="imagen">
-                                        <div class="imagen-imagen">
-                                        <img src="../../img/logo2.png" alt="" width="100px" >
-                                        </div>
-                                        <div class="botones">
-                                            <div class="va"><button onclick="mensaje2()" style='width:70px; height:25px'>Validar</button></div>
-                                            <div class="elimin"><button onclick="mensaje3()" style='width:70px; height:25px'>Eliminar</button></div>
-                                        </div>
-                                    </div>
-                        </div>
-                        <div class="notice">
-                                <div class="texto">
-                                        <div class="titulo-notice">
-                                            <strong>Avances en Química</strong>
-                                        </div>
-                                        <div class="texto-notice">
-                                            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</p>
-                                        </div>
-                                        <div class="autor">
-                                            <strong><i>Publicado por:Miguel Angel Arroyo</i></strong>
-                                        </div>
-                                    </div>
-                                    <div class="imagen">
-                                        <div class="imagen-imagen">
-                                        <img src="../../img/logo2.png" alt="" width="100px" >
-                                        </div>
-                                        <div class="botones">
-                                            <div class="va"><button onclick="mensaje2()" style='width:70px; height:25px'>Validar</button></div>
-                                            <div class="elimin"><button onclick="mensaje3()" style='width:70px; height:25px'>Eliminar</button></div>
-                                        </div>
-                                    </div>
-                        </div>
+                                  	</div>
+                       	 </div> 
+                       	 <%
+                           	}
+                         %>
                     </div>
                 </div>
                 <div class="espacio">
@@ -175,32 +120,32 @@
                                     <img src="../../img/grupo.png" width="60" height="60"><img>
                                 </div>
                                 <div class="nombre"> Equipo 1</div>
-                                <div class="boton1"><a href="#"><img src="../img/correo.png" width="40" height="40"></a></div>
-                                <div class="boton2"><a onclick="mensaje4()"><img src="../img/menos.png" width="40" height="40"></a></div>
+                                <div class="boton1"><a href="#"><img src="../../img/correo.png" width="40" height="40"></a></div>
+                                <div class="boton2"><a onclick="mensaje4()"><img src="../../img/menos.png" width="40" height="40"></a></div>
                             </div>
                             <div class="equipo">
                                 <div class="logo">
                                     <img src="../../img/grupo.png" width="60" height="60"><img>
                                 </div>
                                 <div class="nombre"> Equipo 2</div>
-                                <div class="boton1"><a href="#"><img src="../img/correo.png" width="40" height="40"></a></div>
-                                <div class="boton2"><a onclick="mensaje4()"><img src="../img/menos.png" width="40" height="40"></a></div>
+                                <div class="boton1"><a href="#"><img src="../../img/correo.png" width="40" height="40"></a></div>
+                                <div class="boton2"><a onclick="mensaje4()"><img src="../../img/menos.png" width="40" height="40"></a></div>
                             </div>
                             <div class="equipo">
                                 <div class="logo">
                                     <img src="../../img/grupo.png" width="60" height="60"><img>
                                 </div>
                                 <div class="nombre"> Equipo 3</div>
-                                <div class="boton1"><a href="#"><img src="../img/correo.png" width="40" height="40"></a></div>
-                                <div class="boton2"><a onclick="mensaje4()"><img src="../img/menos.png" width="40" height="40"></a></div>
+                                <div class="boton1"><a href="#"><img src="../../img/correo.png" width="40" height="40"></a></div>
+                                <div class="boton2"><a onclick="mensaje4()"><img src="../../img/menos.png" width="40" height="40"></a></div>
                             </div>
                             <div class="equipo">
                                 <div class="logo">
                                     <img src="../../img/grupo.png" width="60" height="60"><img>
                                 </div>
                                 <div class="nombre"> Equipo 4</div>
-                                <div class="boton1"><a href="#"><img src="../img/correo.png" width="40" height="40"></a></div>
-                                <div class="boton2"><a onclick="mensaje4()"><img src="../img/menos.png" width="40" height="40"></a></div>
+                                <div class="boton1"><a href="#"><img src="../../img/correo.png" width="40" height="40"></a></div>
+                                <div class="boton2"><a onclick="mensaje4()"><img src="../../img/menos.png" width="40" height="40"></a></div>
                             </div>
                     </div>
                     <div class="espacio"></div>
