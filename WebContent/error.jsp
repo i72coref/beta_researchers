@@ -5,7 +5,7 @@
  <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-	 <link rel="stylesheet" href="futuriste.css">
+	 <link rel="stylesheet" href="./css/futuriste.css">
   <title>404 pages</title>
 </head>
 
@@ -54,4 +54,4 @@
 </div>
 </div>
 </body>
-	</html>
+</html>

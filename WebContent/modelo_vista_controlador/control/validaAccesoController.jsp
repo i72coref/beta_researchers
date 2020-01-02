@@ -54,7 +54,7 @@ boolean admin;
 					admin=Auxiliar.isInvestigador();
 					System.out.println("valor del bool "+admin);
 					if(admin){
-						response.sendRedirect("../gestionView");	
+						response.sendRedirect("gestionController.jsp");	
 					}
 					else{
 						response.sendRedirect("../vistas/perfilView.jsp");	

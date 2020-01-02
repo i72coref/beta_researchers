@@ -46,7 +46,9 @@
                     Contraseña<br>
                     <input type="password" placeholder="Introduce tu Contraseña" name="password" required><br>
                     Fecha de Nacimiento<br>
-                    <input type="date" required><br>-->
+                    <input type="date" required><br>
+                    Ciudad<br>
+                    Dirección<br>
                     Redes Sociales<br>
                     <input type="text" placeholder="Perfil de Facebook"><br>
             		<input type="text" placeholder="Perfil de Google+"><br>

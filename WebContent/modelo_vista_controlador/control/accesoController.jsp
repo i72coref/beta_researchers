@@ -15,6 +15,7 @@
 	String jdbURL = getServletContext().getInitParameter("jdbURL");
 	String jdbUsername = getServletContext().getInitParameter("jdbUsername");
 	String jdbPassword = getServletContext().getInitParameter("jdbPassword");
+	
 	try {
 		
 		AccesoDao AccesoDao = new AccesoDao(jdbURL, jdbUsername, jdbPassword);
@@ -22,7 +23,6 @@
 		if(AccesoDao.insertarUsuario(accesoUsuario))
 			nextPage = "../../jsp/perfil.jsp";  
 		
-	
 	} catch (Exception e) {
 			// TODO: handle exception
 	}
