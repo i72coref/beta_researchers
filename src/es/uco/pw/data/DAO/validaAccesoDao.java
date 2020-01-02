@@ -42,6 +42,7 @@ public class validaAccesoDao {
 				session.setNombre(rs.getString("nombre"));  
 				session.setApellidos(rs.getString("apellidos"));  
 				session.setCorreoElectronico(rs.getString("correoElectronico"));
+				session.setInvestigador(rs.getBoolean("investigador"));
 	        } 
 			statement.close();
 			con.desconectar();

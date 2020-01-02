@@ -15,7 +15,7 @@ int id;
 String nombre;
 String apellidos;
 String correo;
-boolean researcher;
+boolean admin;
 %>
 
 <%
@@ -48,17 +48,17 @@ boolean researcher;
 
 					id=Auxiliar.getIdUsuario();
 					correo=Auxiliar.getCorreoElectronico();
+					admin=Auxiliar.isInvestigador();
+					System.out.println("valor del bool "+admin);
+					if(admin){
+						response.sendRedirect("../vistas/perfilView.jsp");	
+					}
+					else{
+						response.sendRedirect("../vistas/EjemploViewSalida.jsp");	
+					}
+							
 					
-					if(researcher)
-					{
-						response.sendRedirect("../vistas/EjemploViewSalida.jsp");
-					}
-					else
-					{
-						response.sendRedirect("../vistas/EjemploViewSalida.jsp");
 
-						//response.sendRedirect("../view/resultadosBusquedaView.jsp");
-					}
 					%> 
 					  <jsp:setProperty name="usuarioSession" property="idUsuario" value="<%=id%>"/>  
 					  <jsp:setProperty name="usuarioSession" property="correoElectronico" value="<%=correo%>"/>  
