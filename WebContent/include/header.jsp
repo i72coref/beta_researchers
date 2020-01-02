@@ -18,7 +18,7 @@
 <body>
         <header>
                 <div class="container">
-                    <a href="../index.html"><h1 class="logo">  <img src="./../img/bueno.png" alt="" width="60px"></h1></a>
+                    <!--  <a href="../index.html"><h1 class="logo">  <img src="./../img/bueno.png" alt="" width="60px"></h1></a>-->
 
                     <nav>
                     <ul>

@@ -10,16 +10,16 @@
         <!-- Ajusta la página para móviles (diseño casi responsive)
         	la etiqueta meta viewport para controlar la composición en los navegadores móviles, width es  para controlar el tamaño del viewport-->
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="./../css/index.css" >
-        <link rel="stylesheet" href="./../css/information_pages.css" >
+        <link rel="stylesheet" href="./css/index.css" >
+        <link rel="stylesheet" href="./css/information_pages.css" >
         <meta name="description" content="Web para crear grupos de investigacion con profesionales, conocer profesionales de tu entorno, noticias, etc.">
         <meta name="keywords" content="researchers,investigadores,grupos de investigacion,profesionales">
         <meta name="author" content="Antonio Sanchez,Carlos Freire, Francisco Cordoba, Angel Cañuelo">
     </head>
 
     <body>
-    <header class="header">
-       <%@include file= "./../include/header.jsp" %>
+    <header>
+       <%@include file="./include/header.jsp"%>
     </header>
 
    	<div class="content">
@@ -62,6 +62,7 @@
    		</div>
 
    	</div>
-	<%@include file= "./../include/footer.jsp" %>
+   	
+	<%@include file="./include/footer.jsp" %>
     </body>
 </html>
