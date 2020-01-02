@@ -125,7 +125,7 @@
             <a href="../html/info_grupo.html"><img src="../img/grupo.png" width="80"  height="80"></a>
             <a href="../html/info_grupo.html"><img src="../img/grupo.png" width="80"  height="80"></a><br>
             <a href="./grupos.html"><u>Ver más...</u></a><br>
-            <input type="submit" value="Crear un grupo" onclick="location.href = './crear_grupo.html'">
+            <input type="submit" value="Crear un grupo" onclick="location.href = './../../crear_grupo.jsp'">
             </div>
         </div> <!--Info Derecha-->
     </div> <!--Contenedor-->
