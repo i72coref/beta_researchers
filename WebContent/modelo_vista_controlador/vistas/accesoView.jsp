@@ -45,13 +45,15 @@
                     <input type="email" placeholder="Introduce tu Email" name="correoElectronico" required><br>
                     Contraseña<br>
                     <input type="password" placeholder="Introduce tu Contraseña" name="password" required><br>
-                    <!--  Fecha de Nacimiento<br>
+                    Fecha de Nacimiento<br>
                     <input type="date" required><br>-->
-                    <!-- Sexo<br>
-                    <input type="radio" name="gender" value="Masculino"> Masculino<br>
-                    <input type="radio" name="gender" value="Femenino"> Femenino<br>
-                    <input type="radio" name="gender" value="otro" checked> Otro<br>-->
-                    <input type="submit" value="Registrarse"><br>
+                    Redes Sociales<br>
+                    <input type="text" placeholder="Perfil de Facebook"><br>
+            		<input type="text" placeholder="Perfil de Google+"><br>
+            		<input type="text" placeholder="Perfil de GitHub"><br>
+           			<input type="text" placeholder="Perfil de Twitter"><br>
+            		<input type="text" placeholder="Nombre de Telegram"><br>
+            		<input type="submit" value="Registrarse"><br>
                 </form>
                 <div class="acepta-terminos">
                     <form action="acepta">

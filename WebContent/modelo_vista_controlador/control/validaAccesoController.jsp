@@ -48,13 +48,16 @@ boolean admin;
 
 					id=Auxiliar.getIdUsuario();
 					correo=Auxiliar.getCorreoElectronico();
+					nombre=Auxiliar.getNombre();
+					apellidos=Auxiliar.getApellidos();
+					System.out.println("Los apellidos son "+apellidos);
 					admin=Auxiliar.isInvestigador();
 					System.out.println("valor del bool "+admin);
 					if(admin){
-						response.sendRedirect("../vistas/perfilView.jsp");	
+						response.sendRedirect("../gestionView");	
 					}
 					else{
-						response.sendRedirect("../vistas/EjemploViewSalida.jsp");	
+						response.sendRedirect("../vistas/perfilView.jsp");	
 					}
 							
 					
@@ -62,6 +65,8 @@ boolean admin;
 					%> 
 					  <jsp:setProperty name="usuarioSession" property="idUsuario" value="<%=id%>"/>  
 					  <jsp:setProperty name="usuarioSession" property="correoElectronico" value="<%=correo%>"/>  
+					  <jsp:setProperty name="usuarioSession" property="nombre" value="<%=nombre%>"/>
+					  <jsp:setProperty name="usuarioSession" property="apellidos" value="<%=apellidos%>"/> 
 					<%
 								
 				}

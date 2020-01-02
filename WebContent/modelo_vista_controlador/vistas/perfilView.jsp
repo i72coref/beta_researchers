@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-
+<jsp:useBean id="usuarioSession" class="es.uco.pw.display.beans.sessionBean" scope="session"></jsp:useBean> 
 <%@page import="es.uco.pw.display.beans.sessionBean"%>
 
 
@@ -25,7 +25,7 @@
 
 <body>
         <header>
-	 <%@include file="../../include/header.jsp"%>
+
         </header>
         <center>
             <p id="p0">Perfil</p>
@@ -45,12 +45,8 @@
              </div>
             <div class="nombre">
 
-                <h1><%
-                
-                
-                
-                
-                %></h1>
+                <h4><jsp:getProperty property="nombre" name="usuarioSession"/>
+                <jsp:getProperty property="apellidos" name="usuarioSession"/></h4> 
                 <h4>Edad: 20 años</h4>
             </div>
             <div class="estudios">
