@@ -25,19 +25,7 @@
 
 <body>
         <header>
-                <div class="container">
-                  <a href="../index.html"><h1 class="logo">  <img src="../../img/bueno.png" alt="" width="60px"></h1></a>
-
-                  <nav>
-                    <ul>
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="perfil.html">Perfil</a></li>
-                        <li><a href="ver_grupos.html">Comunidad</a></li>
-                        <li><a href="b_avanzada.html">Búsqueda Avanzada</a></li>
-                        <li><a href="result_avanzada.html" class=""></a>  <input type="text" id="bar" placeholder="Buscar aquí"></li>
-                    </ul>
-                  </nav>
-                </div>
+	 <%@include file="../../include/header.jsp"%>
         </header>
         <center>
             <p id="p0">Perfil</p>
