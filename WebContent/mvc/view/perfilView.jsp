@@ -164,8 +164,7 @@
             <input type="text" placeholder="Perfil de Twitter"><br>
             <input type="text" placeholder="Nombre de Telegram"><br>
             <div class="botones-overlay">
-                <img src="../img/guardar.png" width="150px" class="btn-submit" id="btn-cerrar-popup" class="btn-cerrar-popup" >
-                <img src="../img/salir.png" width="190px" class="btn-submit" id="btn-cerrar-popup2" class="btn-cerrar-popup2" >
+                <img src="../../img/salir.png" width="150px" class="btn-submit" id="btn-cerrar-popup" class="btn-cerrar-popup" >
             </div>
     </div>
 
@@ -175,8 +174,7 @@
 
     <script scr="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../js/perfil.js"></script>
-
+    <script src="../../js/perfil.js"></script>
 
 </body>
 
