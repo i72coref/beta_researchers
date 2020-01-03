@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 
 <%@page import="es.uco.pw.display.beans.gestionBean"%>
+<%@page import="es.uco.pw.display.beans.gestionNoticiasBean"%>
 <%@page import="java.util.ArrayList"%>   
 <%@page import="java.util.List"%>    
 
@@ -66,7 +67,7 @@
                         <a href="#"><h2>NOTICIAS</h2></a>
             </div>
                             <%
-                           	ArrayList<gestionBean> res2=(ArrayList<gestionBean>)request.getAttribute("resultado2");                         
+                           	ArrayList<gestionNoticiasBean> res2=(ArrayList<gestionNoticiasBean>)request.getAttribute("result");                         
                            	for (int i=0; i<res2.size();i++){
                            	%>
             <div class="notice1">

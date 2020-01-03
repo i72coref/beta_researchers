@@ -79,14 +79,7 @@
                 <table class="tabla2" cellpadding="45" >
                   <tr>
                   
-                            <%
-                           	ArrayList<b_avanzadaBean> res_grupos=(ArrayList<b_avanzadaBean>)request.getAttribute("resultado_grupos");                         
-                           	for (int i=0; i<res_grupos.size();i++){
-                           	%>
-                           	<td><a href="./info_grupo.html"><img src="./../../img/grupo.png" alt="" width="80px"></img></a><p><%out.println(res_grupos.get(i).getNombre_grupo());%></p></td>
-                           	<%
-                           	}
-                            %>
+
                     
                   </tr>
                 </table>

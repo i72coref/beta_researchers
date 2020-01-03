@@ -21,6 +21,7 @@ try {
 	int cp = Integer.parseInt(request.getParameter("CP"));
 	int exp = Integer.parseInt(request.getParameter("EXPERIENCIA"));
 	
+	System.out.println(grado);
 	b_avanzadaDao b_avanzadaDao = new b_avanzadaDao(jdbURL, jdbUsername, jdbPassword);
 	
 	

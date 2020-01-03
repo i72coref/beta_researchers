@@ -12,22 +12,13 @@ public class gestionBean implements Serializable {
 	private String descripcion;
 	private String lider;
 	private String titulo;
-	private String contenido;
+
 	
 	public Integer getId_grupo() {
 		return id_grupo;
 	}
 	
 	
-	
-	public String getContenido() {
-		return contenido;
-	}
-
-
-	public void setContenido(String contenido) {
-		this.contenido = contenido;
-	}
 
 	public String getTitulo() {
 		return titulo;

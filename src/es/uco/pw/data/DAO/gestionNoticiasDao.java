@@ -113,7 +113,7 @@ ArrayList<gestionNoticiasBean> resultado=new ArrayList<gestionNoticiasBean>();
 					connection = con.getJdbcConnection();
 					System.out.println(connection);
 				
-					PreparedStatement statement = connection.prepareStatement("SELECT idNoticia,titulo,descripcion, Usuario FROM Noticias WHERE valid=?");
+					PreparedStatement statement = connection.prepareStatement("SELECT idNoticia,titulo, Usuario, contenido FROM Noticias WHERE valid=?");
 					
 					statement.setInt(1,validado);
 					
@@ -128,8 +128,8 @@ ArrayList<gestionNoticiasBean> resultado=new ArrayList<gestionNoticiasBean>();
 						
 						result.setIdNoticia(rs.getInt("idNoticia"));
 						result.setTitulo(rs.getString("titulo"));  
-						result.setDescripcion(rs.getString("descripcion"));
 						result.setUsuario(rs.getInt("Usuario"));
+						result.setContenido(rs.getString("contenido"));
 						resultado.add(result);
 
 					}

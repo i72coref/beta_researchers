@@ -109,7 +109,7 @@ try {
 					connection = con.getJdbcConnection();
 					System.out.println(connection);
 				
-					PreparedStatement statement = connection.prepareStatement("SELECT id_grupo, nombre_grupo FROM Grupos WHERE validar=?");
+					PreparedStatement statement = connection.prepareStatement("SELECT id_grupo, nombre_grupo, lider, descripcion FROM Grupos WHERE validar=?");
 					
 					statement.setInt(1,validado);
 					
@@ -123,7 +123,10 @@ try {
 						gestionBean result=new gestionBean();  
 						
 						result.setId_grupo(rs.getInt("id_grupo"));  
-						result.setNombre_grupo(rs.getString("nombre_grupo"));  
+						result.setNombre_grupo(rs.getString("nombre_grupo"));
+						result.setLider(rs.getString("lider"));
+						result.setDescripcion(rs.getString("descripcion"));
+						
 						resultado.add(result);
 
 					}
