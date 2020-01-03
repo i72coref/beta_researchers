@@ -26,7 +26,7 @@ public class AccesoDao {
 		
 		
 		
-		String sql = "INSERT INTO Usuario (idUsuario,nombre, apellidos, correoElectronico, password) VALUES (?,?,?,?,?)";
+		String sql = "INSERT INTO Usuario (idUsuario,nombre, apellidos, correoElectronico, password, github, direccion, telefono, facebook, twitter, google, telegram, grado, experiencia, universidad, edad, provincia, CP) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		System.out.println(accesoUsuario.getNombre()+"-"+accesoUsuario.getApellidos()+"-"+accesoUsuario.getCorreoElectronico());
 		con.conectar();
 		connection = con.getJdbcConnection();
@@ -38,7 +38,20 @@ public class AccesoDao {
 		statement.setString(3, accesoUsuario.getApellidos());
 		statement.setString(4, accesoUsuario.getCorreoElectronico());
 		statement.setString(5, accesoUsuario.getPassword());
-	    
+		statement.setString(6, accesoUsuario.getGithub());
+		statement.setString(7, accesoUsuario.getDireccion());
+		statement.setString(8, accesoUsuario.getTelefono());
+		statement.setString(9, accesoUsuario.getFacebook());
+		statement.setString(10, accesoUsuario.getTwitter());
+		statement.setString(11, accesoUsuario.getGoogle());
+		statement.setString(12, accesoUsuario.getTelegram());
+		statement.setInt(13, accesoUsuario.getGrado());
+		statement.setInt(14, accesoUsuario.getExperiencia());
+		statement.setString(15, accesoUsuario.getUniversidad());
+		statement.setInt(16, accesoUsuario.getEdad());
+		statement.setString(17, accesoUsuario.getProvincia());
+		statement.setInt(18, accesoUsuario.getCP());
+
 		boolean rowInserted = statement.executeUpdate() > 0;
 		statement.close();
 		con.desconectar();
@@ -47,3 +60,4 @@ public class AccesoDao {
 	
 	
 }
+

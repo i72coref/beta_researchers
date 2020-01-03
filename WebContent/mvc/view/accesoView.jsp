@@ -39,22 +39,32 @@
                     <input type="text" placeholder="Introduce tu Nombre" name="nombre" required><br>
                     Apellidos<br>
                     <input type="text" placeholder="Introduce tus Apellidos" name="apellidos" required><br>
-                    <!--  Nombre de Usuario<br>
-                    <input type="text" placeholder="Introduce tu Usuario" required><br>-->
                     Email<br>
                     <input type="email" placeholder="Introduce tu Email" name="correoElectronico" required><br>
                     Contraseña<br>
                     <input type="password" placeholder="Introduce tu Contraseña" name="password" required><br>
-                    Fecha de Nacimiento<br>
-                    <input type="date" required><br>
-                    Ciudad<br>
+                    Edad<br>
+                    <input type="text" name="edad" required><br>
+                    Provincia<br>
+                    <input type="text" placeholder="Introduce tu Provincia" name="provincia" required><br>
                     Dirección<br>
+                    <input type="text" placeholder="Introduce tu Direccion" name="direccion" required><br>
+                    Codigo Postal<br>
+                    <input type="text" placeholder="Introduce tu CP" name="CP" required><br>
+                    Telefono<br>
+                    <input type="text" placeholder="Introduce tu Telefono" name="telefono" required><br>
+                    Universidad<br>
+                    <input type="text" placeholder="Introduce tu Universidad" name="universidad">
+                    Grado<br>
+                    <input type="text" placeholder="Introduce tu último año de Grado" name="grado">
+         			Experiencia<br>
+					<input type="text" placeholder="Introduce tus Años de Experiencia" name="experiencia">
                     Redes Sociales<br>
-                    <input type="text" placeholder="Perfil de Facebook"><br>
-            		<input type="text" placeholder="Perfil de Google+"><br>
-            		<input type="text" placeholder="Perfil de GitHub"><br>
-           			<input type="text" placeholder="Perfil de Twitter"><br>
-            		<input type="text" placeholder="Nombre de Telegram"><br>
+                    <input type="text" placeholder="Perfil de Facebook" name="facebook"><br>
+            		<input type="text" placeholder="Perfil de Google+" name="google"><br>
+            		<input type="text" placeholder="Perfil de GitHub" name="github"><br>
+           			<input type="text" placeholder="Perfil de Twitter" name="twitter"><br>
+            		<input type="text" placeholder="Nombre de Telegram" name="telegram"><br>
             		<input type="submit" value="Registrarse"><br>
                 </form>
                 <div class="acepta-terminos">
@@ -70,3 +80,4 @@
     <script src="../../js/acceso.js"></script>
 </body>
 </html>
+
