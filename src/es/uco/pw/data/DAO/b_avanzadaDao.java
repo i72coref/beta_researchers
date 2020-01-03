@@ -81,5 +81,63 @@ public class b_avanzadaDao {
 				
 				return resultado_grupos;
 			}
+		
+		
+		public ArrayList<b_avanzadaBean> getbusqueda_av(
+				int grado, 
+				String provincia,
+				int edad,
+				String uni,
+				int cp,
+				int exp
+				){
+			
+		ArrayList<b_avanzadaBean> resultado_av=new ArrayList<b_avanzadaBean>();  
+				
+				try {
+					con.conectar();
+					connection = con.getJdbcConnection();
+					System.out.println(connection);
+					
+					
+						System.out.println(grado);
+						System.out.println(provincia);
+						System.out.println(edad);
+						System.out.println(uni);
+						System.out.println(cp);
+						System.out.println(exp);
+						
+					
+					
+						PreparedStatement statement = connection.prepareStatement(
+								"Select nombre, avatar from Usuario where grado = ? and provincia = ? and edad < ? and universidad = ? and CP = ? and experiencia = ?");
+						
+								statement.setInt(1, grado);
+								statement.setString(2, provincia);
+								statement.setInt(3, edad);
+								statement.setString(4, uni);
+								statement.setInt(5, cp);
+								statement.setInt(6, exp);
+								ResultSet rs=statement.executeQuery();
+					
+					
+
+					while(rs.next()){
+						//System.out.println("Entro si o si");
+						b_avanzadaBean result=new b_avanzadaBean();  
+						
+						result.setNombre(rs.getString("nombre"));
+						result.setAvatar(rs.getBlob("avatar"));
+						resultado_av.add(result);
+
+					}
+					
+					statement.close();
+					con.desconectar();
+					
+				}catch(Exception e){}
+				
+				return resultado_av;
+			}
 	
 }

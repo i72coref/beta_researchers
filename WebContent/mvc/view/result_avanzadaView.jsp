@@ -59,8 +59,8 @@
                 <table class="tabla1" cellpadding="45">
                   <tr>
                             <%
-                           	ArrayList<b_avanzadaBean> res=(ArrayList<b_avanzadaBean>)request.getAttribute("resultado");                         
-                           	for (int i=0; i<res.size();i++){
+                           	ArrayList<b_avanzadaBean> res=(ArrayList<b_avanzadaBean>)request.getAttribute("resultado_av");                         
+                           	for (int i=0; i<res.size();i++){             
                            	%>
                            	<td><a href="perfil.html"><img src="./../../img/logo3.png" alt="" width="80px"></img></a><p><%out.println(res.get(i).getNombre() + " " + res.get(i).getApellidos());%></p></td>
                            	<%
@@ -78,6 +78,7 @@
               <div class="f4">
                 <table class="tabla2" cellpadding="45" >
                   <tr>
+                  
                             <%
                            	ArrayList<b_avanzadaBean> res_grupos=(ArrayList<b_avanzadaBean>)request.getAttribute("resultado_grupos");                         
                            	for (int i=0; i<res_grupos.size();i++){

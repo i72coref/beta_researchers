@@ -4,9 +4,9 @@
 <html lang="es">
 <head>
 
-    <link rel="stylesheet" href="../css/noticiasmejorado.css">
-    <link rel="stylesheet" href="../css/header_footer.css">
-    <link rel="stylesheet" href="./../css/carrousel.css" >
+    <link rel="stylesheet" href="../../css/noticiasmejorado.css">
+    <link rel="stylesheet" href="../../css/header_footer.css">
+    <link rel="stylesheet" href="./../../css/carrousel.css" >
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta charset="utf-8">
@@ -32,7 +32,7 @@
 <body>
         <header>
                 <div class="container">
-                  <a href="../index.html"><h1 class="logo">  <img src="../img/bueno.png" alt="" width="60px"></h1></a>
+                  <a href="../index.html"><h1 class="logo">  <img src="../../img/bueno.png" alt="" width="60px"></h1></a>
 
                   <nav>
                     <ul>
@@ -40,7 +40,10 @@
                         <li><a href="perfil.html">Perfil</a></li>
                         <li><a href="ver_grupos.html">Comunidad</a></li>
                         <li><a href="b_avanzada.html">Búsqueda Avanzada</a></li>
-                        <li><a href="result_avanzada.html" class=""></a>  <input type="text" id="bar" placeholder="Buscar aquí"></li>
+                        <li><form action="./../control/buscarapidoController.jsp" method="post">
+                        		<input class="busqueda" type="search" name="palabrasclave" placeholder="Buscar Aquí..." size="20px" >
+            					<button  type="submit"  data-placement="top" title="Click para buscar">Search</button></li>
+            				</form></li>
                     </ul>
                   </nav>
                 </div>
@@ -52,7 +55,7 @@
     <!---------------------------------------------->
     <div class="contenedor">
     <main class="noticia">
-        <img src="../img/notica2.jpg" width="600px">
+        <img src="../../img/notica2.jpg" width="600px">
         <h3>Título de la Noticia</h3>
         Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
         Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones

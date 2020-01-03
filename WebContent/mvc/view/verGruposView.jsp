@@ -7,9 +7,9 @@
   <title>Ver Grupos</title>
   <meta name="viewport" content="width-device-width">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./../css/index.css" >
-  <link rel="stylesheet" href="../css/carrousel.css" >
-  <link rel="stylesheet" href="./../css/ver_grupos.css" >
+  <link rel="stylesheet" href="./../../css/index.css" >
+  <link rel="stylesheet" href="../../css/carrousel.css" >
+  <link rel="stylesheet" href="./../../css/ver_grupos.css" >
   <meta name="description" content="Web para crear grupos de investigacion con profesionales, conocer profesionales de tu entorno, noticias, etc.">
   <meta name="keywords" content="researchers,investigadores,grupos de investigacion,profesionales">
   <meta name="author" content="Antonio Sanchez,Carlos Freire, Francisco Cordoba, Angel Cañuelo">

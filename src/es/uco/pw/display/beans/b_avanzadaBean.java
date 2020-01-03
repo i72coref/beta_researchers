@@ -1,6 +1,7 @@
 package es.uco.pw.display.beans;
 
 import java.io.Serializable;
+import java.sql.Blob;
 
 
 public class b_avanzadaBean implements Serializable {
@@ -10,12 +11,23 @@ public class b_avanzadaBean implements Serializable {
 	private String nombre;
 	private String apellidos;
 	private String nombre_grupo;
+	private Blob avatar;
 	
 
 	public b_avanzadaBean() { 
 		
 	}
 	
+	
+	
+	public Blob getAvatar() {
+		return avatar;
+	}
+
+	public void setAvatar(Blob avatar) {
+		this.avatar = avatar;
+	}
+
 	public String getNombre_grupo() {
 		return nombre_grupo;
 	}
