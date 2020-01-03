@@ -21,6 +21,9 @@ try {
 	ArrayList<gestionBean> resultado=indexDao.grupo();
 	request.setAttribute("resultado",resultado);
 	
+	ArrayList<gestionBean> resultado2=indexDao.noticia();
+	request.setAttribute("resultado",resultado);
+
 }
 
 catch (Exception e) {

@@ -10,6 +10,9 @@ public class gestionBean implements Serializable {
 	private String nombre_grupo;
 	private String categoria;
 	private String descripcion;
+	private String lider;
+	private String titulo;
+	private String contenido;
 	
 	public Integer getId_grupo() {
 		return id_grupo;
@@ -17,6 +20,31 @@ public class gestionBean implements Serializable {
 	
 	
 	
+	public String getContenido() {
+		return contenido;
+	}
+
+
+	public void setContenido(String contenido) {
+		this.contenido = contenido;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getLider() {
+		return lider;
+	}
+
+	public void setLider(String lider) {
+		this.lider = lider;
+	}
+
 	public String getDescripcion() {
 		return descripcion;
 	}

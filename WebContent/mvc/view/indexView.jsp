@@ -39,23 +39,11 @@
 
     <div class="content">
         <div class="gruyper">
-                <div class="box1">
-                    <div class="lognom1">
-                        <img src="./img/logo.png" alt="" width="200px" >
-                        <h3> <strong>Hack and Beers</strong></h3>
-                        <a href="./html/form.html"><button type="submit" id="btn-abrir-popup" class="btn-abrir-popup">Unirse</button></a>
-
-                    </div>
-                    <div class="contentbox1">
-                        <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estÃ¡ndar de las industrias desde el aÃ±o 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usÃ³ una galerÃ­a de textos y los mezclÃ³ de tal manera que logrÃ³ hacer un libro de textos especimen. No sÃ³lo sobreviviÃ³ 500 aÃ±os, sino que tambien ingresÃ³ como texto de relleno en documentos electrÃ³nicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creaciÃ³n de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y mÃ¡s recientemente con software de autoediciÃ³n, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
-                        <h6><strong><i>Lider:Miguel Angel Arroyo</i></strong></h6>
-                    </div>
-                </div>
-                <div class="box2">
                             <%
                            	ArrayList<gestionBean> res=(ArrayList<gestionBean>)request.getAttribute("resultado");                         
                            	for (int i=0; i<res.size();i++){
                            	%>
+                <div class="box2">
                         <div class="lognom2">
                             <img src="./img/logo2.png" alt="" width="100px" >
                             <h3> <strong><%out.println(res.get(i).getNombre_grupo());%></strong></h3>
@@ -63,12 +51,12 @@
                         </div>
                         <div class="contentbox2">
                             <p><%out.println(res.get(i).getDescripcion());%></p>
-                            <h6><strong><i>Lider:Juan Perez</i></strong></h6>
+                            <h6><strong><i>Lider: <%out.println(res.get(i).getLider());%></i></strong></h6>
                         </div>
+                </div>
                             <%
                            	}
-                            %>
-                </div>
+                            %>                
 
         </div>
         <div class="espacio">
@@ -77,16 +65,23 @@
             <div class="titulonot">
                         <a href="#"><h2>NOTICIAS</h2></a>
             </div>
+                            <%
+                           	ArrayList<gestionBean> res2=(ArrayList<gestionBean>)request.getAttribute("resultado2");                         
+                           	for (int i=0; i<res2.size();i++){
+                           	%>
             <div class="notice1">
 
                         <div class="noticelogo1">
                             <img src="./img/logo2.png" alt="" width="80px" >
                         </div>
                         <div class="contentnotice1">
-                            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estÃ¡ndar de las industrias desde el aÃ±o 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usÃ³ "<a href="./html/noticias.html"><u>Leer mÃ¡s...</u></a></p>
+                        	<h3>><%out.println(res2.get(i).getTitulo());%></h3>
+                            <p><%out.println(res2.get(i).getContenido());%><a href="./html/noticias.html"><u>Leer mÃ¡s...</u></a></p>
                         </div>
             </div>
-                        
+                        <%
+                        }
+                        %>
 
         </div>
 
