@@ -64,6 +64,7 @@ if(validarNoticias != null){
 	ArrayList<gestionNoticiasBean> resultNoticias=gestionNoticiasDao.getNoticiasValidar(0);
 	request.setAttribute("result",resultNoticias);
 	
+	
 }
 
 %>
