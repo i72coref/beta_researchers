@@ -12,7 +12,7 @@ public class sessionBean implements Serializable {
 	private String nombre;
 	private String apellidos;
 	private String correoElectronico=null;
-	private boolean investigador;
+	private boolean administrador;
 
 	public int getIdUsuario() {
 		return idUsuario;
@@ -38,14 +38,15 @@ public class sessionBean implements Serializable {
 	public void setCorreoElectronico(String correoElectronico) {
 		this.correoElectronico = correoElectronico;
 	}
+	
+	public boolean isAdministrador() {
+		return administrador;
+	}
+	public void setAdministrador(boolean administrador) {
+		this.administrador = administrador;
+	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	public boolean isInvestigador() {
-		return investigador;
-	}
-	public void setInvestigador(boolean investigador) {
-		this.investigador = investigador;
-	}
-	
+
 }

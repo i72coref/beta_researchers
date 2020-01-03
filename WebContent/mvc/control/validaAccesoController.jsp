@@ -51,13 +51,13 @@ boolean admin;
 					nombre=Auxiliar.getNombre();
 					apellidos=Auxiliar.getApellidos();
 					System.out.println("Los apellidos son "+apellidos);
-					admin=Auxiliar.isInvestigador();
+					admin=Auxiliar.isAdministrador();
 					System.out.println("valor del bool "+admin);
 					if(admin){
 						response.sendRedirect("gestionController.jsp");	
 					}
 					else{
-						response.sendRedirect("../vistas/perfilView.jsp");	
+						response.sendRedirect("../view/perfilView.jsp");	
 					}
 							
 					
@@ -79,7 +79,7 @@ boolean admin;
 			else{
 				
 				System.out.println("no se puede iniciar");
-				response.sendRedirect("../vistas/errorpage.jsp");
+				response.sendRedirect("../view/errorpage.jsp");
 
 			}
 						
