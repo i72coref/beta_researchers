@@ -13,6 +13,20 @@ public class sessionBean implements Serializable {
 	private String apellidos;
 	private String correoElectronico=null;
 	private boolean administrador;
+	private String direccion;
+	private int CP;
+	private String telefono;
+	private int grupo;
+	private String github;
+	private String facebook;
+	private String twitter;
+	private String google;
+	private String telegram;
+	private int grado;
+	private int experiencia;
+	private String universidad;
+	private int edad;
+	private String provincia;
 
 	public int getIdUsuario() {
 		return idUsuario;
@@ -44,6 +58,90 @@ public class sessionBean implements Serializable {
 	}
 	public void setAdministrador(boolean administrador) {
 		this.administrador = administrador;
+	}
+	public String getDireccion() {
+		return direccion;
+	}
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+	public int getCP() {
+		return CP;
+	}
+	public void setCP(int cP) {
+		CP = cP;
+	}
+	public String getTelefono() {
+		return telefono;
+	}
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+	public int getGrupo() {
+		return grupo;
+	}
+	public void setGrupo(int grupo) {
+		this.grupo = grupo;
+	}
+	public String getGithub() {
+		return github;
+	}
+	public void setGithub(String github) {
+		this.github = github;
+	}
+	public String getFacebook() {
+		return facebook;
+	}
+	public void setFacebook(String facebook) {
+		this.facebook = facebook;
+	}
+	public String getTwitter() {
+		return twitter;
+	}
+	public void setTwitter(String twitter) {
+		this.twitter = twitter;
+	}
+	public String getGoogle() {
+		return google;
+	}
+	public void setGoogle(String google) {
+		this.google = google;
+	}
+	public String getTelegram() {
+		return telegram;
+	}
+	public void setTelegram(String telegram) {
+		this.telegram = telegram;
+	}
+	public int getGrado() {
+		return grado;
+	}
+	public void setGrado(int grado) {
+		this.grado = grado;
+	}
+	public int getExperiencia() {
+		return experiencia;
+	}
+	public void setExperiencia(int experiencia) {
+		this.experiencia = experiencia;
+	}
+	public String getUniversidad() {
+		return universidad;
+	}
+	public void setUniversidad(String universidad) {
+		this.universidad = universidad;
+	}
+	public int getEdad() {
+		return edad;
+	}
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+	public String getProvincia() {
+		return provincia;
+	}
+	public void setProvincia(String provincia) {
+		this.provincia = provincia;
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;

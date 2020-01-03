@@ -9,7 +9,7 @@
 <html lang="es">
 <head>
 
-    <link rel="stylesheet" href="../../css/styleperfil.css">
+    <link rel="stylesheet" href="./../../css/styleperfil.css">
     <link rel="stylesheet" href="../../css/header_footer.css">
     <link rel="stylesheet" href="../../css/esto.css">
         <meta charset="utf-8">
@@ -29,7 +29,8 @@
         </header>
         <center>
             <p id="p0">Perfil</p>
-            <p id="p1">Perfil ><p id="p2">Nombre de Usuario</p></p>
+            <p id="p1">Perfil ><p id="p2"><jsp:getProperty property="nombre" name="usuarioSession"/>
+                <jsp:getProperty property="apellidos" name="usuarioSession"/></p></p>
         </center>
     <!-------------------------------------------------------------->
     <div class="contenedor">
@@ -38,7 +39,7 @@
                 <img src="../../img/foto_perfil.png" width="150px" border-radius="50%">
             </div>
             <div class="miembro-desde">
-                 <h6>miembro desde 03/11/2019</h6>
+                 <h6>miembro desde X</h6>
 
              <img src="../img/modificar.png" id="btn-abrir-popup" class="btn-abrir-popup" width="40px" >
 
@@ -47,7 +48,8 @@
 
                 <h4><jsp:getProperty property="nombre" name="usuarioSession"/>
                 <jsp:getProperty property="apellidos" name="usuarioSession"/></h4> 
-                <h4>Edad: 20 años</h4>
+                
+                <h4>Edad: <jsp:getProperty property="edad" name="usuarioSession"/> años</h4>
             </div>
             <div class="estudios">
                     <h4>Estudios:</h4>
@@ -55,7 +57,8 @@
             </div>
             <div class="ubicacion">
                         <h4>Ubicación:</h4>
-                        <h5>Ciudad Jardín, Córdoba</h5>
+                        <h5><jsp:getProperty property="direccion" name="usuarioSession"/> 
+                        <jsp:getProperty property="provincia" name="usuarioSession"/></h5>
              </div>
         </div> <!--Banner Superior-->
 

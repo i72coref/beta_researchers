@@ -16,6 +16,17 @@ String nombre;
 String apellidos;
 String correo;
 boolean admin;
+String direccion;
+String twitter;
+String github;
+String telegram;
+String google;
+int cp;
+int grado;
+int experiencia;
+String uni;
+int edad;
+String provincia;
 %>
 
 <%
@@ -41,32 +52,54 @@ boolean admin;
 
 					Auxiliar=validaAccesoDao2.logueoAplicacion(login);
 					
-					System.out.println("aquí está el tamano: " +Auxiliar.getCorreoElectronico());
+					//System.out.println("aquí está el tamano: " +Auxiliar.getCorreoElectronico());
 
-					System.out.println(Auxiliar.getIdUsuario());
-					System.out.println(Auxiliar.getCorreoElectronico());
-
+					//System.out.println(Auxiliar.getIdUsuario());
+					//System.out.println(Auxiliar.getCorreoElectronico());
+					admin=Auxiliar.isAdministrador();
+					//System.out.println("valor del bool "+admin);
+					
 					id=Auxiliar.getIdUsuario();
 					correo=Auxiliar.getCorreoElectronico();
 					nombre=Auxiliar.getNombre();
 					apellidos=Auxiliar.getApellidos();
-					System.out.println("Los apellidos son "+apellidos);
-					admin=Auxiliar.isAdministrador();
-					System.out.println("valor del bool "+admin);
+					github=Auxiliar.getGithub();
+					twitter=Auxiliar.getTwitter();
+					telegram=Auxiliar.getTelegram();
+					google=Auxiliar.getGoogle();
+					direccion=Auxiliar.getDireccion();
+					cp=Auxiliar.getCP();
+					grado=Auxiliar.getGrado();
+					experiencia=Auxiliar.getExperiencia();
+					uni=Auxiliar.getUniversidad();
+					edad=Auxiliar.getEdad();
+					provincia=Auxiliar.getProvincia();
+					
+					//Comprobamos si el usuario es administrador
 					if(admin){
 						response.sendRedirect("gestionController.jsp");	
 					}
 					else{
 						response.sendRedirect("../view/perfilView.jsp");	
 					}
-							
-					
 
 					%> 
 					  <jsp:setProperty name="usuarioSession" property="idUsuario" value="<%=id%>"/>  
 					  <jsp:setProperty name="usuarioSession" property="correoElectronico" value="<%=correo%>"/>  
 					  <jsp:setProperty name="usuarioSession" property="nombre" value="<%=nombre%>"/>
-					  <jsp:setProperty name="usuarioSession" property="apellidos" value="<%=apellidos%>"/> 
+					  <jsp:setProperty name="usuarioSession" property="apellidos" value="<%=apellidos%>"/>
+					  <jsp:setProperty name="usuarioSession" property="github" value="<%=github%>"/>
+					  <jsp:setProperty name="usuarioSession" property="twitter" value="<%=twitter%>"/>
+					  <jsp:setProperty name="usuarioSession" property="telegram" value="<%=telegram%>"/>
+					  <jsp:setProperty name="usuarioSession" property="google" value="<%=google%>"/>
+					  <jsp:setProperty name="usuarioSession" property="direccion" value="<%=direccion%>"/>
+					  <jsp:setProperty name="usuarioSession" property="cp" value="<%=cp%>"/>
+					  <jsp:setProperty name="usuarioSession" property="grado" value="<%=grado%>"/>
+					  <jsp:setProperty name="usuarioSession" property="experiencia" value="<%=experiencia%>"/>
+					  <jsp:setProperty name="usuarioSession" property="universidad" value="<%=uni%>"/>
+					  <jsp:setProperty name="usuarioSession" property="edad" value="<%=edad%>"/>
+					  <jsp:setProperty name="usuarioSession" property="provincia" value="<%=provincia%>"/>
+					  
 					<%
 								
 				}
