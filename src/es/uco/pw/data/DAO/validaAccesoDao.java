@@ -43,7 +43,17 @@ public class validaAccesoDao {
 				session.setApellidos(rs.getString("apellidos"));  
 				session.setCorreoElectronico(rs.getString("correoElectronico"));
 				session.setAdministrador(rs.getBoolean("administrador"));
+				
+				////////////////////////////////////////////////////////
+				session.setGithub(rs.getString("github"));
+				session.setEdad(rs.getInt("edad"));
+				session.setProvincia(rs.getString("provincia"));
+				session.setDireccion(rs.getString("direccion"));
+				session.setCP(rs.getInt("CP"));
+				session.setTelefono(rs.getString("telefono"));
+				
 	        } 
+			
 			statement.close();
 			con.desconectar();
 		}catch(Exception e){}

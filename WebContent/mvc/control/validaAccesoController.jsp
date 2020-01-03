@@ -75,6 +75,12 @@ String provincia;
 					edad=Auxiliar.getEdad();
 					provincia=Auxiliar.getProvincia();
 					
+					System.out.println("aquí está la edad : " + edad);
+					System.out.println("aquí está la provincia : " + provincia);
+					System.out.println("aquí está el github : " + github);
+					System.out.println("aquí está el CP : " + cp);
+					
+					
 					//Comprobamos si el usuario es administrador
 					if(admin){
 						response.sendRedirect("gestionController.jsp");	

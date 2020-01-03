@@ -25,6 +25,7 @@
 
 <body>
        <%@include file="./../../include/header.html"%>
+        
         <center>
             <p id="p0">Perfil</p>
             <p id="p1">Perfil ><p id="p2"><jsp:getProperty property="nombre" name="usuarioSession"/>
@@ -47,7 +48,7 @@
                 <h4><jsp:getProperty property="nombre" name="usuarioSession"/>
                 <jsp:getProperty property="apellidos" name="usuarioSession"/></h4> 
                 
-                <h4>Edad: <jsp:getProperty property="edad" name="usuarioSession"/> años</h4>
+                <h4><jsp:getProperty property="edad" name="usuarioSession"/></h4>
             </div>
             <div class="estudios">
                     <h4>Estudios:</h4>
@@ -65,21 +66,16 @@
             <h4>Educación</h4>
             <ul>
                 <li>
-                    <img src="../img/colegio-logo.png" width="40">
-                     [2006-2016] ESO y Bachillerato. Colegio Blas Infante
+					<jsp:getProperty property="idUsuario" name="usuarioSession"/>
                 </li>
                 <li>
-                    <img src="../img/universidad-logo.png" width="80">
-                    [2017-2021] Grado en Ingeniería Informática: Mención en Software.
+ 					<jsp:getProperty property="github" name="usuarioSession"/>
                 </li>
 
             </ul>
                 <h4>Aptitudes y Validaciones</h4>
                 <ul>
-                    <li>Python</li>
-                    <li>Django</li>
-                    <li>GUN/LINUX</li>
-                    <li>SQL Injection</li>
+					 <jsp:getProperty property="provincia" name="usuarioSession"/>
                 </ul>
 
             <h4>Curriculum</h4>
