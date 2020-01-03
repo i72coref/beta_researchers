@@ -23,7 +23,7 @@ public class indexDao {
 		ArrayList<gestionBean> resultado=new ArrayList<gestionBean>();  
 				
 				try {
-					String sql = "SELECT nombre_grupo, descripcion FROM Grupos";
+					String sql = "SELECT nombre_grupo, descripcion, lider FROM Grupos";
 					
 					con.conectar();
 					connection = con.getJdbcConnection();
@@ -38,6 +38,7 @@ public class indexDao {
 						
 						result.setNombre_grupo(rs.getString("nombre_grupo"));  
 						result.setDescripcion(rs.getString("descripcion"));
+						result.setLider(rs.getString("lider"));
 						resultado.add(result);
 
 					}
@@ -51,5 +52,35 @@ public class indexDao {
 				return resultado;
 			}
 		
-	
+		public ArrayList<gestionBean> noticia(){
+			
+		ArrayList<gestionBean> resultado=new ArrayList<gestionBean>();  
+				
+			
+				try {
+					String sql = "SELECT titulo, contenido FROM Noticias where valid = 1";
+					
+					con.conectar();
+					connection = con.getJdbcConnection();
+					
+					PreparedStatement statement = connection.prepareStatement(sql);
+					
+					ResultSet rs=statement.executeQuery();
+
+					while(rs.next()){
+						//System.out.println("Entro si o si");
+						gestionBean result=new gestionBean();  
+						
+					
+						resultado.add(result);
+
+					}
+					
+					statement.close();
+					con.desconectar();
+					
+				}catch(Exception e){}
+				
+				return resultado;
+			}
 }
