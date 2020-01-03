@@ -51,13 +51,13 @@
                 <h4><jsp:getProperty property="edad" name="usuarioSession"/></h4>
             </div>
             <div class="estudios">
-                    <h4>Estudios:</h4>
-                    <h5>Graduado en Ingeniería Informática</h5>
+					<jsp:getProperty property="universidad" name="usuarioSession"/>
             </div>
             <div class="ubicacion">
                         <h4>Ubicación:</h4>
-                        <h5><jsp:getProperty property="direccion" name="usuarioSession"/> 
-                        <jsp:getProperty property="provincia" name="usuarioSession"/></h5>
+                        <h5><jsp:getProperty property="direccion" name="usuarioSession"/>,
+                         <jsp:getProperty property="CP" name="usuarioSession"/>
+                        Provincia de <jsp:getProperty property="provincia" name="usuarioSession"/></h5>
              </div>
         </div> <!--Banner Superior-->
 

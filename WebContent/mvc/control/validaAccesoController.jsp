@@ -78,7 +78,7 @@ String provincia;
 					System.out.println("aquí está la edad : " + edad);
 					System.out.println("aquí está la provincia : " + provincia);
 					System.out.println("aquí está el github : " + github);
-					System.out.println("aquí está el CP : " + cp);
+					System.out.println("aquí está el CP : " + uni);
 					
 					
 					//Comprobamos si el usuario es administrador
@@ -93,21 +93,26 @@ String provincia;
 					  <jsp:setProperty name="usuarioSession" property="idUsuario" value="<%=id%>"/>  
 					  <jsp:setProperty name="usuarioSession" property="correoElectronico" value="<%=correo%>"/>  
 					  <jsp:setProperty name="usuarioSession" property="nombre" value="<%=nombre%>"/>
+					  <jsp:setProperty name="usuarioSession" property="edad" value="<%=edad%>"/>
+					  <jsp:setProperty name="usuarioSession" property="provincia" value="<%=provincia%>"/>
 					  <jsp:setProperty name="usuarioSession" property="apellidos" value="<%=apellidos%>"/>
 					  <jsp:setProperty name="usuarioSession" property="github" value="<%=github%>"/>
 					  <jsp:setProperty name="usuarioSession" property="twitter" value="<%=twitter%>"/>
 					  <jsp:setProperty name="usuarioSession" property="telegram" value="<%=telegram%>"/>
 					  <jsp:setProperty name="usuarioSession" property="google" value="<%=google%>"/>
 					  <jsp:setProperty name="usuarioSession" property="direccion" value="<%=direccion%>"/>
-					  <jsp:setProperty name="usuarioSession" property="cp" value="<%=cp%>"/>
+					  <jsp:setProperty name="usuarioSession" property="CP" value="<%=cp%>"/>
 					  <jsp:setProperty name="usuarioSession" property="grado" value="<%=grado%>"/>
 					  <jsp:setProperty name="usuarioSession" property="experiencia" value="<%=experiencia%>"/>
 					  <jsp:setProperty name="usuarioSession" property="universidad" value="<%=uni%>"/>
-					  <jsp:setProperty name="usuarioSession" property="edad" value="<%=edad%>"/>
-					  <jsp:setProperty name="usuarioSession" property="provincia" value="<%=provincia%>"/>
-					  
+					 
 					<%
-								
+					
+					System.out.println("la edad es: "+edad +" años");
+					System.out.println("la edad es: "+Auxiliar.getEdad() +" años");
+					System.out.println("la edad es: "+ usuarioSession.getEdad() +" años");
+					
+					
 				}
 				catch (Exception e) {
 						// TODO: handle exception
