@@ -24,9 +24,7 @@
 </head>
 
 <body>
-        <header>
-
-        </header>
+       <%@include file="./../../include/header.html"%>
         <center>
             <p id="p0">Perfil</p>
             <p id="p1">Perfil ><p id="p2"><jsp:getProperty property="nombre" name="usuarioSession"/>
@@ -177,26 +175,7 @@
 
     </div> <!--Overlay-->
     <!-------------------------------------------------------------->
-    <div class="footer">
-        <div class="footer-main-div">
-        <div class="footer-social-icons">
-            <ul>
-                <li><a href="#" target="blank"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#" target="blank"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#" target="blank"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#" target="blank"><i class="fa fa-youtube"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-menu-one">
-            <ul>
-                <li><a href="./aviso_legal.html">Aviso legal</a></li>
-                <li><a href="./termino_condiciones.html">Termino y condiciones de uso</a></li>
-                <li><a href="./politica_privacidad.html">Política y privacidad de datos</a></li>
-                <li><a href="./about_us.html">Acerca de nosotros</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
+    <%@include file="./../../include/footer.html" %>
 
     <script scr="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

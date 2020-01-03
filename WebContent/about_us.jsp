@@ -3,24 +3,22 @@
 
 <!DOCTYPE html> <!-- !DOCTYPE indica que trabajamos con HTML5 -->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Sobre nosotros</title>
-        <meta name="viewport" content="width-device-width">
-        <!-- Ajusta la página para móviles (diseño casi responsive)
-        	la etiqueta meta viewport para controlar la composición en los navegadores móviles, width es  para controlar el tamaño del viewport-->
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="./css/index.css" >
-        <link rel="stylesheet" href="./css/information_pages.css" >
-        <meta name="description" content="Web para crear grupos de investigacion con profesionales, conocer profesionales de tu entorno, noticias, etc.">
-        <meta name="keywords" content="researchers,investigadores,grupos de investigacion,profesionales">
-        <meta name="author" content="Antonio Sanchez,Carlos Freire, Francisco Cordoba, Angel Cañuelo">
-    </head>
+<head>
+	<meta charset="utf-8">
+	<title>Sobre nosotros</title>
+	<meta name="viewport" content="width-device-width">
+	<!-- Ajusta la página para móviles (diseño casi responsive)
+		la etiqueta meta viewport para controlar la composición en los navegadores móviles, width es  para controlar el tamaño del viewport-->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/index.css" >
+	<link rel="stylesheet" href="./css/information_pages.css" >
+	<meta name="description" content="Web para crear grupos de investigacion con profesionales, conocer profesionales de tu entorno, noticias, etc.">
+	<meta name="keywords" content="researchers,investigadores,grupos de investigacion,profesionales">
+	<meta name="author" content="Antonio Sanchez,Carlos Freire, Francisco Cordoba, Angel Cañuelo">
+</head>
+<body>
 
-    <body>
-    <header>
-       <%@include file="./include/header.jsp"%>
-    </header>
+	<%@include file="./include/header.html"%>
 
    	<div class="content">
 
@@ -63,6 +61,7 @@
 
    	</div>
    	
-	<%@include file="./include/footer.jsp" %>
-    </body>
+	<%@include file="./include/footer.html" %>
+	
+</body>
 </html>

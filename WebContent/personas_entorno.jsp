@@ -8,9 +8,9 @@
         <meta name="viewport" content="width-device-width">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../css/index.css" >
-        <link rel="stylesheet" href="../css/carrousel.css" >
-        <link rel="stylesheet" href="../css/personas_entorno.css" >
+        <link rel="stylesheet" href="css/index.css" >
+        <link rel="stylesheet" href="css/carrousel.css" >
+        <link rel="stylesheet" href="css/personas_entorno.css" >
         <meta name="description" content="Web para crear grupos de investigacion con profesionales, conocer profesionales de tu entorno, noticias, etc.">
         <meta name="keywords" content="researchers,investigadores,grupos de investigacion,profesionales">
         <meta name="author" content="Antonio Sanchez,Carlos Freire, Francisco Cordoba, Angel Cañuelo">
@@ -20,22 +20,9 @@
 
 <body>
 
-  <header>
-    <div class="container">
-      <a href="../index.html"><h1 class="logo">  <img src="./../img/bueno.png" alt="" width="60px"></h1></a>
-      <nav>
-      <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="perfil.html">Perfil</a></li>
-        <li><a href="ver_grupos.html">Comunidad</a></li>
-        <li><a href="b_avanzada.html">Búsqueda Avanzada</a></li>
-        <li><a href="result_avanzada.html" class=""></a>  <input type="text" id="bar" placeholder="Buscar aquí"></li>
-      </ul>
-      </nav>
-    </div>
-  </header>
+<%@include file="./include/header.html"%>
 
- <div class="content">
+<div class="content">
         <div class="personas-entorno">
             <div class="titulo-filtros">
               <div class="titulo">
@@ -150,27 +137,7 @@
         </div>
 </div>
 
-
-<div class="footer">
-    <div class="footer-main-div">
-    <div class="footer-social-icons">
-        <ul>
-            <li><a href="#" target="blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#" target="blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#" target="blank"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="#" target="blank"><i class="fa fa-youtube"></i></a></li>
-        </ul>
-    </div>
-     <div class="footer-menu-one">
-        <ul>
-            <li><a href="./aviso_legal.html">Aviso legal</a></li>
-            <li><a href="./termino_condiciones.html">Termino y condiciones de uso</a></li>
-            <li><a href="./politica_privacidad.html">Política y privacidad de datos</a></li>
-            <li><a href="./about_us.html">Acerca de nosotros</a></li>
-        </ul>
-    </div>
-    </div>
-</div>
+<%@include file="./include/footer.html" %>
 
 </body>
 </html>

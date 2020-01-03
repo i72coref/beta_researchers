@@ -20,23 +20,7 @@
         <meta name="author" content="Antonio Sanchez,Carlos Freire, Francisco Cordoba, Angel CaÃ±uelo">
     </head>
     <body>
-            <header>
-                    <div class="container">
-                      <a href="index.html"><h1 class="logo">  <img src="./img/bueno.png" alt="" width="60px"></h1></a>
-                      <nav>
-                        <ul>
-                            <li><a href="index.html">Inicio</a></li>
-                            <li><a href="./html/perfil.html">Perfil</a></li>
-                            <li><a href="./html/ver_grupos.html">Comunidad</a></li>
-                            <li><a href="./html/b_avanzada.html">BÃºsqueda Avanzada</a></li>
-                            <li> <form action="./../control/buscarapidoController.jsp" method="post">
-                        		<input class="busqueda" type="search" name="palabrasclave" placeholder="Buscar Aquí..." size="20px" >
-            					<button  type="submit"  data-placement="top" title="Click para buscar">Search</button></li>
-            				</form></li>
-                        </ul>
-                      </nav>
-                    </div>
-            </header>
+            <%@include file="./../../include/header.html"%>
 
     <div class="content">
         <div class="gruyper">
@@ -88,26 +72,7 @@
 
 
 
-    <div class="footer">
-        <div class="footer-main-div">
-        <div class="footer-social-icons">
-            <ul>
-                <li><a href="#" target="blank"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#" target="blank"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#" target="blank"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#" target="blank"><i class="fa fa-youtube"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-menu-one">
-            <ul>
-                <li><a href="./html/aviso_legal.html">Aviso legal</a></li>
-                <li><a href="./html/termino_condiciones.html">Termino y condiciones de uso</a></li>
-                <li><a href="./html/politica_privacidad.html">PolÃ­tica y privacidad de datos</a></li>
-                <li><a href="./html/about_us.html">Acerca de nosotros</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
+    <%@include file="./../../include/footer.html" %>
 
     </body>
 </html>
