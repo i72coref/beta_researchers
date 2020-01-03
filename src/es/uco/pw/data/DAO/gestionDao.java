@@ -76,6 +76,65 @@ try {
 		
 		return true;
 	}
+	public boolean validarGrupo(String grupo) {
+		try {
+					
+					con.conectar();
+					
+					connection = con.getJdbcConnection();
+					System.out.println(connection);
+					
+					PreparedStatement statement=connection.prepareStatement("update Grupos SET validar=1 WHERE id_grupo =?");
+					statement.setString(1,grupo);
+					statement.executeUpdate();
+					statement.close();
+					
+					con.desconectar();
+					
+				}catch(Exception e){return false;}
+				
+				return true;
+			}
+	public ArrayList<gestionBean> getGruposValidar(Integer validado){
+		
+		ArrayList<gestionBean> resultado=new ArrayList<gestionBean>();  
+				
+
+
+				try {
+					
+			
+					con.conectar();
+					
+					connection = con.getJdbcConnection();
+					System.out.println(connection);
+				
+					PreparedStatement statement = connection.prepareStatement("SELECT id_grupo, nombre_grupo FROM Grupos WHERE validar=?");
+					
+					statement.setInt(1,validado);
+					
+					ResultSet rs=statement.executeQuery();
+					/*
+						System.out.println("HOLA"+ rs);
+						status=rs.next();
+					*/
+					while(rs.next()){
+						//System.out.println("Entro si o si");
+						gestionBean result=new gestionBean();  
+						
+						result.setId_grupo(rs.getInt("id_grupo"));  
+						result.setNombre_grupo(rs.getString("nombre_grupo"));  
+						resultado.add(result);
+
+					}
+					
+					statement.close();
+					con.desconectar();
+					
+				}catch(Exception e){}
+				
+				return resultado;
+			}
 	
 }
 

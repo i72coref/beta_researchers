@@ -60,7 +60,7 @@ ArrayList<gestionNoticiasBean> resultado=new ArrayList<gestionNoticiasBean>();
 	}
 	
 	public boolean borrarNoticia(String noticia) {
-try {
+		try {
 			
 			con.conectar();
 			

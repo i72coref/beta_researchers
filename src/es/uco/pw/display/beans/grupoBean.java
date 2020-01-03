@@ -12,6 +12,7 @@ public class grupoBean implements Serializable{
 	private String fecha_creacion;
 	private String actividades;
 	private float puntuacion;
+	private boolean validar;
 	
 	
 	public int getNombre() {
@@ -62,4 +63,11 @@ public class grupoBean implements Serializable{
 	public void setPuntuacion(float puntuacion) {
 		this.puntuacion = puntuacion;
 	}
+	public boolean isValidar() {
+		return validar;
+	}
+	public void setValidar(boolean validar) {
+		this.validar = validar;
+	}
+	
 }

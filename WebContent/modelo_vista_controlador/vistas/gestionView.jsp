@@ -58,7 +58,9 @@
                                  <form action="../control/gestionController.jsp" method="POST">
                                 <div class="eliminar"><button><input type="submit" name="eliminar" value=<%out.println(res.get(i).getId_grupo());%>></button>Eliminar</div>
                                 </form>
-                                <div class="valid"><button  style='width:70px; height:25px'>Validar</button></div>
+                                 <form action="../control/gestionController.jsp" method="POST">
+                                <div class="valid"><button><input type="submit" name="val" value=<%out.println(res.get(i).getId_grupo());%>></button>Validar</div>
+                                </form>
                         </div>
                         	<%
                            	}

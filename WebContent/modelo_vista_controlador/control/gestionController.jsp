@@ -16,7 +16,7 @@
 	String jdbPassword = getServletContext().getInitParameter("jdbPassword");
 try {
 		gestionDao gestionDao = new gestionDao(jdbURL, jdbUsername, jdbPassword);
-		ArrayList<gestionBean> resultado=gestionDao.getGrupos();
+		ArrayList<gestionBean> resultado=gestionDao.getGruposValidar(0);
 		request.setAttribute("resultado",resultado);
 		gestionNoticiasDao gestionNoticiasDao = new gestionNoticiasDao(jdbURL, jdbUsername, jdbPassword);
 		ArrayList<gestionNoticiasBean> resultNoticias=gestionNoticiasDao.getNoticias();
@@ -34,7 +34,7 @@ if(eliminar != null){
 	gestionDao gestionDao = new gestionDao(jdbURL, jdbUsername, jdbPassword);
 	gestionDao.borrarGrupo(eliminar);
 	//Lo hemos borrado, pero hay que actualizar la página.
-	ArrayList<gestionBean> resultado=gestionDao.getGrupos();
+	ArrayList<gestionBean> resultado=gestionDao.getGruposValidar(0);
 	request.setAttribute("resultado",resultado);
 }
 
@@ -45,6 +45,15 @@ if(eliminarNoticias != null){
 	//Lo hemos borrado, pero hay que actualizar la página.
 	ArrayList<gestionNoticiasBean> resultNoticias=gestionNoticiasDao.getNoticias();
 	request.setAttribute("result",resultNoticias);
+}
+
+String validarGrupos = request.getParameter("val");
+if(validarGrupos != null){
+	gestionDao gestionDao = new gestionDao(jdbURL, jdbUsername, jdbPassword);
+	gestionDao.validarGrupo(validarGrupos);
+	//Lo hemos borrado, pero hay que actualizar la página.
+	ArrayList<gestionBean> resultado=gestionDao.getGruposValidar(0);
+	request.setAttribute("resultado",resultado);
 }
 
 %>
