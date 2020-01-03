@@ -40,7 +40,10 @@
                         <li><a href="perfil.html">Perfil</a></li>
                         <li><a href="ver_grupos.html">Comunidad</a></li>
                         <li><a href="b_avanzada.html">Búsqueda Avanzada</a></li>
-                        <li><a href="result_avanzada.html" class=""></a>  <input type="text" id="bar" placeholder="Buscar aquí"></li>
+                        <li><form action="./../control/buscarapidoController.jsp" method="post">
+                        		<input class="busqueda" type="search" name="palabrasclave" placeholder="Buscar Aquí..." size="20px" >
+            					<button  type="submit"  data-placement="top" title="Click para buscar">Search</button></li>
+            				</form></li>
                     </ul>
                   </nav>
                 </div>

@@ -14,20 +14,17 @@ String jdbUsername = getServletContext().getInitParameter("jdbUsername");
 String jdbPassword = getServletContext().getInitParameter("jdbPassword");
 
 try {
-	int grado = Integer.parseInt(request.getParameter("GRADO"));
-	String provincia = request.getParameter("PROVINCIA");
-	int edad = Integer.parseInt(request.getParameter("EDAD"));
-	String uni = request.getParameter("UNI");
-	int cp = Integer.parseInt(request.getParameter("CP"));
-	int exp = Integer.parseInt(request.getParameter("EXPERIENCIA"));
-	
+	String palabraabuscar = request.getParameter("palabrasclave");
+		
 	b_avanzadaDao b_avanzadaDao = new b_avanzadaDao(jdbURL, jdbUsername, jdbPassword);
 	
+
+	ArrayList<b_avanzadaBean> resultado=b_avanzadaDao.getbusqueda(palabraabuscar);
+	request.setAttribute("resultado",resultado);
 	
-	ArrayList<b_avanzadaBean> resultado_av=b_avanzadaDao.getbusqueda_av(
-	grado, provincia,edad,uni,cp,exp);
-	request.setAttribute("resultado_av",resultado_av);	
-	
+	ArrayList<b_avanzadaBean> resultado_grupos=b_avanzadaDao.getbusqueda_grupos(palabraabuscar);
+	request.setAttribute("resultado_grupos",resultado_grupos);
+		
 }
 
 catch (Exception e) {
@@ -37,4 +34,4 @@ catch (Exception e) {
 
 %>
 
-<jsp:forward page="../view/result_avanzadaView.jsp" />
+<jsp:forward page="../view/result_avanzadaView2.jsp" />

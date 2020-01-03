@@ -23,7 +23,7 @@ public class indexDao {
 		ArrayList<gestionBean> resultado=new ArrayList<gestionBean>();  
 				
 				try {
-					String sql = "SELECT nombre_grupo, contenido FROM Grupos";
+					String sql = "SELECT nombre_grupo, descripcion FROM Grupos";
 					
 					con.conectar();
 					connection = con.getJdbcConnection();
