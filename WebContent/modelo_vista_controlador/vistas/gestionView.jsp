@@ -95,7 +95,9 @@
                                         <img src="../../img/logo2.png" alt="" width="100px" >
                                         </div>
                                         <div class="botones">
-                                            <div class="va"><button onclick="mensaje2()" style='width:70px; height:25px' >Validar</button></div>
+                                            <form action="../control/gestionController.jsp" method="POST">
+                                				<div class="va"><button><input type="submit" name="valid" value=<%out.println(rest.get(i).getIdNoticia());%>></button>Validar</div>
+                                			</form>
                                             <form action="../control/gestionController.jsp" method="POST">
                                 				<div class="elimin"><button><input type="submit" name="delet" value=<%out.println(rest.get(i).getIdNoticia());%>></button>Eliminar</div>
                                 			</form>
