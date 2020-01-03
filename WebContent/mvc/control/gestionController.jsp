@@ -67,4 +67,4 @@ if(validarNoticias != null){
 }
 
 %>
-<jsp:forward page="../vistas/gestionView.jsp" />
+<jsp:forward page="../view/gestionView.jsp" />
