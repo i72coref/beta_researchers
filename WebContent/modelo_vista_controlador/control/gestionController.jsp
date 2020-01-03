@@ -63,6 +63,7 @@ if(validarNoticias != null){
 	//Lo hemos borrado, pero hay que actualizar la página.
 	ArrayList<gestionNoticiasBean> resultNoticias=gestionNoticiasDao.getNoticiasValidar(0);
 	request.setAttribute("result",resultNoticias);
+	
 }
 
 %>
