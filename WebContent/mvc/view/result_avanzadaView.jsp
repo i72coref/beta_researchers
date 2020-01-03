@@ -59,7 +59,7 @@
                 <table class="tabla1" cellpadding="45">
                   <tr>
                             <%
-                           	ArrayList<b_avanzadaBean> res=(ArrayList<b_avanzadaBean>)request.getAttribute("resultado");                         
+                           	ArrayList<b_avanzadaBean> res=(ArrayList<b_avanzadaBean>)request.getAttribute("resultado_av");                         
                            	for (int i=0; i<res.size();i++){
                            	%>
                            	<td><a href="perfil.html"><img src="./../../img/logo3.png" alt="" width="80px"></img></a><p><%out.println(res.get(i).getNombre() + " " + res.get(i).getApellidos());%></p></td>

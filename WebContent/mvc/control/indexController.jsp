@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@page import="es.uco.pw.data.DAO.indexDao"%>
-<%@page import="es.uco.pw.display.beans.indexBean"%>
+<%@page import="es.uco.pw.display.beans.gestionBean"%>
 <%@page import="es.uco.pw.display.beans.sessionBean"%>
 <%@page import="java.util.ArrayList"%>   
 <%@page import="java.util.List"%> 
@@ -15,16 +15,12 @@ String jdbPassword = getServletContext().getInitParameter("jdbPassword");
 
 try {
 	
-	indexDao indexDao = new b_avanzadaDao(jdbURL, jdbUsername, jdbPassword);
+	indexDao indexDao= new indexDao(jdbURL, jdbUsername, jdbPassword);
 	
 	
-	ArrayList<indexDao> resultado=indexDao.noticias();
+	ArrayList<gestionBean> resultado=indexDao.grupo();
 	request.setAttribute("resultado",resultado);
 	
-	
-	
-	ArrayList<b_avanzadaBean> resultado_grupos=b_avanzadaDao.getbusqueda_grupos(palabraabuscar);
-	request.setAttribute("resultado_grupos",resultado_grupos);
 }
 
 catch (Exception e) {
@@ -34,4 +30,4 @@ catch (Exception e) {
 
 %>
 
-<jsp:forward page="../vistas/result_avanzadaView.jsp" />
+<jsp:forward page="../view/indexView.jsp" />

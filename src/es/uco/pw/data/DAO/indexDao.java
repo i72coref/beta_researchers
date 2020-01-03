@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 import es.uco.pw.data.BD.DBConexion;
-import es.uco.pw.display.beans.b_avanzadaBean;
+import es.uco.pw.display.beans.gestionBean;
 
 
 public class indexDao {
@@ -18,26 +18,26 @@ public class indexDao {
 		}
 	
 	
-		public ArrayList<b_avanzadaBean> getbusqueda(String nombreabuscar){
+		public ArrayList<gestionBean> grupo(){
 		
-		ArrayList<b_avanzadaBean> resultado=new ArrayList<b_avanzadaBean>();  
+		ArrayList<gestionBean> resultado=new ArrayList<gestionBean>();  
 				
 				try {
+					String sql = "SELECT nombre_grupo, contenido FROM Grupos";
+					
 					con.conectar();
 					connection = con.getJdbcConnection();
-					System.out.println(connection);
 					
+					PreparedStatement statement = connection.prepareStatement(sql);
 					
-					PreparedStatement statement = connection.prepareStatement("SELECT idUsuario, nombre, apellidos, correoElectronico FROM Usuario WHERE nombre = ?");
-					statement.setString(1, nombreabuscar);
 					ResultSet rs=statement.executeQuery();
 
 					while(rs.next()){
 						//System.out.println("Entro si o si");
-						b_avanzadaBean result=new b_avanzadaBean();  
+						gestionBean result=new gestionBean();  
 						
-						result.setNombre(rs.getString("nombre"));  
-						result.setApellidos(rs.getString("apellidos"));  
+						result.setNombre_grupo(rs.getString("nombre_grupo"));  
+						result.setDescripcion(rs.getString("descripcion"));
 						resultado.add(result);
 
 					}
@@ -47,7 +47,9 @@ public class indexDao {
 					
 				}catch(Exception e){}
 				
+				System.out.println("RESULTADO----------------------->>>>>>>>>>>>>>>> " + resultado.size());
 				return resultado;
 			}
 		
+	
 }
