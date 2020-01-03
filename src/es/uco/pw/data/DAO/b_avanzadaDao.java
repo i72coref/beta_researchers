@@ -110,7 +110,8 @@ public class b_avanzadaDao {
 					
 					
 						PreparedStatement statement = connection.prepareStatement(
-								"Select nombre_grupo from Grupos where grado = ? and provincia = ? and edad < ? and universidad = ? and CP = ? and exp = ?");
+								"Select nombre, avatar from Usuario where grado = ? and provincia = ? and edad < ? and universidad = ? and CP = ? and experiencia = ?");
+						
 								statement.setInt(1, grado);
 								statement.setString(2, provincia);
 								statement.setInt(3, edad);
@@ -125,7 +126,8 @@ public class b_avanzadaDao {
 						//System.out.println("Entro si o si");
 						b_avanzadaBean result=new b_avanzadaBean();  
 						
-						result.setNombre_grupo(rs.getString("nombre_grupo"));   
+						result.setNombre(rs.getString("nombre"));
+						result.setAvatar(rs.getBlob("avatar"));
 						resultado_av.add(result);
 
 					}
