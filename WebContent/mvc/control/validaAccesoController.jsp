@@ -24,7 +24,7 @@ String google;
 int cp;
 int grado;
 int experiencia;
-String uni;
+String universidad;
 int edad;
 String provincia;
 %>
@@ -71,14 +71,13 @@ String provincia;
 					cp=Auxiliar.getCP();
 					grado=Auxiliar.getGrado();
 					experiencia=Auxiliar.getExperiencia();
-					uni=Auxiliar.getUniversidad();
+					universidad=Auxiliar.getUniversidad();
 					edad=Auxiliar.getEdad();
 					provincia=Auxiliar.getProvincia();
 					
 					System.out.println("aquí está la edad : " + edad);
 					System.out.println("aquí está la provincia : " + provincia);
 					System.out.println("aquí está el github : " + github);
-					System.out.println("aquí está el CP : " + uni);
 					
 					
 					//Comprobamos si el usuario es administrador
@@ -96,6 +95,7 @@ String provincia;
 					  <jsp:setProperty name="usuarioSession" property="edad" value="<%=edad%>"/>
 					  <jsp:setProperty name="usuarioSession" property="provincia" value="<%=provincia%>"/>
 					  <jsp:setProperty name="usuarioSession" property="apellidos" value="<%=apellidos%>"/>
+					  <jsp:setProperty name="usuarioSession" property="universidad" value="<%=universidad%>"/>
 					  <jsp:setProperty name="usuarioSession" property="github" value="<%=github%>"/>
 					  <jsp:setProperty name="usuarioSession" property="twitter" value="<%=twitter%>"/>
 					  <jsp:setProperty name="usuarioSession" property="telegram" value="<%=telegram%>"/>
@@ -104,7 +104,7 @@ String provincia;
 					  <jsp:setProperty name="usuarioSession" property="CP" value="<%=cp%>"/>
 					  <jsp:setProperty name="usuarioSession" property="grado" value="<%=grado%>"/>
 					  <jsp:setProperty name="usuarioSession" property="experiencia" value="<%=experiencia%>"/>
-					  <jsp:setProperty name="usuarioSession" property="universidad" value="<%=uni%>"/>
+
 					 
 					<%
 					

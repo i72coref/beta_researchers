@@ -48,10 +48,10 @@
                 <h4><jsp:getProperty property="nombre" name="usuarioSession"/>
                 <jsp:getProperty property="apellidos" name="usuarioSession"/></h4> 
                 
-                <h4><jsp:getProperty property="edad" name="usuarioSession"/></h4>
+                <h4>Edad: <jsp:getProperty property="edad" name="usuarioSession"/></h4>
             </div>
             <div class="estudios">
-					<jsp:getProperty property="universidad" name="usuarioSession"/>
+				Estudios: <jsp:getProperty property="universidad" name="usuarioSession"/>
             </div>
             <div class="ubicacion">
                         <h4>Ubicación:</h4>
@@ -64,19 +64,9 @@
         <div class="info-izquierda">
             <div class="educacion">
             <h4>Educación</h4>
-            <ul>
-                <li>
-					<jsp:getProperty property="idUsuario" name="usuarioSession"/>
-                </li>
-                <li>
- 					<jsp:getProperty property="github" name="usuarioSession"/>
-                </li>
-
-            </ul>
-                <h4>Aptitudes y Validaciones</h4>
-                <ul>
-					 <jsp:getProperty property="provincia" name="usuarioSession"/>
-                </ul>
+			<jsp:getProperty property="grado" name="usuarioSession"/> año en la <jsp:getProperty property="universidad" name="usuarioSession"/>
+                <h4>Experiencia</h4>
+				  Más de <jsp:getProperty property="experiencia" name="usuarioSession"/> años de Experiencia.
 
             <h4>Curriculum</h4>
             <embed src="../files/curriculum.pdf" type="application/pdf" width="95%" height="500px" />
@@ -85,7 +75,7 @@
             <h4>Información de Contacto</h4>
             <div class="footer-social-icons">
                 <ul>
-                        <li><a href="#" target="blank"><i class="fa fa-phone"></i></a></li>
+                     <li><a href="#" target="blank"><i class="fa fa-phone"></i></a></li>
                     <li><a href="#" target="blank"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#" target="blank"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="#" target="blank"><i class="fa fa-google-plus"></i></a></li>
@@ -133,18 +123,22 @@
             <h1>Ajustes de Usuario</h1>
             <div class="ajustes-cuenta">
             <h3>Ajustes de Cuenta</h3>
+            
              <h4>Cambiar Email</h4>
-             Tu email actual es: <jsp:getProperty property="correoElectronico" name="usuarioSession"/> <br>
-             
-             <form action="../control/modificarPerfilController.jsp" method="POST">
+             Tu email actual es: <jsp:getProperty property="correoElectronico" name="usuarioSession"/> <br>     
+          	 <form action="../control/modificarPerfilController.jsp" method="POST">
              <%application.setAttribute("campo", new String("correoElectronico")); %>
              <input type="email" placeholder="Introduce tu Nuevo Email" name="variable"><br>
              <input type="submit" value="verificar"><br>
              </form>
              
              <h4>Cambiar Contraseña</h4>
-             <input type="password" placeholder="Introduce tu Contraseña actual"><br>
+             <form action="../control/modificarPerfilController.jsp" method="POST">
+             <%application.setAttribute("campo", new String("contraseña")); %>
+             <input type="password" placeholder="Nueva Contraseña" name="variable"><br>
              <input type="submit" value="verificar">
+             </form>
+             
              <h4>Cambiar Teléfono</h4>
              Tu Teléfono actual es: <br>
              <input type="text" placeholder="Introduce tu nuevo Teléfono"><br>

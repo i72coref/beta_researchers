@@ -17,22 +17,28 @@ public class modificarPerfilDao {
 
 	public void modificar(int id, String campo, String variable) throws SQLException {
 		
+		try {
 			System.out.println(id+campo+variable);
 			con.conectar();
 			
 			connection = con.getJdbcConnection();
 			System.out.println(connection);
+			String sql="update Usuario set "+campo;
 			
-			PreparedStatement statement=connection.prepareStatement("update Usuario set ?=? where idUsuario=?");
-			statement.setString(1, campo);
-			statement.setString(2, variable);
-			statement.setInt(3, id);
+			PreparedStatement statement=connection.prepareStatement(sql +"=? where idUsuario=?");
+			
+			//statement.setString(1, campo);
+			statement.setString(1, variable);
+			statement.setString(2, String.valueOf(id));
 			
 			statement.executeUpdate();
 			statement.close();
 			
 			con.desconectar();
 			
+		}catch(Exception e){}
+		
+			//return true;
 	}
 	
 }

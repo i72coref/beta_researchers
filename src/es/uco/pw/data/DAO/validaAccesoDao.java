@@ -51,6 +51,9 @@ public class validaAccesoDao {
 				session.setDireccion(rs.getString("direccion"));
 				session.setCP(rs.getInt("CP"));
 				session.setTelefono(rs.getString("telefono"));
+				session.setUniversidad(rs.getString("universidad"));
+				session.setGrado(rs.getInt("grado"));
+				session.setExperiencia(rs.getInt("experiencia"));
 				
 	        } 
 			

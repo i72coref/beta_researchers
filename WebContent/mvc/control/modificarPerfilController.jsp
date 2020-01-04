@@ -7,6 +7,7 @@
 
 
 <%
+String nextPage = "../vistas/errorpage.jsp";
 int id = usuarioSession.getIdUsuario();
 String campo = (String)application.getAttribute("campo"); 
 String variable = request.getParameter("variable");
@@ -23,9 +24,9 @@ String jdbPassword = getServletContext().getInitParameter("jdbPassword");
 		
 		modificarPerfilDao.modificar(id, campo, variable);
 		
-		
+		nextPage = "validaAccesoController.jsp"; 
 	}catch (Exception e) {
 		// TODO: handle exception
 }
-
 %>
+ <jsp:forward page="<%=nextPage%>"></jsp:forward>

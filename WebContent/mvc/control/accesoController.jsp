@@ -9,7 +9,7 @@
 <!-- para que funcione adecuadamente, las variables del bean se han de llamar igual que las de el cuestionario --> 
 
 <%
- String nextPage = "../vistas/errorpage.jsp";
+ String nextPage = "../view/errorpage.jsp";
 
 	//Capturamos los datos para la conexión a la BD con los parametros del WEB-INF > XML
 	String jdbURL = getServletContext().getInitParameter("jdbURL");
@@ -21,7 +21,7 @@
 		AccesoDao AccesoDao = new AccesoDao(jdbURL, jdbUsername, jdbPassword);
 		System.out.println(accesoUsuario.getApellidos()+"--"+accesoUsuario.getCorreoElectronico());
 		if(AccesoDao.insertarUsuario(accesoUsuario))
-			nextPage = "../view/perfilView.jsp";  
+			nextPage = "../view/registroCorrectoView.jsp";  
 		
 	} catch (Exception e) {
 			// TODO: handle exception
