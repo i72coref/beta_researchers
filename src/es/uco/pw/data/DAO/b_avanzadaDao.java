@@ -49,8 +49,7 @@ public class b_avanzadaDao {
 				
 				return resultado;
 			}
-		
-		
+				
 		public ArrayList<b_avanzadaBean> getbusqueda_grupos(String nombreabuscar){
 			
 		ArrayList<b_avanzadaBean> resultado_grupos=new ArrayList<b_avanzadaBean>();  
@@ -81,8 +80,7 @@ public class b_avanzadaDao {
 				
 				return resultado_grupos;
 			}
-		
-		
+				
 		public ArrayList<b_avanzadaBean> getbusqueda_av(
 				int grado, 
 				String provincia,
@@ -106,9 +104,7 @@ public class b_avanzadaDao {
 						System.out.println(uni);
 						System.out.println(cp);
 						System.out.println(exp);
-						
-					
-					
+									
 						PreparedStatement statement = connection.prepareStatement(
 								"Select nombre, avatar from Usuario where grado = ? and provincia = ? and edad < ? and universidad = ? and CP = ? and experiencia = ?");
 						
