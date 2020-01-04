@@ -139,9 +139,11 @@
              </form>
              
              <h4>Cambiar Teléfono</h4>
-             Tu Teléfono actual es: <br>
-             <input type="text" placeholder="Introduce tu nuevo Teléfono"><br>
+             Tu Teléfono actual es: <jsp:getProperty property="correoElectronico" name="usuarioSession"/> <br>
+             <form action="../control/modificarPerfilController.jsp" method="POST">
+             <input type="text" placeholder="Introduce tu nuevo Teléfono" name="variabletelefono"><br>
              <input type="submit" value="verificar">
+             </form>
             </div>
             <div class="ajustes-datos">
             <h3>Modificar Perfil</h3>

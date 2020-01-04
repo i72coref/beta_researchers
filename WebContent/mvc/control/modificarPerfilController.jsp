@@ -11,6 +11,7 @@ int id = usuarioSession.getIdUsuario();
 
 String variablecorreo = request.getParameter("variablecorreo");
 String variablecontraseña = request.getParameter("variablecontraseña");
+String variabletelefono = request.getParameter("variabletelefono");
 
 String jdbURL = getServletContext().getInitParameter("jdbURL");
 String jdbUsername = getServletContext().getInitParameter("jdbUsername");
@@ -32,6 +33,10 @@ String jdbPassword = getServletContext().getInitParameter("jdbPassword");
 		
 		if(variablecontraseña != null){
 			modificarPerfilDao.modificar(id, "contraseña", variablecontraseña);
+		}
+		
+		if(variabletelefono != null){
+			modificarPerfilDao.modificar(id, "telefono", variabletelefono);
 		}
 		
 		nextPage = "../view/perfilView.jsp"; 

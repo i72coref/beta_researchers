@@ -21,6 +21,7 @@ String twitter;
 String github;
 String telegram;
 String google;
+String telefono;
 int cp;
 int grado;
 int experiencia;
@@ -74,6 +75,7 @@ String provincia;
 					universidad=Auxiliar.getUniversidad();
 					edad=Auxiliar.getEdad();
 					provincia=Auxiliar.getProvincia();
+					telefono=Auxiliar.getTelefono();
 					
 					System.out.println("aquí está la edad : " + edad);
 					System.out.println("aquí está la provincia : " + provincia);
@@ -96,6 +98,7 @@ String provincia;
 					  <jsp:setProperty name="usuarioSession" property="provincia" value="<%=provincia%>"/>
 					  <jsp:setProperty name="usuarioSession" property="apellidos" value="<%=apellidos%>"/>
 					  <jsp:setProperty name="usuarioSession" property="universidad" value="<%=universidad%>"/>
+					  <jsp:setProperty name="usuarioSession" property="telefono" value="<%=telefono%>"/>
 					  <jsp:setProperty name="usuarioSession" property="github" value="<%=github%>"/>
 					  <jsp:setProperty name="usuarioSession" property="twitter" value="<%=twitter%>"/>
 					  <jsp:setProperty name="usuarioSession" property="telegram" value="<%=telegram%>"/>
