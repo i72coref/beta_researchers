@@ -4,7 +4,6 @@
 <%@page import="es.uco.pw.data.DAO.gestionDao"%>
 <%@page import="es.uco.pw.data.DAO.gestionNoticiasDao"%>
 <%@page import="es.uco.pw.display.beans.gestionBean"%>
-<%@page import="es.uco.pw.display.beans.customerBean"%> 
 <%@page import="es.uco.pw.display.beans.gestionNoticiasBean"%> 
 <%@page import="java.util.ArrayList"%>   
 <%@page import="java.util.List"%>    

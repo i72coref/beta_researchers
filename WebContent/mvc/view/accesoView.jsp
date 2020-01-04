@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <title>Acceso</title>
     <meta name="viewport" content="width-device-width">
-    <link rel="stylesheet" href="../../css/styleacceso.css">
+    <link rel="stylesheet" href="css/styleacceso.css">
     <meta name="description" content="Web para crear grupos de investigacion con profesionales, conocer profesionales de tu entorno, noticias, etc.">
     <meta name="keywords" content="researchers,investigadores,grupos de investigacion,profesionales">
     <meta name="author" content="Antonio Sanchez,Carlos Freire, Francisco Cordoba, Angel Cañuelo">
@@ -20,7 +20,7 @@
 
         <div class="formulario">
         <h2> Iniciar Sesión </h2>
-        <form action="../control/validaAccesoController.jsp" method="POST">
+        <form action="mvc/control/validaAccesoController.jsp" method="POST">
                 Email<br>
                 <input type="text" placeholder="Introduce tu Email" id="log" name="correoElectronico" required><br>
                 Contraseña<br>

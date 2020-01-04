@@ -4,10 +4,13 @@ package es.uco.pw.data.DAO;
 // Paquetes para conexion con la BD
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 // Paquetes creados por el equipo para la conexion con la BD
 import es.uco.pw.data.BD.DBConexion;
+import es.uco.pw.display.beans.gestionBean;
 import es.uco.pw.display.beans.grupoBean;
 
 public class GroupDao {
@@ -25,9 +28,7 @@ public class GroupDao {
 	
 	// Insertar un nuevo grupo en la BD
 	public boolean insertarGrupo(grupoBean nuevoGrupo) throws SQLException {
-		
 		String sql = "INSERT INTO Grupos (id_grupo,nombre_grupo, categoria, descripcion, privacidad, n_participantes, fecha_creacion, actividades, puntuacion) VALUES (?,?,?,?,?,?,?,?,?)";
-		//System.out.println(nuevoGrupo.getNombre()+"-"+nuevoGrupo.getApellidos()+"-"+nuevoGrupo.getCorreoElectronico());
 		con.conectar();
 		connection = con.getJdbcConnection();
 			
@@ -48,4 +49,35 @@ public class GroupDao {
 		con.desconectar();
 		return rowInserted;
 	}
+	
+	public ArrayList<grupoBean> getGrupos() throws SQLException {
+		
+		ArrayList<grupoBean> resultado=new ArrayList<grupoBean>();
+		
+		try {
+			
+			String sql = "SELECT * FROM Grupos";
+			con.conectar();
+			connection = con.getJdbcConnection();
+			
+			PreparedStatement statement = connection.prepareStatement(sql);
+			
+			ResultSet rs=statement.executeQuery();
+			
+			while(rs.next()) {
+				groupBean result=new groupBean();  
+				
+				result.setId_grupo(rs.getInt("id_grupo"));  
+				result.setNombre_grupo(rs.getString("nombre_grupo"));  
+				resultado.add(result);
+			}
+				
+			statement.close();
+			con.desconectar();
+			
+		} catch(Exception e) {
+			System.out.println(e);
+		}
+			return resultado;
+	}	
 }
