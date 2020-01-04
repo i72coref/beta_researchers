@@ -38,7 +38,7 @@
                 <img src="../../img/foto_perfil.png" width="150px" border-radius="50%">
             </div>
             <div class="miembro-desde">
-                 <h6>miembro desde X</h6>
+                 <h6>miembro desde <jsp:getProperty property="fechaAlta" name="usuarioSession"/></h6>
 
              <img src="../img/modificar.png" id="btn-abrir-popup" class="btn-abrir-popup" width="40px" >
 
@@ -64,23 +64,25 @@
         <div class="info-izquierda">
             <div class="educacion">
             <h4>Educación</h4>
-			<jsp:getProperty property="grado" name="usuarioSession"/> año en la <jsp:getProperty property="universidad" name="usuarioSession"/>
+			<jsp:getProperty property="curso" name="usuarioSession"/> año de <jsp:getProperty property="carrera" name="usuarioSession"/>
                 <h4>Experiencia</h4>
 				  Más de <jsp:getProperty property="experiencia" name="usuarioSession"/> años de Experiencia.
 
-            <h4>Curriculum</h4>
-            <embed src="../files/curriculum.pdf" type="application/pdf" width="95%" height="500px" />
+            <!--  <h4>Curriculum</h4>
+            <embed src="../files/curriculum.pdf" type="application/pdf" width="95%" height="500px" />-->
+            <h4>Más sobre mi:</h4>
+            	<jsp:getProperty property="actividades" name="usuarioSession"/>
              </div>
             <div class="info-contacto">
             <h4>Información de Contacto</h4>
             <div class="footer-social-icons">
                 <ul>
-                     <li><a href="#" target="blank"><i class="fa fa-phone"></i></a></li>
-                    <li><a href="#" target="blank"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#" target="blank"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#" target="blank"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#" target="blank"><i class="fa fa-github"></i></a></li>
-                    <li><a href="#" target="blank"><i class="fa fa-paper-plane"></i></a></li>
+                    <li><a href="#" target="blank"><i class="fa fa-phone"></i><jsp:getProperty property="telefono" name="usuarioSession"/></a></li>
+                    <li><a href="<jsp:getProperty property="facebook" name="usuarioSession"/>" target="blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="<jsp:getProperty property="twitter" name="usuarioSession"/>" target="blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="<jsp:getProperty property="google" name="usuarioSession"/>" target="blank"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="<jsp:getProperty property="github" name="usuarioSession"/>" target="blank"><i class="fa fa-github"></i></a></li>
+                    <li><a href="#" target="blank"><i class="fa fa-paper-plane"></i><jsp:getProperty property="telegram" name="usuarioSession"/></a></li>
 
                 </ul>
             </div>
@@ -89,7 +91,7 @@
         </div> <!--Info Izquierda-->
 
         <div class="info-derecha">
-           <div class="contactos">
+          <!--   <div class="contactos">
             <h4>Contactos</h4>
             <a href="#"><img src="../img/logo3.png" width="80"  height="80"></a>
             <a href="#"><img src="../img/chica.png" width="80"  height="80"></a>
@@ -102,7 +104,7 @@
             <a href="#"><img src="../img/logo3.png" width="80"  height="80"></a>
             <a href="./personas_entorno.html"><u>Explorar tu entorno...</u></a>
             </div>
-
+			-->
            <div class="grupos">
             <h4>Grupos</h4>
             <a href="../html/info_grupo.html"><img src="../img/grupo.png" width="80"  height="80"></a>

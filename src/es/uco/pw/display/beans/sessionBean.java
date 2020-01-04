@@ -3,6 +3,8 @@ package es.uco.pw.display.beans;
 
 import java.io.Serializable;
 
+import java.util.Date;
+
 public class sessionBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
@@ -22,12 +24,16 @@ public class sessionBean implements Serializable {
 	private String twitter;
 	private String google;
 	private String telegram;
-	private int grado;
 	private int experiencia;
 	private String universidad;
 	private int edad;
 	private String provincia;
-
+	
+	private int curso;
+	private String carrera;
+	private String actividades;
+	private Date fechaAlta;
+	
 	public int getIdUsuario() {
 		return idUsuario;
 	}
@@ -113,12 +119,7 @@ public class sessionBean implements Serializable {
 	public void setTelegram(String telegram) {
 		this.telegram = telegram;
 	}
-	public int getGrado() {
-		return grado;
-	}
-	public void setGrado(int grado) {
-		this.grado = grado;
-	}
+	
 	public int getExperiencia() {
 		return experiencia;
 	}
@@ -142,6 +143,32 @@ public class sessionBean implements Serializable {
 	}
 	public void setProvincia(String provincia) {
 		this.provincia = provincia;
+	}
+
+	public int getCurso() {
+		return curso;
+	}
+	public void setCurso(int curso) {
+		this.curso = curso;
+	}
+	public String getCarrera() {
+		return carrera;
+	}
+	public void setCarrera(String carrera) {
+		this.carrera = carrera;
+	}
+	public String getActividades() {
+		return actividades;
+	}
+	public void setActividades(String actividades) {
+		this.actividades = actividades;
+	}
+	
+	public Date getFechaAlta() {
+		return fechaAlta;
+	}
+	public void setFechaAlta(Date fechaAlta) {
+		this.fechaAlta = fechaAlta;
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;

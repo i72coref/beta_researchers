@@ -43,17 +43,23 @@ public class validaAccesoDao {
 				session.setApellidos(rs.getString("apellidos"));  
 				session.setCorreoElectronico(rs.getString("correoElectronico"));
 				session.setAdministrador(rs.getBoolean("administrador"));
-				
-				////////////////////////////////////////////////////////
-				session.setGithub(rs.getString("github"));
 				session.setEdad(rs.getInt("edad"));
 				session.setProvincia(rs.getString("provincia"));
 				session.setDireccion(rs.getString("direccion"));
 				session.setCP(rs.getInt("CP"));
 				session.setTelefono(rs.getString("telefono"));
 				session.setUniversidad(rs.getString("universidad"));
-				session.setGrado(rs.getInt("grado"));
+				session.setCurso(rs.getInt("curso"));
 				session.setExperiencia(rs.getInt("experiencia"));
+				
+				session.setGithub(rs.getString("github"));
+				session.setTwitter(rs.getString("twitter"));
+				session.setFacebook(rs.getString("facebook"));
+				session.setTelegram(rs.getString("telegram"));
+				session.setGoogle(rs.getString("google"));
+				session.setActividades(rs.getString("actividades"));
+				session.setCarrera(rs.getString("carrera"));
+				session.setFechaAlta(rs.getDate("fechaAlta"));
 				
 	        } 
 			

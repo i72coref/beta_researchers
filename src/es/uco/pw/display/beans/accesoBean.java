@@ -22,12 +22,15 @@ public class accesoBean implements Serializable {
 	private String twitter;
 	private String google;
 	private String telegram;
-	private int grado;
 	private int experiencia;
 	private String universidad;
 	private int edad;
 	private String provincia;
 	private Date fechaAlta;
+	
+	private int curso;
+	private String carrera;
+	private String actividades;
 	
 	public accesoBean() {
 		this.setFechaAlta(new Date());
@@ -146,14 +149,6 @@ public class accesoBean implements Serializable {
 		this.telegram = telegram;
 	}
 
-	public int getGrado() {
-		return grado;
-	}
-
-	public void setGrado(int grado) {
-		this.grado = grado;
-	}
-
 	public int getExperiencia() {
 		return experiencia;
 	}
@@ -184,6 +179,30 @@ public class accesoBean implements Serializable {
 
 	public void setProvincia(String provincia) {
 		this.provincia = provincia;
+	}
+	
+	public int getCurso() {
+		return curso;
+	}
+
+	public void setCurso(int curso) {
+		this.curso = curso;
+	}
+
+	public String getCarrera() {
+		return carrera;
+	}
+
+	public void setCarrera(String carrera) {
+		this.carrera = carrera;
+	}
+
+	public String getActividades() {
+		return actividades;
+	}
+
+	public void setActividades(String actividades) {
+		this.actividades = actividades;
 	}
 
 	public static long getSerialversionuid() {

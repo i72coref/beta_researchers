@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-
+<%@page import="java.util.Date"%>
 <%@page import="es.uco.pw.data.DAO.validaAccesoDao"%>
 <%@page import="es.uco.pw.display.beans.validaAccesoBean"%>
 <%@page import="es.uco.pw.display.beans.sessionBean"%>
@@ -19,15 +19,21 @@ boolean admin;
 String direccion;
 String twitter;
 String github;
+String facebook;
 String telegram;
 String google;
 String telefono;
 int cp;
-int grado;
+int curso;
 int experiencia;
 String universidad;
 int edad;
 String provincia;
+
+Date fechaAlta;
+String carrera;
+String actividades;
+
 %>
 
 <%
@@ -45,7 +51,6 @@ String provincia;
 			
 			if (status){
 				
-				System.out.println("ok");
 				try {
 					validaAccesoDao validaAccesoDao2=new validaAccesoDao(jdbURL, jdbUsername, jdbPassword);
 
@@ -70,12 +75,18 @@ String provincia;
 					google=Auxiliar.getGoogle();
 					direccion=Auxiliar.getDireccion();
 					cp=Auxiliar.getCP();
-					grado=Auxiliar.getGrado();
+					facebook=Auxiliar.getFacebook();
+					curso=Auxiliar.getCurso();
 					experiencia=Auxiliar.getExperiencia();
 					universidad=Auxiliar.getUniversidad();
 					edad=Auxiliar.getEdad();
 					provincia=Auxiliar.getProvincia();
 					telefono=Auxiliar.getTelefono();
+					
+					fechaAlta=Auxiliar.getFechaAlta();
+					carrera=Auxiliar.getCarrera();
+					actividades=Auxiliar.getActividades();
+					
 					
 					System.out.println("aquí está la edad : " + edad);
 					System.out.println("aquí está la provincia : " + provincia);
@@ -105,17 +116,16 @@ String provincia;
 					  <jsp:setProperty name="usuarioSession" property="google" value="<%=google%>"/>
 					  <jsp:setProperty name="usuarioSession" property="direccion" value="<%=direccion%>"/>
 					  <jsp:setProperty name="usuarioSession" property="CP" value="<%=cp%>"/>
-					  <jsp:setProperty name="usuarioSession" property="grado" value="<%=grado%>"/>
+					  <jsp:setProperty name="usuarioSession" property="facebook" value="<%=facebook%>"/>
+					  <jsp:setProperty name="usuarioSession" property="curso" value="<%=curso%>"/>
 					  <jsp:setProperty name="usuarioSession" property="experiencia" value="<%=experiencia%>"/>
+					  <jsp:setProperty name="usuarioSession" property="fechaAlta" value="<%=fechaAlta%>"/>
+					  <jsp:setProperty name="usuarioSession" property="carrera" value="<%=carrera%>"/>
+					  <jsp:setProperty name="usuarioSession" property="actividades" value="<%=actividades%>"/>
 
 					 
 					<%
-					
-					System.out.println("la edad es: "+edad +" años");
-					System.out.println("la edad es: "+Auxiliar.getEdad() +" años");
-					System.out.println("la edad es: "+ usuarioSession.getEdad() +" años");
-					
-					
+													
 				}
 				catch (Exception e) {
 						// TODO: handle exception
