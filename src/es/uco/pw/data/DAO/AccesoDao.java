@@ -51,6 +51,7 @@ public class AccesoDao {
 		statement.setInt(16, accesoUsuario.getEdad());
 		statement.setString(17, accesoUsuario.getProvincia());
 		statement.setInt(18, accesoUsuario.getCP());
+		statement.setDate(19, new java.sql.Date(accesoUsuario.getFechaAlta().getTime()));
 
 		boolean rowInserted = statement.executeUpdate() > 0;
 		statement.close();
