@@ -23,13 +23,16 @@ String jdbPassword = getServletContext().getInitParameter("jdbPassword");
 		modificarPerfilDao modificarPerfilDao = new modificarPerfilDao(jdbURL, jdbUsername, jdbPassword);
 		
 		if(variablecorreo != null){
+			System.out.println("entro en el primer if");
 			modificarPerfilDao.modificar(id, "correoElectronico", variablecorreo);
+			%>
+			<jsp:setProperty name="usuarioSession" property="correoElectronico" value="<%=variablecorreo%>"/>
+			<%
 		}
 		
 		if(variablecontraseña != null){
 			modificarPerfilDao.modificar(id, "contraseña", variablecontraseña);
 		}
-		
 		
 		nextPage = "../view/perfilView.jsp"; 
 	}catch (Exception e) {

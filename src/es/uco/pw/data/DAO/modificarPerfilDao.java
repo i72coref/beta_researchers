@@ -18,7 +18,7 @@ public class modificarPerfilDao {
 	public void modificar(int id, String campo, String variable) throws SQLException {
 		
 		try {
-			System.out.println(id+campo+variable);
+			System.out.println("Me llega" + id+campo+variable);
 			con.conectar();
 			
 			connection = con.getJdbcConnection();
