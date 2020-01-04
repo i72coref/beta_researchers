@@ -125,17 +125,16 @@
             <h3>Ajustes de Cuenta</h3>
             
              <h4>Cambiar Email</h4>
-             Tu email actual es: <jsp:getProperty property="correoElectronico" name="usuarioSession"/> <br>     
-          	 <form action="../control/modificarPerfilController.jsp" method="POST">
-             <%application.setAttribute("campo", new String("correoElectronico")); %>
-             <input type="email" placeholder="Introduce tu Nuevo Email" name="variable"><br>
+             Tu email actual es: <jsp:getProperty property="correoElectronico" name="usuarioSession"/> <br>
+                  
+          	 <form action="../control/actualizarDatosPerfilController.jsp" method="POST">
+             <input type="email" placeholder="Introduce tu Nuevo Email" name="variablecorreo"><br>
              <input type="submit" value="verificar"><br>
              </form>
              
              <h4>Cambiar Contraseña</h4>
              <form action="../control/modificarPerfilController.jsp" method="POST">
-             <%application.setAttribute("campo", new String("contraseña")); %>
-             <input type="password" placeholder="Nueva Contraseña" name="variable"><br>
+             <input type="password" placeholder="Nueva Contraseña" name="variablecontraseña"><br>
              <input type="submit" value="verificar">
              </form>
              
