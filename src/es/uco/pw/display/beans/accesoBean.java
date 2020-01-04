@@ -1,6 +1,7 @@
 package es.uco.pw.display.beans;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class accesoBean implements Serializable {
 
@@ -26,8 +27,19 @@ public class accesoBean implements Serializable {
 	private String universidad;
 	private int edad;
 	private String provincia;
+	private Date fechaAlta;
 	
-	public accesoBean() {}
+	public accesoBean() {
+		this.setFechaAlta(new Date());
+	}
+
+	public Date getFechaAlta() {
+		return fechaAlta;
+	}
+
+	public void setFechaAlta(Date fechaAlta) {
+		this.fechaAlta = fechaAlta;
+	}
 
 	public String getNombre() {
 		return nombre;
