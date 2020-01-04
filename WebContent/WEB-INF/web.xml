@@ -25,7 +25,7 @@
   </context-param>
   <error-page>
         <error-code>404</error-code>
-        <location>/errorPage/404-error.jsp</location>
+        <location>errors/error-404.jsp</location>
   </error-page>
   
   <session-config>
