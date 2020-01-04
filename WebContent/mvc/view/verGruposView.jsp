@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@page import="es.uco.pw.display.beans.grupoBean"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%> 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,12 +41,70 @@
     </div>
 
     <div class="info">
+    
+    	<%
+    	ArrayList<grupoBean> res=(ArrayList<grupoBean>)request.getAttribute("id_grupo");                         
+        for (int i=0; i<res.size();i++){
+        %>
+                           	
+        <div class="grupo-recomendado">
+        	<a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a><br>	
+        	<a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
+        	<img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
+        	<hr width=220 size=1 color="black" >
+      	</div>
+      	
+    	<%
+       	}
+        %>
+
+		<!--
+      	<div class="grupo-recomendado">
+        	<a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
+        	<br>
+        	<a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
+        	<img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
+        	<hr width=220 size=1 color="black" >
+      	</div>
+
+     	<div class="grupo-recomendado">
+	        <a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
+	        <br>
+	        <a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
+	        <img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
+	        <hr width=220 size=1 color="black" >
+	    </div>
+
+		<div class="grupo-recomendado">
+			<a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
+			<br>
+			<a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
+			<img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
+			<hr width=220 size=1 color="black" >
+		</div>
+
+	    <div class="grupo-recomendado">
+	        <a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
+	        <br>
+	        <a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
+	        <img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
+	        <hr width=220 size=1 color="black" >
+	    </div>
+
+		<div class="grupo-recomendado">
+			<a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
+			<br>
+			<a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
+			<img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
+			<hr width=220 size=1 color="black" >
+		</div>
+
       <div class="grupo-recomendado">
-        <a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
-        <br>
-        <a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
-        <img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
-        <hr width=220 size=1 color="black" >
+       <a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
+       <br>
+       <a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
+       <img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
+       <hr width=220 size=1 color="black" >
       </div>
 
       <div class="grupo-recomendado">
@@ -49,47 +112,8 @@
         <br>
         <a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
         <img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
-        <hr width=220 size=1 color="black" >
       </div>
-
-      <div class="grupo-recomendado">
-        <a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
-        <br>
-        <a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
-        <img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
-        <hr width=220 size=1 color="black" >
-      </div>
-
-      <div class="grupo-recomendado">
-        <a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
-        <br>
-        <a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
-        <img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
-        <hr width=220 size=1 color="black" >
-      </div>
-
-      <div class="grupo-recomendado">
-        <a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
-        <br>
-        <a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
-        <img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
-        <hr width=220 size=1 color="black" >
-      </div>
-
-      <div class="grupo-recomendado">
-        <a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
-        <br>
-        <a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
-        <img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
-        <hr width=220 size=1 color="black" >
-      </div>
-
-      <div class="grupo-recomendado">
-        <a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
-        <br>
-        <a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
-        <img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
-      </div>
+      -->
     </div>
 
   </div>
