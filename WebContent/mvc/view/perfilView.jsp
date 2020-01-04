@@ -136,7 +136,6 @@
              <h4>Cambiar Email</h4>
              Tu email actual es: <jsp:getProperty property="correoElectronico" name="usuarioSession"/> <br>
              
-             
              <form action="../control/modificarPerfilController.jsp" method="POST">
              <%application.setAttribute("campo", new String("correoElectronico")); %>
              <input type="email" placeholder="Introduce tu Nuevo Email" name="variable"><br>
