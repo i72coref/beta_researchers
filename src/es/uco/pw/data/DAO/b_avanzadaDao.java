@@ -28,7 +28,7 @@ public class b_avanzadaDao {
 					System.out.println(connection);
 					
 					
-					PreparedStatement statement = connection.prepareStatement("SELECT idUsuario, nombre, apellidos, correoElectronico FROM Usuario WHERE nombre = ?");
+					PreparedStatement statement = connection.prepareStatement("SELECT idUsuario, nombre, apellidos, correoElectronico FROM Usuario WHERE nombre like '%?%'");
 					statement.setString(1, nombreabuscar);
 					ResultSet rs=statement.executeQuery();
 
