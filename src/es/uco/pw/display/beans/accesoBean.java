@@ -16,21 +16,21 @@ public class accesoBean implements Serializable {
 	private String direccion;
 	private int CP;
 	private String telefono;
-	private int grupo;
-	private String github;
-	private String facebook;
-	private String twitter;
-	private String google;
-	private String telegram;
-	private int experiencia;
-	private String universidad;
+	private int grupo = 0;
+	private String github = null;
+	private String facebook = null;
+	private String twitter = null;
+	private String google = null;
+	private String telegram = null;
+	private int experiencia = 0;
+	private String universidad = null;
 	private int edad;
 	private String provincia;
 	private Date fechaAlta;
 	
-	private int curso;
-	private String carrera;
-	private String actividades;
+	private int curso = 0;
+	private String carrera = null;
+	private String actividades = null;
 	
 	public accesoBean() {
 		this.setFechaAlta(new Date());

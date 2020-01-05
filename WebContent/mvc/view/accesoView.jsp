@@ -35,23 +35,23 @@
         <div class="formulario">
                 <h2> Crear cuenta </h2>
                 <form action="../control/accesoController.jsp" method="POST">
-                    Nombre<br>
+                    Nombre (Obligatorio)<br>
                     <input type="text" placeholder="Introduce tu Nombre" name="nombre" required><br>
-                    Apellidos<br>
+                    Apellidos (Obligatorio)<br>
                     <input type="text" placeholder="Introduce tus Apellidos" name="apellidos" required><br>
-                    Email<br>
+                    Email (Obligatorio)<br>
                     <input type="email" placeholder="Introduce tu Email" name="correoElectronico" required><br>
-                    Contraseña<br>
+                    Contraseña (Obligatorio)<br>
                     <input type="password" placeholder="Introduce tu Contraseña" name="password" required><br>
-                    Edad<br>
+                    Edad (Obligatorio)<br>
                     <input type="text" name="edad" required><br>
-                    Provincia<br>
+                    Provincia (Obligatorio)<br>
                     <input type="text" placeholder="Introduce tu Provincia" name="provincia" required><br>
-                    Dirección<br>
+                    Dirección (Obligatorio)<br>
                     <input type="text" placeholder="Introduce tu Direccion" name="direccion" required><br>
-                    Codigo Postal<br>
+                    Codigo Postal (Obligatorio)<br>
                     <input type="text" placeholder="Introduce tu CP" name="CP" required><br>
-                    Telefono<br>
+                    Telefono (Obligatorio)<br>
                     <input type="text" placeholder="Introduce tu Telefono" name="telefono" required><br>
                     Universidad<br>
                     <input type="text" placeholder="Introduce tu Universidad" name="universidad">
