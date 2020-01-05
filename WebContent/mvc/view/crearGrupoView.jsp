@@ -25,7 +25,7 @@ w<%@ page language="java" contentType="text/html; charset=UTF-8"
         </center>
 
     <!-------------------------------------------------------------->
-	<form action="../control/nuevoGrupoController.jsp" method="POST">
+	<form action="../control/crearGrupoController.jsp" method="POST">
 	
 	    <div class="contenedor">
 	        <div class="nombre-grupo">
@@ -105,7 +105,7 @@ w<%@ page language="java" contentType="text/html; charset=UTF-8"
 	            </div>
 	        <div class="crearya">
 	            <input type="submit" value="Crear Grupo"><br>
-	           </div>
+	        </div>
 	           
     </form>
     </div> <!--Bloque Derecha-->

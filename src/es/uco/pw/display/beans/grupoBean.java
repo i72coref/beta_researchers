@@ -30,10 +30,11 @@ public class grupoBean implements Serializable {
 	private Date fecha_creacion;
 	private String actividades;
 	private float puntuacion;
-	private boolean validar;
+	private int validar;
 	
 	// CONSTRUCTOR DE LA CLASE GROUPBEAN
 	public grupoBean() {
+		this.setValidar(0);
 		this.setFecha_creacion(new Date());
 	}
 	
@@ -86,11 +87,10 @@ public class grupoBean implements Serializable {
 	public void setPuntuacion(float puntuacion) {
 		this.puntuacion = puntuacion;
 	}
-	public boolean isValidar() {
+	public int getValidar() {
 		return validar;
 	}
-	public void setValidar(boolean validar) {
+	public void setValidar(int validar) {
 		this.validar = validar;
 	}
-	
 }

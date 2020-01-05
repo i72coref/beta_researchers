@@ -4,31 +4,27 @@ package es.uco.pw.data.DAO;
 // Paquetes para conexion con la BD
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 // Paquetes creados por el equipo para la conexion con la BD
 import es.uco.pw.data.BD.DBConexion;
-import es.uco.pw.display.beans.gestionBean;
 import es.uco.pw.display.beans.grupoBean;
 
-public class GroupDao {
-	// ATRIBUTOS DE LA CLASE GROUPDAO
+public class grupoDao {
+	// ATRIBUTOS DE LA CLASE grupoDao
 	private DBConexion con;
 	private Connection connection;
 
-	// CONSTRUCTOR DE LA CLASE GROUPDAO
-	public  GroupDao(String jdbURL, String jdbUsername, String jdbPassword) throws SQLException {
-		System.out.println(jdbURL+jdbUsername);
+	// CONSTRUCTOR DE LA CLASE grupoDao
+	public  grupoDao(String jdbURL, String jdbUsername, String jdbPassword) throws SQLException {
 		con = new DBConexion(jdbURL, jdbUsername, jdbPassword);
 	}
 	
-	// METODOS DE LA CLASE GROUPDAO
+	// METODOS DE LA CLASE grupoDao
 	
 	// Insertar un nuevo grupo en la BD
 	public boolean insertarGrupo(grupoBean nuevoGrupo) throws SQLException {
-		String sql = "INSERT INTO Grupos (id_grupo,nombre_grupo, categoria, descripcion, privacidad, n_participantes, fecha_creacion, actividades, puntuacion) VALUES (?,?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO Grupos (id_grupo,nombre_grupo, categoria, descripcion, privacidad, n_participantes, fecha_creacion, actividades, puntuacion, validar) VALUES (?,?,?,?,?,?,?,?,?,?)";
 		con.conectar();
 		connection = con.getJdbcConnection();
 			
@@ -43,41 +39,11 @@ public class GroupDao {
 		statement.setDate(7, new java.sql.Date(nuevoGrupo.getFecha_creacion().getTime()));
 		statement.setString(8, nuevoGrupo.getActividades());
 		statement.setFloat(9, nuevoGrupo.getPuntuacion());
+		statement.setInt(10, nuevoGrupo.getValidar());
 		
 		boolean rowInserted = statement.executeUpdate() > 0;
 		statement.close();
 		con.desconectar();
 		return rowInserted;
 	}
-	
-	public ArrayList<grupoBean> getGrupos() throws SQLException {
-		
-		ArrayList<grupoBean> resultado=new ArrayList<grupoBean>();
-		
-		try {
-			
-			String sql = "SELECT * FROM Grupos";
-			con.conectar();
-			connection = con.getJdbcConnection();
-			
-			PreparedStatement statement = connection.prepareStatement(sql);
-			
-			ResultSet rs=statement.executeQuery();
-			
-			while(rs.next()) {
-				groupBean result=new groupBean();  
-				
-				result.setId_grupo(rs.getInt("id_grupo"));  
-				result.setNombre_grupo(rs.getString("nombre_grupo"));  
-				resultado.add(result);
-			}
-				
-			statement.close();
-			con.desconectar();
-			
-		} catch(Exception e) {
-			System.out.println(e);
-		}
-			return resultado;
-	}	
 }

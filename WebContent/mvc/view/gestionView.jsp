@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
     
 <%@page import="es.uco.pw.display.beans.gestionBean"%>
-<%@page import="es.uco.pw.display.beans.customerBean"%> 
 <%@page import="es.uco.pw.display.beans.gestionNoticiasBean"%>
 <%@page import="java.util.ArrayList"%>   
 <%@page import="java.util.List"%>   

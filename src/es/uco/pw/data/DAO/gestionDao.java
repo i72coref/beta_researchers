@@ -4,6 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 import es.uco.pw.display.beans.gestionBean;
+import es.uco.pw.display.beans.sessionBean;
 import es.uco.pw.data.BD.DBConexion;
 
 
@@ -97,45 +98,53 @@ try {
 		
 		ArrayList<gestionBean> resultado=new ArrayList<gestionBean>();  
 				
-
-
-				try {
-					
+		try {	
+			con.conectar();
+			connection = con.getJdbcConnection();
 			
-					con.conectar();
-					
-					connection = con.getJdbcConnection();
-					System.out.println(connection);
-				
-					PreparedStatement statement = connection.prepareStatement("SELECT id_grupo, nombre_grupo, lider, descripcion FROM Grupos WHERE validar=?");
-					
-					statement.setInt(1,validado);
-					
-					ResultSet rs=statement.executeQuery();
-					/*
-						System.out.println("HOLA"+ rs);
-						status=rs.next();
-					*/
-					while(rs.next()){
-						//System.out.println("Entro si o si");
-						gestionBean result=new gestionBean();  
-						
-						result.setId_grupo(rs.getInt("id_grupo"));  
-						result.setNombre_grupo(rs.getString("nombre_grupo"));
-						result.setLider(rs.getString("lider"));
-						result.setDescripcion(rs.getString("descripcion"));
-						
-						resultado.add(result);
+			System.out.println(connection);
+		
+			PreparedStatement statement = connection.prepareStatement("SELECT id_grupo, nombre_grupo, lider, descripcion, n_participantes, categoria FROM Grupos WHERE validar=?");
+			
+			statement.setInt(1,validado);
+			
+			ResultSet rs=statement.executeQuery();
+			while(rs.next()){
+				gestionBean result=new gestionBean();  
+				result.setId_grupo(rs.getInt("id_grupo"));  
+				result.setNombre_grupo(rs.getString("nombre_grupo"));
+				result.setLider(rs.getString("lider"));
+				result.setDescripcion(rs.getString("descripcion"));
+				result.setN_participantes(rs.getInt("n_participantes"));
+				result.setCategoria(rs.getString("categoria"));
+				resultado.add(result);
+			}
+			
+			statement.close();
+			con.desconectar();
+			
+		} catch(Exception e){
+			System.out.println(e);
+		}
+		return resultado;
+	}
+	
+	// Anyade un usuario a un determinado grupo //
+	public boolean insertarUsuarioGrupo(int usuario, int grupo) throws SQLException {
+		String sql = "INSERT INTO Usuario_Grupo (idUsuario, idGrupo) VALUES (?,?)";
+		con.conectar();
+		connection = con.getJdbcConnection();
+			
+		PreparedStatement statement = connection.prepareStatement(sql);
 
-					}
-					
-					statement.close();
-					con.desconectar();
-					
-				}catch(Exception e){}
-				
-				return resultado;
-			}	
+		statement.setInt(1, usuario);
+		statement.setInt(2, grupo);
+		
+		boolean rowInserted = statement.executeUpdate() > 0;
+		statement.close();
+		con.desconectar();
+		return rowInserted;
+	}
 }
 
 	

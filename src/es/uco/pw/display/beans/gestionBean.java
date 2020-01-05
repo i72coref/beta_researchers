@@ -11,21 +11,11 @@ public class gestionBean implements Serializable {
 	private String categoria;
 	private String descripcion;
 	private String lider;
-	private String titulo;
+	private int n_participantes;
 
 	
 	public Integer getId_grupo() {
 		return id_grupo;
-	}
-	
-	
-
-	public String getTitulo() {
-		return titulo;
-	}
-
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
 	}
 
 	public String getLider() {
@@ -59,8 +49,11 @@ public class gestionBean implements Serializable {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
+	public int getN_participantes() {
+		return n_participantes;
+	}
+	public void setN_participantes(int n_participantes) {
+		this.n_participantes = n_participantes;
 	}
 	
 }
