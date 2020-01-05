@@ -30,7 +30,7 @@
 <!--Documentacion:
 -->
 <body>
-        <%@include file="./../../include/header.html"%>
+        <%@include file="./../../include/header.jsp"%>
         <center>
           <p id="p0">NOTICIAS</p>
           <p id="p1">Inicio ><p id="p2">Noticias</p></p>
