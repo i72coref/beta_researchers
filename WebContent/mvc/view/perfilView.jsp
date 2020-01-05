@@ -40,7 +40,7 @@
             <div class="miembro-desde">
                  <h6>miembro desde <jsp:getProperty property="fechaAlta" name="usuarioSession"/></h6>
 
-             <img src="../img/modificar.png" id="btn-abrir-popup" class="btn-abrir-popup" width="40px" >
+             <img src="../../img/modificar.png" id="btn-abrir-popup" class="btn-abrir-popup" width="40px" >
 
              </div>
             <div class="nombre">
@@ -91,30 +91,30 @@
         </div> <!--Info Izquierda-->
 
         <div class="info-derecha">
-          <!--   <div class="contactos">
+          <div class="contactos">
             <h4>Contactos</h4>
-            <a href="#"><img src="../img/logo3.png" width="80"  height="80"></a>
-            <a href="#"><img src="../img/chica.png" width="80"  height="80"></a>
-            <a href="#"><img src="../img/chica.png" width="80"  height="80"></a>
-            <a href="#"><img src="../img/logo3.png" width="80"  height="80"></a>
-            <a href="#"><img src="../img/logo3.png" width="80"  height="80"></a>
-            <a href="#"><img src="../img/chica.png" width="80"  height="80"></a>
-            <a href="#"><img src="../img/logo3.png" width="80"  height="80"></a>
-            <a href="#"><img src="../img/chica.png" width="80"  height="80"></a>
-            <a href="#"><img src="../img/logo3.png" width="80"  height="80"></a>
-            <a href="./personas_entorno.html"><u>Explorar tu entorno...</u></a>
+            <a href="#"><img src="../../img/logo3.png" width="80"  height="80"></a>
+            <a href="#"><img src="../../img/chica.png" width="80"  height="80"></a>
+            <a href="#"><img src="../../img/chica.png" width="80"  height="80"></a>
+            <a href="#"><img src="../../img/logo3.png" width="80"  height="80"></a>
+            <a href="#"><img src="../../img/logo3.png" width="80"  height="80"></a>
+            <a href="#"><img src="../../img/chica.png" width="80"  height="80"></a>
+            <a href="#"><img src="../../img/logo3.png" width="80"  height="80"></a>
+            <a href="#"><img src="../../img/chica.png" width="80"  height="80"></a>
+            <a href="#"><img src="../../img/logo3.png" width="80"  height="80"></a>
+            <a href="./../../personas_entorno.jsp"><u>Explorar tu entorno...</u></a>
             </div>
-			-->
+            
            <div class="grupos">
             <h4>Grupos</h4>
-            <a href="../html/info_grupo.html"><img src="../img/grupo.png" width="80"  height="80"></a>
-            <a href="../html/info_grupo.html"><img src="../img/grupo.png" width="80"  height="80"></a>
-            <a href="../html/info_grupo.html"><img src="../img/grupo.png" width="80"  height="80"></a>
-            <a href="../html/info_grupo.html"><img src="../img/grupo.png" width="80"  height="80"></a>
-            <a href="../html/info_grupo.html"><img src="../img/grupo.png" width="80"  height="80"></a>
-            <a href="../html/info_grupo.html"><img src="../img/grupo.png" width="80"  height="80"></a><br>
-            <a href="./grupos.html"><u>Ver más...</u></a><br>
-            <input type="submit" value="Crear un grupo" onclick="location.href = './../../crear_grupo.jsp'">
+            <a href="./../../info_grupo.jsp"><img src="../../img/grupo.png" width="80"  height="80"></a>
+            <a href="./../../info_grupo.jsp"><img src="../../img/grupo.png" width="80"  height="80"></a>
+            <a href="./../../info_grupo.jsp"><img src="../../img/grupo.png" width="80"  height="80"></a>
+            <a href="./../../info_grupo.jsp"><img src="../../img/grupo.png" width="80"  height="80"></a>
+            <a href="./../../info_grupo.jsp"><img src="../../img/grupo.png" width="80"  height="80"></a>
+            <a href="./../../info_grupo.jsp"><img src="../../img/grupo.png" width="80"  height="80"></a><br>
+            <a href="/beta_web/grupos.jsp"><u>Ver más...</u></a><br>
+            <input type="submit" value="Crear un grupo" onclick="location.href = 'crearGrupoView.jsp'">
             </div>
         </div> <!--Info Derecha-->
     </div> <!--Contenedor-->
@@ -174,7 +174,7 @@
             <input type="text" placeholder="Introduce tus Intereses" name="variableactividades"><br>
             <input type="submit" value="verificar">
             </form>
-             <!--
+            <!--
             <h4>Curriculum</h4>
             <input type="file"><br>
              Mostrar<br>

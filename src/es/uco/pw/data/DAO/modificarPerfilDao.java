@@ -2,7 +2,7 @@ package es.uco.pw.data.DAO;
 
 import java.sql.*;
 
-import es.uco.pw.display.beans.sessionBean;
+//import es.uco.pw.display.beans.sessionBean;
 import es.uco.pw.data.BD.DBConexion;
 
 public class modificarPerfilDao {
@@ -11,18 +11,17 @@ public class modificarPerfilDao {
 	private Connection connection;
 
 	public modificarPerfilDao(String jdbURL, String jdbUsername, String jdbPassword) throws SQLException {
-		System.out.println(jdbURL+jdbUsername);
+		//System.out.println(jdbURL+jdbUsername);
 		con = new DBConexion(jdbURL, jdbUsername, jdbPassword);
 	}
 
 	public void modificar(int id, String campo, String variable) throws SQLException {
-		
 		try {
-			System.out.println("Me llega" + id+campo+variable);
+			//System.out.println("Me llega" + id+campo+variable);
 			con.conectar();
 			
 			connection = con.getJdbcConnection();
-			System.out.println(connection);
+			//System.out.println(connection);
 			String sql="update Usuario set "+campo;
 			
 			PreparedStatement statement=connection.prepareStatement(sql +"=? where idUsuario=?");
@@ -36,9 +35,9 @@ public class modificarPerfilDao {
 			
 			con.desconectar();
 			
-		}catch(Exception e){}
+		} catch(Exception e){System.out.println(e);}
 		
-			//return true;
+		//return true;
 	}
 }
 

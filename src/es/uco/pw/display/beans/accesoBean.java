@@ -5,9 +5,6 @@ import java.util.Date;
 
 public class accesoBean implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private String nombre;
 	private String apellidos;
@@ -27,7 +24,6 @@ public class accesoBean implements Serializable {
 	private int edad;
 	private String provincia;
 	private Date fechaAlta;
-	
 	private int curso = 0;
 	private String carrera = null;
 	private String actividades = null;
@@ -59,7 +55,6 @@ public class accesoBean implements Serializable {
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
 	}
-
 
 	public String getCorreoElectronico() {
 		return correoElectronico;
@@ -208,6 +203,5 @@ public class accesoBean implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
 }
 

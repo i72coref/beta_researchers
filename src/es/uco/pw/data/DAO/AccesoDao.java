@@ -1,6 +1,3 @@
-/**
- * 
- */
 package es.uco.pw.data.DAO;
 
 import java.sql.*;
@@ -8,26 +5,19 @@ import java.sql.*;
 import es.uco.pw.display.beans.accesoBean;
 import es.uco.pw.data.BD.DBConexion;
 
-/**
- * @author root
- *
- */
 public class AccesoDao {
-	
+
 	private DBConexion con;
 	private Connection connection;
 
 	public  AccesoDao(String jdbURL, String jdbUsername, String jdbPassword) throws SQLException {
-		System.out.println(jdbURL+jdbUsername);
+		//System.out.println(jdbURL+jdbUsername);
 		con = new DBConexion(jdbURL, jdbUsername, jdbPassword);
 	}
-	
+
 	public boolean insertarUsuario(accesoBean accesoUsuario) throws SQLException {
-		
-		
-		
 		String sql = "INSERT INTO Usuario (idUsuario,nombre, apellidos, correoElectronico, password, github, direccion, telefono, facebook, twitter, google, telegram, curso, experiencia, universidad, edad, provincia, CP, fechaAlta,carrera, actividades) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-		System.out.println(accesoUsuario.getNombre()+"-"+accesoUsuario.getApellidos()+"-"+accesoUsuario.getCorreoElectronico());
+		//System.out.println(accesoUsuario.getNombre()+"-"+accesoUsuario.getApellidos()+"-"+accesoUsuario.getCorreoElectronico());
 		con.conectar();
 		connection = con.getJdbcConnection();
 			
@@ -60,7 +50,4 @@ public class AccesoDao {
 		con.desconectar();
 		return rowInserted;
 	}
-	
-	
 }
-

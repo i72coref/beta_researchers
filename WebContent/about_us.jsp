@@ -20,7 +20,6 @@
 
 	<%@include file="./include/header.jsp"%>
 
-
    	<div class="content">
 
 		<div class="text">

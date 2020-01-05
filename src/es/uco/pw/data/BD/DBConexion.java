@@ -1,5 +1,5 @@
-
 package es.uco.pw.data.BD;
+
 import java.sql.*;
 
 public class DBConexion {

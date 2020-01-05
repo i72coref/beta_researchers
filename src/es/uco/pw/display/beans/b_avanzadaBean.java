@@ -3,22 +3,15 @@ package es.uco.pw.display.beans;
 import java.io.Serializable;
 import java.sql.Blob;
 
-
 public class b_avanzadaBean implements Serializable {
 
-	
 	private static final long serialVersionUID = 1L;
 	private String nombre;
 	private String apellidos;
 	private String nombre_grupo;
 	private Blob avatar;
 	
-
-	public b_avanzadaBean() { 
-		
-	}
-	
-	
+	public b_avanzadaBean() {}
 	
 	public Blob getAvatar() {
 		return avatar;
@@ -52,5 +45,4 @@ public class b_avanzadaBean implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-
 }

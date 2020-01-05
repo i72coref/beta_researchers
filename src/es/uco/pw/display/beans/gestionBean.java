@@ -2,7 +2,6 @@ package es.uco.pw.display.beans;
 
 import java.io.Serializable;
 
-
 public class gestionBean implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
@@ -13,7 +12,6 @@ public class gestionBean implements Serializable {
 	private String lider;
 	private int n_participantes;
 
-	
 	public Integer getId_grupo() {
 		return id_grupo;
 	}

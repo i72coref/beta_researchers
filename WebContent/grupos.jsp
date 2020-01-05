@@ -13,7 +13,7 @@
 	<meta name="description" content="Web para crear grupos de investigacion con profesionales, conocer profesionales de tu entorno, noticias, etc.">
 	<meta name="keywords" content="researchers,investigadores,grupos de investigacion,profesionales">
 	<meta name="author" content="Antonio Sanchez,Carlos Freire, Francisco Cordoba, Angel Cañuelo">
-	<script src="./../js/grupos.js"></script>
+	<script src="./js/grupos.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 </head>
 <body>

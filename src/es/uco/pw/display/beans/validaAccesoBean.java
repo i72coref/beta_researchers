@@ -4,9 +4,6 @@ import java.io.Serializable;
 
 public class validaAccesoBean implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	public validaAccesoBean(){}
@@ -17,21 +14,16 @@ public class validaAccesoBean implements Serializable {
 	public String getCorreoElectronico() {
 		return correoElectronico;
 	}
-
 	public void setCorreoElectronico(String correoElectronico) {
 		this.correoElectronico = correoElectronico;
 	}
-
 	public String getPassword() {
 		return password;
 	}
-
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
 }

@@ -31,9 +31,8 @@
                            	%>
                 <div class="box2">
                         <div class="lognom2">
-                            <img src="./img/logo2.png" alt="" width="100px" >
+                            <a href="../../info_grupo.jsp"><img src="../../img/colegio-logo.png" alt="" width="100px" ></a>
                             <h3> <strong><%out.println(res.get(i).getNombre_grupo());%></strong></h3>
-                            <a href="./html/form.html"><button type="submit" id="btn-abrir-popup" class="btn-abrir-popup">Unirse</button></a>
                         </div>
                         <div class="contentbox2">
                             <p><%out.println(res.get(i).getDescripcion());%></p>
@@ -49,7 +48,7 @@
         </div>
         <div class="notices">
             <div class="titulonot">
-                        <a href="#"><h2>NOTICIAS</h2></a>
+                        <a href="../view/noticias.jsp"><h2>NOTICIAS</h2></a>
             </div>
                             <%
                            	ArrayList<gestionNoticiasBean> res2=(ArrayList<gestionNoticiasBean>)request.getAttribute("result");                         
@@ -58,11 +57,11 @@
             <div class="notice1">
 
                         <div class="noticelogo1">
-                            <img src="./img/logo2.png" alt="" width="80px" >
+                            <img src="../../img/logo2.png" alt="" width="80px" >
                         </div>
                         <div class="contentnotice1">
                         	<h3>><%out.println(res2.get(i).getTitulo());%></h3>
-                            <p><%out.println(res2.get(i).getContenido());%><a href="./html/noticias.html"><u>Leer mÃ¡s...</u></a></p>
+                            <p><%out.println(res2.get(i).getContenido());%><a href="../view/noticias.jsp"><u>Leer mas...</u></a></p>
                         </div>
             </div>
                         <%

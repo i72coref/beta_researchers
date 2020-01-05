@@ -29,6 +29,7 @@ body{
     margin-left: 50px;
     height: 620px;
     font-size: 12px;
+    overflow: auto;
 }
 
   .content .notices{

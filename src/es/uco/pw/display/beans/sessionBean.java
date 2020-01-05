@@ -1,4 +1,3 @@
-
 package es.uco.pw.display.beans;
 
 import java.io.Serializable;
@@ -7,9 +6,7 @@ import java.util.Date;
 
 public class sessionBean implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
-	public sessionBean(){}
-	
+		
 	private int idUsuario=-1;
 	private String nombre;
 	private String apellidos;
@@ -28,11 +25,12 @@ public class sessionBean implements Serializable {
 	private String universidad;
 	private int edad;
 	private String provincia;
-	
 	private int curso;
 	private String carrera;
 	private String actividades;
 	private Date fechaAlta;
+	
+	public sessionBean(){}
 	
 	public int getIdUsuario() {
 		return idUsuario;
@@ -58,7 +56,6 @@ public class sessionBean implements Serializable {
 	public void setCorreoElectronico(String correoElectronico) {
 		this.correoElectronico = correoElectronico;
 	}
-	
 	public boolean isAdministrador() {
 		return administrador;
 	}
@@ -119,7 +116,6 @@ public class sessionBean implements Serializable {
 	public void setTelegram(String telegram) {
 		this.telegram = telegram;
 	}
-	
 	public int getExperiencia() {
 		return experiencia;
 	}
@@ -144,7 +140,6 @@ public class sessionBean implements Serializable {
 	public void setProvincia(String provincia) {
 		this.provincia = provincia;
 	}
-
 	public int getCurso() {
 		return curso;
 	}
@@ -163,7 +158,6 @@ public class sessionBean implements Serializable {
 	public void setActividades(String actividades) {
 		this.actividades = actividades;
 	}
-	
 	public Date getFechaAlta() {
 		return fechaAlta;
 	}
@@ -173,5 +167,4 @@ public class sessionBean implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-
 }

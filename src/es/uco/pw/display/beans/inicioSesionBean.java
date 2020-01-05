@@ -2,11 +2,6 @@ package es.uco.pw.display.beans;
 
 import java.io.Serializable;
 
-/**
- * @author root
- *
- */
-
 public class inicioSesionBean implements Serializable {
 	
 	private static final long serialVersionUID = 1L;

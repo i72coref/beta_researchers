@@ -5,7 +5,7 @@
 }
 
 body {
-     background: url(../img/wallpaperlogin.png);
+     background: url(/beta_web/img/wallpaperlogin.png);
      background-size: cover;
      background-attachment: fixed;
      font-family: Roboto;

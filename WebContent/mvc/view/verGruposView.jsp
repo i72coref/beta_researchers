@@ -25,7 +25,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-  <script src="../js/slider.js"></script>
+  <script src="../../js/slider.js"></script>
 </head>
 <body>
 
@@ -46,58 +46,58 @@
     <div class="info">
     
       	<div class="grupo-recomendado">
-        	<a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
+        	<a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="../../img/logo2.png" alt="" width="60px"></a>
         	<br>
-        	<a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
-        	<img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
+        	<!-- <a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a> -->
+        	<img id="foto-estrella" src="../../img/estrellas.png" alt="" width="100px" height="20px">
         	<hr width=220 size=1 color="black" >
       	</div>
 
      	<div class="grupo-recomendado">
-	        <a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
+	        <a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="../../img/logo2.png" alt="" width="60px"></a>
 	        <br>
-	        <a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
-	        <img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
+	        <!-- <a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a> -->
+	        <img id="foto-estrella" src="../../img/estrellas.png" alt="" width="100px" height="20px">
 	        <hr width=220 size=1 color="black" >
 	    </div>
 
 		<div class="grupo-recomendado">
-			<a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
+			<a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="../../img/logo2.png" alt="" width="60px"></a>
 			<br>
-			<a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
+			<!-- <a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a> -->
 			<img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
 			<hr width=220 size=1 color="black" >
 		</div>
 
 	    <div class="grupo-recomendado">
-	        <a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
+	        <a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="../../img/logo2.png" alt="" width="60px"></a>
 	        <br>
-	        <a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
-	        <img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
+	        <!-- <a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a> -->
+	        <img id="foto-estrella" src="../../img/estrellas.png" alt="" width="100px" height="20px">
 	        <hr width=220 size=1 color="black" >
 	    </div>
 
 		<div class="grupo-recomendado">
-			<a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
+			<a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="../../img/logo2.png" alt="" width="60px"></a>
 			<br>
-			<a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
-			<img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
+			<!--<a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>-->
+			<img id="foto-estrella" src="../../img/estrellas.png" alt="" width="100px" height="20px">
 			<hr width=220 size=1 color="black" >
 		</div>
 
       <div class="grupo-recomendado">
-       <a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
+       <a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="../../img/logo2.png" alt="" width="60px"></a>
        <br>
        <a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
-       <img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
+       <img id="foto-estrella" src="../../img/estrellas.png" alt="" width="100px" height="20px">
        <hr width=220 size=1 color="black" >
       </div>
 
       <div class="grupo-recomendado">
-        <a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="./../img/logo2.png" alt="" width="60px"></a>
+        <a href="info_grupo.html" target="_blank" rel="alternate"><img id="foto-grupo" src="../../img/logo2.png" alt="" width="60px"></a>
         <br>
         <a href="form.html" target="_blank" rel="alternate"><button id="boton">Unirse</button></a>
-        <img id="foto-estrella" src="./../img/estrellas.png" alt="" width="100px" height="20px">
+        <img id="foto-estrella" src="../../img/estrellas.png" alt="" width="100px" height="20px">
       </div>
       
     </div>
@@ -165,36 +165,36 @@
                            	
        <div class="grupo">
           <div id="carrusel">
-              <a href="#" class="left-arrow"><img src="../img/left-arrow.png" /></a>
-              <a href="#" class="right-arrow"><img src="../img/right-arrow.png" /></a>
+              <a href="#" class="left-arrow"><img src="../../img/left-arrow.png" /></a>
+              <a href="#" class="right-arrow"><img src="../../img/right-arrow.png" /></a>
               <div class="carrusel">
                   <div class="product" id="product_0">
-                      <img src="../img/01.jpg" width="195" height="100" />
+                      <img src="../../img/01.jpg" width="195" height="100" />
                       <h5>Lorem ipsum 1</h5>
                       <p>165.00 €</p>
                   </div>
                   <div class="product" id="product_1">
-                      <img src="../img/02.jpg" width="195" height="100" />
+                      <img src="../../img/02.jpg" width="195" height="100" />
                       <h5>Lorem ipsum 2</h5>
                       <p>100.00 €</p>
                   </div>
                   <div class="product" id="product_2">
-                      <img src="../img/03.jpg" width="195" height="100" />
+                      <img src="../../img/03.jpg" width="195" height="100" />
                       <h5>Lorem ipsum 3</h5>
                       <p>250.00 €</p>
                   </div>
                   <div class="product" id="product_3">
-                      <img src="../img/01.jpg" width="195" height="100" />
+                      <img src="../../img/01.jpg" width="195" height="100" />
                       <h5>Lorem ipsum 4</h5>
                       <p>75.00 €</p>
                   </div>
                   <div class="product" id="product_4">
-                      <img src="../img/02.jpg" width="195" height="100" />
+                      <img src="../../img/02.jpg" width="195" height="100" />
                       <h5>Lorem ipsum 5</h5>
                       <p>65.00 €</p>
                   </div>
                   <div class="product" id="product_5">
-                      <img src="../img/03.jpg" width="195" height="100" />
+                      <img src="../../img/03.jpg" width="195" height="100" />
                       <h5>Lorem ipsum 6</h5>
                       <p>40.00 €</p>
                   </div>

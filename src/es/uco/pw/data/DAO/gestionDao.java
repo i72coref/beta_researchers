@@ -4,9 +4,8 @@ import java.sql.*;
 import java.util.ArrayList;
 
 import es.uco.pw.display.beans.gestionBean;
-import es.uco.pw.display.beans.sessionBean;
+//import es.uco.pw.display.beans.sessionBean;
 import es.uco.pw.data.BD.DBConexion;
-
 
 public class gestionDao {
 	
@@ -14,22 +13,20 @@ public class gestionDao {
 	private Connection connection;
 
 	public  gestionDao(String jdbURL, String jdbUsername, String jdbPassword) throws SQLException {
-		System.out.println(jdbURL+jdbUsername);
+		//System.out.println(jdbURL+jdbUsername);
 		con = new DBConexion(jdbURL, jdbUsername, jdbPassword);
 	}
+	
 	public ArrayList<gestionBean> getGrupos(){
-		
-ArrayList<gestionBean> resultado=new ArrayList<gestionBean>();  
-		
+		ArrayList<gestionBean> resultado=new ArrayList<gestionBean>();  
 		try {
-			
 			//String sql = "SELECT idUsuario, nombre, apellidos, github, Institucion FROM Usuario WHERE nombre+apellidos COLLATE SQL_Latin1_General_Cp1_CI_AI like ? OR github COLLATE SQL_Latin1_General_Cp1_CI_AI like ? COLLATE ";
 			String sql = "SELECT id_grupo, nombre_grupo FROM Grupos";
 			//meter lista de string a null y el controlador se encarga de separar la cadena golda
 			con.conectar();
 			
 			connection = con.getJdbcConnection();
-			System.out.println(connection);
+			//System.out.println(connection);
 		
 			PreparedStatement statement = connection.prepareStatement(sql);
 			
@@ -51,18 +48,16 @@ ArrayList<gestionBean> resultado=new ArrayList<gestionBean>();
 			statement.close();
 			con.desconectar();
 			
-		}catch(Exception e){}
+		}catch(Exception e){System.out.println(e);}
 		
 		return resultado;
 	}
 	
 	public boolean borrarGrupo(String grupo) {
-try {
-			
+		try {
 			con.conectar();
-			
 			connection = con.getJdbcConnection();
-			System.out.println(connection);
+			//System.out.println(connection);
 			
 			PreparedStatement statement=connection.prepareStatement("delete from Grupos where id_grupo=?");
 			statement.setString(1,grupo);
@@ -70,39 +65,33 @@ try {
 			statement.close();
 			
 			con.desconectar();
-			
 		}catch(Exception e){return false;}
-		
 		return true;
 	}
+	
 	public boolean validarGrupo(String grupo) {
-		try {
-					
-					con.conectar();
-					
-					connection = con.getJdbcConnection();
-					System.out.println(connection);
-					
-					PreparedStatement statement=connection.prepareStatement("update Grupos SET validar=1 WHERE id_grupo =?");
-					statement.setString(1,grupo);
-					statement.executeUpdate();
-					statement.close();
-					
-					con.desconectar();
-					
-				}catch(Exception e){return false;}
-				
-				return true;
-			}
+		try {	
+			con.conectar();
+			connection = con.getJdbcConnection();
+			//System.out.println(connection);
+			
+			PreparedStatement statement=connection.prepareStatement("update Grupos SET validar=1 WHERE id_grupo =?");
+			statement.setString(1,grupo);
+			statement.executeUpdate();
+			statement.close();
+			
+			con.desconectar();
+		}catch(Exception e){return false;}
+		return true;
+	}
+	
 	public ArrayList<gestionBean> getGruposValidar(Integer validado){
-		
-		ArrayList<gestionBean> resultado=new ArrayList<gestionBean>();  
-				
+		ArrayList<gestionBean> resultado=new ArrayList<gestionBean>();  	
 		try {	
 			con.conectar();
 			connection = con.getJdbcConnection();
 			
-			System.out.println(connection);
+			//System.out.println(connection);
 		
 			PreparedStatement statement = connection.prepareStatement("SELECT id_grupo, nombre_grupo, lider, descripcion, n_participantes, categoria FROM Grupos WHERE validar=?");
 			

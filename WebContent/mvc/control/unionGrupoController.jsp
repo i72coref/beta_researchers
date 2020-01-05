@@ -30,4 +30,4 @@
 	}
  %>
  
- <jsp:forward page="<%=nextPage%>"></jsp:forward>
+ <jsp:forward page="<%=nextPage%>" />

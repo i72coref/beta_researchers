@@ -12,26 +12,22 @@ public class validaAccesoDao {
 	private Connection connection;
 
 	public  validaAccesoDao(String jdbURL, String jdbUsername, String jdbPassword) throws SQLException {
-		System.out.println(jdbURL+jdbUsername);
+		//System.out.println(jdbURL+jdbUsername);
 		con = new DBConexion(jdbURL, jdbUsername, jdbPassword);
 	}
 	
 	public sessionBean logueoAplicacion(validaAccesoBean login) throws SQLException {
-		
 		sessionBean session=null;
 		try {
-			
 			String sql = "SELECT * from Usuario where correoElectronico=? and password=?";
 			con.conectar();
 			
-
 			connection = con.getJdbcConnection();
 		
 			PreparedStatement statement = connection.prepareStatement(sql);
 			
 			statement.setString(1, login.getCorreoElectronico());
 			statement.setString(2, login.getPassword());
-			
 			
 			ResultSet rs=statement.executeQuery();
 		
@@ -51,7 +47,6 @@ public class validaAccesoDao {
 				session.setUniversidad(rs.getString("universidad"));
 				session.setCurso(rs.getInt("curso"));
 				session.setExperiencia(rs.getInt("experiencia"));
-				
 				session.setGithub(rs.getString("github"));
 				session.setTwitter(rs.getString("twitter"));
 				session.setFacebook(rs.getString("facebook"));
@@ -60,23 +55,17 @@ public class validaAccesoDao {
 				session.setActividades(rs.getString("actividades"));
 				session.setCarrera(rs.getString("carrera"));
 				session.setFechaAlta(rs.getDate("fechaAlta"));
-				
 	        } 
-			
 			statement.close();
 			con.desconectar();
-		}catch(Exception e){}
-		System.out.println(connection );
-
+		} catch(Exception e){ System.out.println(e); }
+		//System.out.println(connection );
 		return session;
 	}
 
 	public boolean login(validaAccesoBean login) throws SQLException {
-		
 		boolean status=false;
-		
 		try {
-			
 			String sql = "SELECT * from Usuario where correoElectronico=? and password=?";
 			con.conectar();
 			
@@ -94,13 +83,9 @@ public class validaAccesoDao {
 			statement.close();
 			con.desconectar();
 			
-		}catch(Exception e){}
-		
-		
-		System.out.println(connection );
-
+		} catch(Exception e) {System.out.println(e);}	
+		//System.out.println(connection );	
 		return status;
-		}
-	
+	}	
 }
 

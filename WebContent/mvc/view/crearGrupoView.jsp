@@ -1,4 +1,4 @@
-w<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -46,24 +46,24 @@ w<%@ page language="java" contentType="text/html; charset=UTF-8"
 	            <h4>Fotos del Grupo</h4>
 	            <input type="file">
 	        <h6> > Fotos ya subidas</h6>
-	        <img src="../img/notica1.jpg" width="80"  height="80"></a>
-	        <img src="../img/notica2.jpg" width="80"  height="80"></a>
-	        <img src="../img/notica3.jpg" width="80"  height="80"></a>
-	        <img src="../img/logo2.png" width="80"  height="80"></a>
+	        <img src="../../img/notica1.jpg" width="80"  height="80"></a>
+	        <img src="../../img/notica2.jpg" width="80"  height="80"></a>
+	        <img src="../../img/notica3.jpg" width="80"  height="80"></a>
+	        <img src="../../img/logo2.png" width="80"  height="80"></a>
 	        </div>
 	        <div class="integrantes-grupo">
 	            <h4>Añadir Contactos al Grupo</h4>
-	            <input type="search" placeholder="Buscar Contacto">
+	            <input type="search" placeholder="Contacto (not working)">
 	            <input type="submit" value="Añadir"><br>
 	            <h6> > Contacto ya añadidos</h6>
-	            <a href="../html/perfil.html"><img src="../img/logo3.png" width="80"  height="80"></a>
-	            <a href="../html/perfil.html"><img src="../img/chica.png" width="80"  height="80"></a>
-	            <a href="../html/perfil.html"><img src="../img/chica.png" width="80"  height="80"></a>
-	            <a href="../html/perfil.html"><img src="../img/logo3.png" width="80"  height="80"></a>
-	            <a href="../html/perfil.html"><img src="../img/logo3.png" width="80"  height="80"></a>
-	            <a href="../html/perfil.html"><img src="../img/chica.png" width="80"  height="80"></a>
-	            <a href="../html/perfil.html"><img src="../img/logo3.png" width="80"  height="80"></a>
-	            <a href="../html/perfil.html"><img src="../img/chica.png" width="80"  height="80"></a>
+	            <a href="/beta_web/mvc/view/perfilView.jsp"><img src="../../img/logo3.png" width="80"  height="80"></a>
+	            <a href="/beta_web/mvc/view/perfilView.jsp"><img src="../../img/chica.png" width="80"  height="80"></a>
+	            <a href="/beta_web/mvc/view/perfilView.jsp"><img src="../../img/chica.png" width="80"  height="80"></a>
+	            <a href="/beta_web/mvc/view/perfilView.jsp"><img src="../../img/logo3.png" width="80"  height="80"></a>
+	            <a href="/beta_web/mvc/view/perfilView.jsp"><img src="../../img/logo3.png" width="80"  height="80"></a>
+	            <a href="/beta_web/mvc/view/perfilView.jsp"><img src="../../img/chica.png" width="80"  height="80"></a>
+	            <a href="/beta_web/mvc/view/perfilView.jsp"><img src="../../img/logo3.png" width="80"  height="80"></a>
+	            <a href="/beta_web/mvc/view/perfilView.jsp"><img src="../../img/chica.png" width="80"  height="80"></a>
 	        </div>
 	        </div> <!--Bloque Izquierda.-->
 	
