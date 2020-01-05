@@ -20,7 +20,8 @@
         <meta name="author" content="Antonio Sanchez,Carlos Freire, Francisco Cordoba, Angel CaÃ±uelo">
     </head>
     <body>
-            <%@include file="./../../include/header.html"%>
+    <%@include file="./../../include/header.jsp"%>
+
 
     <div class="content">
         <div class="gruyper">

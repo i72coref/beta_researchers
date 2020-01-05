@@ -24,7 +24,7 @@
 </head>
 
 <body>
-       <%@include file="./../../include/header.html"%>
+       <%@include file="./../../include/header.jsp"%>
         
         <center>
             <p id="p0">Perfil</p>

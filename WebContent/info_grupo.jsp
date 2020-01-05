@@ -20,7 +20,7 @@
 
 
               <body>
-                <%@include file="./include/header.html"%>
+                <%@include file="./include/header.jsp"%>
 
 
                 <div class="head">

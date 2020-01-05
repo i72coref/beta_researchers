@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
     
 <%@page import="es.uco.pw.display.beans.b_avanzadaBean"%>
-<%@page import="es.uco.pw.display.beans.customerBean"%> 
 <%@page import="java.util.ArrayList"%>   
 <%@page import="java.util.List"%>   
 <!DOCTYPE html>
@@ -22,7 +21,7 @@
 
         <body >
 
-         <%@include file="./../../include/header.html"%>
+         <%@include file="./../../include/header.jsp"%>
 
 
 
@@ -56,26 +55,7 @@
                   </tr>
                 </table>
               </div>
-
-              <div class="f3">
-                <p style="font-size: 1.2em;">Grupos Encontrados:</p>
-              </div>
-
-
-              <div class="f4">
-                <table class="tabla2" cellpadding="45" >
-                  <tr>
-                  
-
-                    
-                  </tr>
-                </table>
-              </div>
           </div>
-
-
-
-
 
           <%@include file="./../../include/footer.html" %>
 

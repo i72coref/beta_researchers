@@ -18,7 +18,7 @@ w<%@ page language="java" contentType="text/html; charset=UTF-8"
 </head>
 
 <body>
-        <%@include file="./../../include/header.html"%>
+		<%@include file="./../../include/header.jsp"%>
         <center>
             <p id="p0">CREAR GRUPO</p>
             <p id="p1">Comunidad ><p id="p2">Crear grupo</p></p>

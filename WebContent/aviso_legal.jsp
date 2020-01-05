@@ -16,7 +16,7 @@
 </head>
 <body>
 
-	<%@include file="./include/header.html"%>
+	<%@include file="./include/header.jsp"%>
 
    	<div class="content">
 
@@ -37,7 +37,7 @@
    		</div>
 
    		<div class="image">
-   			<img src="../img/aviso_legal.png" alt="" width="500px">
+   			<img src="./img/aviso_legal.png" alt="" width="500px">
    		</div>
 
    	</div>

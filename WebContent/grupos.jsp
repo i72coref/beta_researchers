@@ -18,7 +18,7 @@
 </head>
 <body>
 
-	<%@include file="./include/header.html"%>
+	<%@include file="./include/header.jsp"%>
           
     <center>
       <p id="p0">MIS GRUPOS</p>
@@ -45,7 +45,7 @@
                           <div class="texto">
 
                                 <div class="foto">
-                                  <img src="./../img/logo2.png" width="85" height="85"><img>
+                                  <img src="./img/logo2.png" width="85" height="85"><img>
                                 </div>
 
 
@@ -73,27 +73,27 @@
                                         <a href="#" class="right-arrow"><img src="./../img/right-arrow.png" /></a>
                                         <div class="carrusel">
                                             <div class="product" id="product_0">
-                                                <img src="./../img/vw.png" width="100"  />
+                                                <img src="./img/vw.png" width="100"  />
 
                                             </div>
                                             <div class="product" id="product_1">
-                                                <img src="./../img/audi.jpg" width="100" />
+                                                <img src="./img/audi.jpg" width="100" />
 
                                             </div>
                                             <div class="product" id="product_2">
-                                                <img src="./../img/audi.jpg" width="100" />
+                                                <img src="./img/audi.jpg" width="100" />
 
                                             </div>
                                             <div class="product" id="product_3">
-                                                <img src="./../img/audi.jpg" width="100"  />
+                                                <img src="./img/audi.jpg" width="100"  />
 
                                             </div>
                                             <div class="product" id="product_4">
-                                                <img src="./../img/audi.jpg" width="100"  />
+                                                <img src="./img/audi.jpg" width="100"  />
 
                                             </div>
                                             <div class="product" id="product_5">
-                                                <img src="./../img/vw.png" width="100"  />
+                                                <img src="./img/vw.png" width="100"  />
 
                                             </div>
 
@@ -125,7 +125,7 @@
                           <div class="texto">
 
                                 <div class="foto">
-                                  <img src="./../img/add.png" width="85" height="85"><img>
+                                  <img src="./img/add.png" width="85" height="85"><img>
                                 </div>
 
 
@@ -149,31 +149,31 @@
                             <div class="row">
                                 <div id="content" class="col-lg-12">
                                     <div id="carrusel">
-                                        <a href="#" class="left-arrow"><img src="./../img/left-arrow.png" /></a>
-                                        <a href="#" class="right-arrow"><img src="./../img/right-arrow.png" /></a>
+                                        <a href="#" class="left-arrow"><img src="./img/left-arrow.png" /></a>
+                                        <a href="#" class="right-arrow"><img src="./img/right-arrow.png" /></a>
                                         <div class="carrusel">
                                             <div class="product" id="product_0">
-                                                <img src="./../img/vw.png" width="100"  />
+                                                <img src="./img/vw.png" width="100"  />
 
                                             </div>
                                             <div class="product" id="product_1">
-                                                <img src="./../img/audi.jpg" width="100" />
+                                                <img src="./img/audi.jpg" width="100" />
 
                                             </div>
                                             <div class="product" id="product_2">
-                                                <img src="./../img/audi.jpg" width="100" />
+                                                <img src="./img/audi.jpg" width="100" />
 
                                             </div>
                                             <div class="product" id="product_3">
-                                                <img src="./../img/audi.jpg" width="100"  />
+                                                <img src="./img/audi.jpg" width="100"  />
 
                                             </div>
                                             <div class="product" id="product_4">
-                                                <img src="./../img/audi.jpg" width="100"  />
+                                                <img src="./img/audi.jpg" width="100"  />
 
                                             </div>
                                             <div class="product" id="product_5">
-                                                <img src="./../img/vw.png" width="100"  />
+                                                <img src="./img/vw.png" width="100"  />
 
                                             </div>
 
@@ -205,7 +205,7 @@
                           <div class="texto">
 
                                 <div class="foto">
-                                  <img src="./../img/vw.png" width="85" height="85"><img>
+                                  <img src="./img/vw.png" width="85" height="85"><img>
                                 </div>
 
 
@@ -229,31 +229,31 @@
                             <div class="row">
                                 <div id="content" class="col-lg-12">
                                     <div id="carrusel">
-                                        <a href="#" class="left-arrow"><img src="./../img/left-arrow.png" /></a>
-                                        <a href="#" class="right-arrow"><img src="./../img/right-arrow.png" /></a>
+                                        <a href="#" class="left-arrow"><img src="./img/left-arrow.png" /></a>
+                                        <a href="#" class="right-arrow"><img src="./img/right-arrow.png" /></a>
                                         <div class="carrusel">
                                             <div class="product" id="product_0">
-                                                <img src="./../img/vw.png" width="100"  />
+                                                <img src="./img/vw.png" width="100"  />
 
                                             </div>
                                             <div class="product" id="product_1">
-                                                <img src="./../img/audi.jpg" width="100" />
+                                                <img src="./img/audi.jpg" width="100" />
 
                                             </div>
                                             <div class="product" id="product_2">
-                                                <img src="./../img/audi.jpg" width="100" />
+                                                <img src="./img/audi.jpg" width="100" />
 
                                             </div>
                                             <div class="product" id="product_3">
-                                                <img src="./../img/audi.jpg" width="100"  />
+                                                <img src="./img/audi.jpg" width="100"  />
 
                                             </div>
                                             <div class="product" id="product_4">
-                                                <img src="./../img/audi.jpg" width="100"  />
+                                                <img src="./img/audi.jpg" width="100"  />
 
                                             </div>
                                             <div class="product" id="product_5">
-                                                <img src="./../img/vw.png" width="100"  />
+                                                <img src="./img/vw.png" width="100"  />
 
                                             </div>
 
@@ -324,7 +324,7 @@
     <%@include file="./include/footer.html" %>
 
 
-          <script src="./../js/grupos.js"></script>
+          <script src="./js/grupos.js"></script>
         </body>
 
 </html>

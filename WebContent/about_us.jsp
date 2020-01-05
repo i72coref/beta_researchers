@@ -18,7 +18,8 @@
 </head>
 <body>
 
-	<%@include file="./include/header.html"%>
+	<%@include file="./include/header.jsp"%>
+
 
    	<div class="content">
 
@@ -56,7 +57,7 @@
    		</div>
 
    		<div class="image">
-   			<img src="../img/about_us.jpg" alt="" width="600px">
+   			<img src="./img/about_us.jpg" alt="" width="600px">
    		</div>
 
    	</div>

@@ -29,7 +29,7 @@
 </head>
 <body>
 
-<%@include file="./../../include/header.html"%>
+<%@include file="./../../include/header.jsp"%>
 
 <p id="p0">Ver Grupos</p>
 <p id="p1">Comunidad ></p><p id="p2">&nbspVer Grupos</p>

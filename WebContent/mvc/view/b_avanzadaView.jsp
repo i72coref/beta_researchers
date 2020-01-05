@@ -41,7 +41,7 @@
                 <center>
                 <div class="c1">
                     <div class="f1">
-                      <p>Grado</p>
+                      <p>Curso</p>
 
                     </div>
 
@@ -184,7 +184,7 @@
 
           <div class="boton">
             <center>
-                      <button id="boton"><a href="./result_avanzada.html">Búsqueda</a></button>
+                      <button id="boton">Búsqueda</button>
             </center>
             </form>
           </div>

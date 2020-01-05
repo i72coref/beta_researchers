@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
     
 <%@page import="es.uco.pw.display.beans.b_avanzadaBean"%>
-<%@page import="es.uco.pw.display.beans.customerBean"%> 
 <%@page import="java.util.ArrayList"%>   
 <%@page import="java.util.List"%>   
 <!DOCTYPE html>
@@ -22,7 +21,7 @@
 
         <body >
 
-         <%@include file="./../../include/header.html"%>
+         <%@include file="./../../include/header.jsp"%>
 
 
 

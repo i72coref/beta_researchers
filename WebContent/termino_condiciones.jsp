@@ -15,7 +15,7 @@
     </head>
 
     <body>
-    <%@include file="./include/header.html"%>
+    <%@include file="./include/header.jsp"%>
 
    	<div class="content">
 
@@ -36,7 +36,7 @@
    		</div>
 
    		<div class="image">
-   			<img src="../img/terms_and_conditions.png" alt="Términos y Condiciones de Uso" width="600px">
+   			<img src="./img/terms_and_conditions.png" alt="Términos y Condiciones de Uso" width="600px">
    		</div>
 
    	</div>

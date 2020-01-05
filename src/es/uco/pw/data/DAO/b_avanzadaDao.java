@@ -28,13 +28,13 @@ public class b_avanzadaDao {
 					System.out.println(connection);
 					
 					
-					PreparedStatement statement = connection.prepareStatement("SELECT idUsuario, nombre, apellidos, correoElectronico FROM Usuario WHERE nombre like '%?%'");
+					PreparedStatement statement = connection.prepareStatement("SELECT idUsuario, nombre, apellidos, correoElectronico FROM Usuario WHERE nombre like concat('%', ?, '%')");
 					statement.setString(1, nombreabuscar);
 					ResultSet rs=statement.executeQuery();
 
 					while(rs.next()){
 						//System.out.println("Entro si o si");
-						b_avanzadaBean result=new b_avanzadaBean();  
+						b_avanzadaBean result=new b_avanzadaBean();
 						
 						result.setNombre(rs.getString("nombre"));  
 						result.setApellidos(rs.getString("apellidos"));  
@@ -42,11 +42,11 @@ public class b_avanzadaDao {
 
 					}
 					
+					
 					statement.close();
 					con.desconectar();
 					
 				}catch(Exception e){}
-				
 				return resultado;
 			}
 				
@@ -59,8 +59,9 @@ public class b_avanzadaDao {
 					connection = con.getJdbcConnection();
 					System.out.println(connection);
 					
-					
-					PreparedStatement statement = connection.prepareStatement("select nombre_grupo from Grupos where nombre_grupo = ?");
+					//select nombre_grupo from Grupos where nombre_grupo = ?
+					//
+					PreparedStatement statement = connection.prepareStatement("select nombre_grupo from Grupos where id_grupo in (select idGrupo from Usuario_Grupo where idUsuario in (select idUsuario from Usuario where nombre like concat('%' , ?, '%')) )");
 					statement.setString(1, nombreabuscar);
 					ResultSet rs=statement.executeQuery();
 
@@ -82,7 +83,7 @@ public class b_avanzadaDao {
 			}
 				
 		public ArrayList<b_avanzadaBean> getbusqueda_av(
-				int grado, 
+				int curso, 
 				String provincia,
 				int edad,
 				String uni,
@@ -98,7 +99,7 @@ public class b_avanzadaDao {
 					System.out.println(connection);
 					
 					
-						System.out.println(grado);
+						System.out.println(curso);
 						System.out.println(provincia);
 						System.out.println(edad);
 						System.out.println(uni);
@@ -106,9 +107,9 @@ public class b_avanzadaDao {
 						System.out.println(exp);
 									
 						PreparedStatement statement = connection.prepareStatement(
-								"Select nombre, avatar from Usuario where grado = ? and provincia = ? and edad < ? and universidad = ? and CP = ? and experiencia = ?");
-						
-								statement.setInt(1, grado);
+								"Select nombre from Usuario where curso = ? and provincia = ? and edad < ? and universidad = ? and CP = ? and experiencia = ?");
+							
+								statement.setInt(1, curso);
 								statement.setString(2, provincia);
 								statement.setInt(3, edad);
 								statement.setString(4, uni);
@@ -123,7 +124,7 @@ public class b_avanzadaDao {
 						b_avanzadaBean result=new b_avanzadaBean();  
 						
 						result.setNombre(rs.getString("nombre"));
-						result.setAvatar(rs.getBlob("avatar"));
+						//result.setAvatar(rs.getBlob("avatar"));
 						resultado_av.add(result);
 
 					}
