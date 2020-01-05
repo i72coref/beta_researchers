@@ -55,8 +55,10 @@
                     <input type="text" placeholder="Introduce tu Telefono" name="telefono" required><br>
                     Universidad<br>
                     <input type="text" placeholder="Introduce tu Universidad" name="universidad">
+                   	Curso<br>
+                    <input type="text" placeholder="Introduce tu último año de Matriculación" name="curso">
                     Grado<br>
-                    <input type="text" placeholder="Introduce tu último año de Grado" name="grado">
+                    <input type="text" placeholder="Introduce el título de tu Grado" name="carrera">
          			Experiencia<br>
 					<input type="text" placeholder="Introduce tus Años de Experiencia" name="experiencia">
                     Redes Sociales<br>
@@ -65,6 +67,8 @@
             		<input type="text" placeholder="Perfil de GitHub" name="github"><br>
            			<input type="text" placeholder="Perfil de Twitter" name="twitter"><br>
             		<input type="text" placeholder="Nombre de Telegram" name="telegram"><br>
+            		Más sobre mi<br>
+            		<input type="text" placeholder="Introduce Información relevante sobre ti" name="actividades"><br>
             		<input type="submit" value="Registrarse"><br>
                 </form>
                 <div class="acepta-terminos">
@@ -76,8 +80,8 @@
 
 
     </div>
-    <script src="../../js/jquery-3.4.1.min.js"></script>
-    <script src="../../js/acceso.js"></script>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/acceso.js"></script>
 </body>
 </html>
 

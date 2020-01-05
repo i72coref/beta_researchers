@@ -26,7 +26,7 @@ public class AccesoDao {
 		
 		
 		
-		String sql = "INSERT INTO Usuario (idUsuario,nombre, apellidos, correoElectronico, password, github, direccion, telefono, facebook, twitter, google, telegram, grado, experiencia, universidad, edad, provincia, CP) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO Usuario (idUsuario,nombre, apellidos, correoElectronico, password, github, direccion, telefono, facebook, twitter, google, telegram, curso, experiencia, universidad, edad, provincia, CP, fechaAlta,carrera, actividades) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		System.out.println(accesoUsuario.getNombre()+"-"+accesoUsuario.getApellidos()+"-"+accesoUsuario.getCorreoElectronico());
 		con.conectar();
 		connection = con.getJdbcConnection();
@@ -45,13 +45,15 @@ public class AccesoDao {
 		statement.setString(10, accesoUsuario.getTwitter());
 		statement.setString(11, accesoUsuario.getGoogle());
 		statement.setString(12, accesoUsuario.getTelegram());
-		statement.setInt(13, accesoUsuario.getGrado());
+		statement.setInt(13, accesoUsuario.getCurso());
 		statement.setInt(14, accesoUsuario.getExperiencia());
 		statement.setString(15, accesoUsuario.getUniversidad());
 		statement.setInt(16, accesoUsuario.getEdad());
 		statement.setString(17, accesoUsuario.getProvincia());
 		statement.setInt(18, accesoUsuario.getCP());
 		statement.setDate(19, new java.sql.Date(accesoUsuario.getFechaAlta().getTime()));
+		statement.setString(20, accesoUsuario.getCarrera());
+		statement.setString(21, accesoUsuario.getActividades());
 
 		boolean rowInserted = statement.executeUpdate() > 0;
 		statement.close();
