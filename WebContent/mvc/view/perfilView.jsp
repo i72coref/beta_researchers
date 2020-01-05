@@ -51,7 +51,7 @@
                 <h4>Edad: <jsp:getProperty property="edad" name="usuarioSession"/></h4>
             </div>
             <div class="estudios">
-				Estudios: <jsp:getProperty property="universidad" name="usuarioSession"/>
+				<h4>Universidad: <jsp:getProperty property="universidad" name="usuarioSession"/></h4>
             </div>
             <div class="ubicacion">
                         <h4>Ubicación:</h4>
@@ -136,33 +136,58 @@
              
              <h4>Cambiar Contraseña</h4>
              <form action="../control/modificarPerfilController.jsp" method="POST">
-             <input type="password" placeholder="Nueva Contraseña" name="variablecontraseña"><br>
+             <input type="password" placeholder="Nueva Contraseña" name="variablepassword"><br>
              <input type="submit" value="verificar">
              </form>
              
              <h4>Cambiar Teléfono</h4>
-             Tu Teléfono actual es: <jsp:getProperty property="correoElectronico" name="usuarioSession"/> <br>
+             Tu Teléfono actual es: <jsp:getProperty property="telefono" name="usuarioSession"/> <br>
              <form action="../control/modificarPerfilController.jsp" method="POST">
              <input type="text" placeholder="Introduce tu nuevo Teléfono" name="variabletelefono"><br>
              <input type="submit" value="verificar">
              </form>
             </div>
             <div class="ajustes-datos">
+            
             <h3>Modificar Perfil</h3>
             <h4>Cambiar Ubicación</h4>
-            <input type="text" placeholder="Introduce tu Nueva Ubicación"><br>
+            Tu Ubicación actual es: <jsp:getProperty property="direccion" name="usuarioSession"/> <br>
+            <form action="../control/modificarPerfilController.jsp" method="POST">
+            <input type="text" placeholder="Introduce tu Nueva Ubicación" name="variabledireccion"><br>
+            <input type="submit" value="verificar">
+            </form>
+            <h4>Cambiar Codigo Postal</h4>
+            Tu CP es: <jsp:getProperty property="CP" name="usuarioSession"/> <br>
+            <form action="../control/modificarPerfilController.jsp" method="POST">
+            <input type="text" placeholder="Introduce tu Nuevo CP" name="variableCP"><br>
+            <input type="submit" value="verificar">
+            </form>
+            <h4>Cambiar Provincia</h4>
+            Tu Provincia es: <jsp:getProperty property="provincia" name="usuarioSession"/> <br>
+            <form action="../control/modificarPerfilController.jsp" method="POST">
+            <input type="text" placeholder="Introduce tu Nueva Provincia" name="variableprovincia"><br>
+            <input type="submit" value="verificar">
+            </form>
+            <h4>Intereses</h4>
+            Tus intereses actuales son: <jsp:getProperty property="actividades" name="usuarioSession"/> <br>
+            <form action="../control/modificarPerfilController.jsp" method="POST">
+            <input type="text" placeholder="Introduce tus Intereses" name="variableactividades"><br>
+            <input type="submit" value="verificar">
+            </form>
+             <!--
             <h4>Curriculum</h4>
             <input type="file"><br>
-            Mostrar<br>
+             Mostrar<br>
             <input type="radio" value="Si" name="sino" checked>Si
-            <input type="radio" value="No" name="sino">No
+            <input type="radio" value="No" name="sino">No-->
             </div>
-            <h4>Redes Sociales</h4>
+            <!--   Sociales</h4>
             <input type="text" placeholder="Perfil de Facebook"><br>
             <input type="text" placeholder="Perfil de Google+"><br>
             <input type="text" placeholder="Perfil de GitHub"><br>
             <input type="text" placeholder="Perfil de Twitter"><br>
-            <input type="text" placeholder="Nombre de Telegram"><br>
+            <input type="text" placeholder="Nombre de Telegram"><br> -->
+            
             <div class="botones-overlay">
                 <img src="../../img/salir.png" width="150px" class="btn-submit" id="btn-cerrar-popup" class="btn-cerrar-popup" >
             </div>

@@ -10,8 +10,13 @@ String nextPage = "../vistas/errorpage.jsp";
 int id = usuarioSession.getIdUsuario();
 
 String variablecorreo = request.getParameter("variablecorreo");
-String variablecontraseña = request.getParameter("variablecontraseña");
+String variablepass = request.getParameter("variablepassword");
 String variabletelefono = request.getParameter("variabletelefono");
+String variabledireccion = request.getParameter("variabledireccion");
+String variableCP = request.getParameter("variableCP");
+String variableprovincia = request.getParameter("variableprovincia");
+String variableactividades = request.getParameter("variableactividades");
+int variableCPint;
 
 String jdbURL = getServletContext().getInitParameter("jdbURL");
 String jdbUsername = getServletContext().getInitParameter("jdbUsername");
@@ -31,12 +36,43 @@ String jdbPassword = getServletContext().getInitParameter("jdbPassword");
 			<%
 		}
 		
-		if(variablecontraseña != null){
-			modificarPerfilDao.modificar(id, "contraseña", variablecontraseña);
+		if(variablepass != null){
+			modificarPerfilDao.modificar(id, "password", variablepass);
 		}
 		
 		if(variabletelefono != null){
 			modificarPerfilDao.modificar(id, "telefono", variabletelefono);
+			%>
+			<jsp:setProperty name="usuarioSession" property="telefono" value="<%=variabletelefono%>"/>
+			<%
+		}
+		
+		if(variabledireccion != null){
+			modificarPerfilDao.modificar(id, "direccion", variabledireccion);
+			%>
+			<jsp:setProperty name="usuarioSession" property="direccion" value="<%=variabledireccion%>"/>
+			<%
+		}
+		
+		if(variableCP != null){
+			modificarPerfilDao.modificar(id, "CP", variableCP);
+			variableCPint = Integer.parseInt(variableCP);
+			%>
+			<jsp:setProperty name="usuarioSession" property="CP" value="<%=variableCPint%>"/>
+			<%
+		}
+		if(variableprovincia != null){
+			modificarPerfilDao.modificar(id, "provincia", variableprovincia);
+			%>
+			<jsp:setProperty name="usuarioSession" property="provincia" value="<%=variableprovincia%>"/>
+			<%
+		}
+		
+		if(variableactividades != null){
+			modificarPerfilDao.modificar(id, "actividades", variableactividades);
+			%>
+			<jsp:setProperty name="usuarioSession" property="actividades" value="<%=variableactividades%>"/>
+			<%
 		}
 		
 		nextPage = "../view/perfilView.jsp"; 
