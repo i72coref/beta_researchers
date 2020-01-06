@@ -98,9 +98,10 @@ public class b_avanzadaDao {
 			System.out.println(cp);
 			System.out.println(exp);
 			*/
-							
+			
+			
 			PreparedStatement statement = connection.prepareStatement(
-					"Select nombre from Usuario where curso = ? and provincia = ? and edad < ? and universidad = ? and CP = ? and experiencia = ?");
+					"Select nombre, apellidos from Usuario where curso = ? and provincia = ? and edad < ? and universidad = ? and CP = ? and experiencia = ?");
 				
 			statement.setInt(1, curso);
 			statement.setString(2, provincia);
@@ -114,6 +115,7 @@ public class b_avanzadaDao {
 				b_avanzadaBean result=new b_avanzadaBean();  
 				
 				result.setNombre(rs.getString("nombre"));
+				result.setApellidos(rs.getString("apellidos"));
 				//result.setAvatar(rs.getBlob("avatar"));
 				resultado_av.add(result);
 			}
