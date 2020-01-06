@@ -8,6 +8,6 @@
 </head>
 <body>
 <h1>REGISTRO CORRECTO!!!</h1>
-<input type="submit" value="INICIA SESIÓN" onclick="location.href = 'accesoView.jsp'">
+<input type="submit" value="INICIA SESIÓN" onclick="location.href = '/beta_web/'">
 </body>
 </html>

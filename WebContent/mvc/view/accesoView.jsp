@@ -80,8 +80,8 @@
 
 
     </div>
-    <script src="../../js/jquery-3.4.1.min.js"></script>
-    <script src="../../js/acceso.js"></script>
+    <script src="/beta_web/js/jquery-3.4.1.min.js"></script>
+    <script src="/beta_web/js/acceso.js"></script>
 </body>
 </html>
 

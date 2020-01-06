@@ -23,14 +23,14 @@
     <body>
             <header>
                     <div class="container">
-                      <a href="../index.html"><h1 class="logo">  <img src="../../img/bueno.png" alt="" width="60px"></h1></a> 
+                      <a href="/beta_web/mvc/control/indexController.jsp"><h1 class="logo">  <img src="../../img/bueno.png" alt="" width="60px"></h1></a> 
                       <nav>
                         <ul>
-                          <li><a href="../index-admin.html">Inicio</a></li>
-                          <li><a href="perfil.html">Perfil</a></li>
-                          <li><a href="ver_grupos.html">Comunidad</a></li>
-                          <li><a href="b_avanzada.html">Búsqueda Avanzada</a></li>
-                          <li><a href="./html/gestion.html">Gestión</a></li>
+                          <li><a href="/beta_web/mvc/control/indexController.jsp">Inicio</a></li>
+                          <li><a href="/beta_web/mvc/view/perfilView.jsp">Perfil</a></li>
+                          <li><a href="/beta_web/mvc/control/verGruposController.jsp">Comunidad</a></li>
+                          <li><a href="/beta_web/mvc/view/b_avanzadaView.jsp">Búsqueda Avanzada</a></li>
+                          <li><a href="#">Gestión</a></li>
                           <li> <a href="#" class=""></a>  <input type="text" id="bar" placeholder="Buscar aquí"></li>
                         </ul>
                       </nav>
@@ -166,8 +166,8 @@
                                         <p><strong>Juan Palomo</strong></p>
                                     </div>
                                     <div class="botons">
-                                        <div class="boton1"><a href="#"><img src="../img/correo.png" width="35" height="35"></a></div>
-                                        <div class="boton2"><a onclick="mensaje5()"><img src="../img/menos.png" width="35" height="35"></a></div>
+                                        <div class="boton1"><a href="#"><img src="../../img/correo.png" width="35" height="35"></a></div>
+                                        <div class="boton2"><a onclick="mensaje5()"><img src="../../img/menos.png" width="35" height="35"></a></div>
                                     </div>
                                 </div>
                                 <div class="user">
@@ -176,8 +176,8 @@
                                                 <p><strong>Juan Palomo</strong></p>
                                             </div>
                                             <div class="botons">
-                                                <div class="boton1"><a href="#"><img src="../img/correo.png" width="35" height="35"></a></div>
-                                                <div class="boton2"><a onclick="mensaje5()"><img src="../img/menos.png" width="35" height="35"></a></div>
+                                                <div class="boton1"><a href="#"><img src="../../img/correo.png" width="35" height="35"></a></div>
+                                                <div class="boton2"><a onclick="mensaje5()"><img src="../../img/menos.png" width="35" height="35"></a></div>
                                             </div>
                                 </div>
                                 <div class="user">
@@ -186,8 +186,8 @@
                                                 <p><strong>Juan Palomo</strong></p>
                                             </div>
                                             <div class="botons">
-                                                <div class="boton1"><a href="#"><img src="../img/correo.png" width="35" height="35"></a></div>
-                                                <div class="boton2"><a onclick="mensaje5()"><img src="../img/menos.png" width="35" height="35"></a></div>
+                                                <div class="boton1"><a href="#"><img src="../../img/correo.png" width="35" height="35"></a></div>
+                                                <div class="boton2"><a onclick="mensaje5()"><img src="../../img/menos.png" width="35" height="35"></a></div>
                                             </div>
                                 </div>
                                 <div class="user">
@@ -196,8 +196,8 @@
                                                 <p><strong>Juan Palomo</strong></p>
                                             </div>
                                             <div class="botons">
-                                                <div class="boton1"><a href="#"><img src="../img/correo.png" width="35" height="35"></a></div>
-                                                <div class="boton2"><a onclick="mensaje5()"><img src="../img/menos.png" width="35" height="35"></a></div>
+                                                <div class="boton1"><a href="#"><img src="../../img/correo.png" width="35" height="35"></a></div>
+                                                <div class="boton2"><a onclick="mensaje5()"><img src="../../img/menos.png" width="35" height="35"></a></div>
                                             </div>
                                 </div>
                                 <div class="user"><div class="log-nom">
@@ -205,8 +205,8 @@
                                         <p><strong>Juan Palomo</strong></p>
                                     </div>
                                     <div class="botons">
-                                        <div class="boton1"><a href="#"><img src="../img/correo.png" width="35" height="35"></a></div>
-                                        <div class="boton2"><a onclick="mensaje5()"><img src="../img/menos.png" width="35" height="35"></a></div>
+                                        <div class="boton1"><a href="#"><img src="../../img/correo.png" width="35" height="35"></a></div>
+                                        <div class="boton2"><a onclick="mensaje5()"><img src="../../img/menos.png" width="35" height="35"></a></div>
                                     </div>
                                 </div>
                                 <div class="user"><div class="log-nom">
@@ -214,8 +214,8 @@
                                         <p><strong>Juan Palomo</strong></p>
                                     </div>
                                     <div class="botons">
-                                        <div class="boton1"><a href="#"><img src="../img/correo.png" width="35" height="35"></a></div>
-                                        <div class="boton2"><a onclick="mensaje5()"><img src="../img/menos.png" width="35" height="35"></a></div>
+                                        <div class="boton1"><a href="#"><img src="../../img/correo.png" width="35" height="35"></a></div>
+                                        <div class="boton2"><a onclick="mensaje5()"><img src="../../img/menos.png" width="35" height="35"></a></div>
                                     </div>
                                 </div>
                             </div>
