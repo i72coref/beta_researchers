@@ -23,7 +23,7 @@
 		
 		gestionDao gestionDao = new gestionDao(jdbURL, jdbUsername, jdbPassword);
 		if(gestionDao.insertarUsuarioGrupo(idUsuario, idGrupo)) {
-			nextPage = "../../info_grupo.jsp";
+			nextPage = "/info_grupo.jsp";
 		}
 	} catch (Exception e) {
 		System.out.println(e);			
