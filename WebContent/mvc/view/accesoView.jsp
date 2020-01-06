@@ -31,7 +31,7 @@
 
         <div class="formulario">
                 <h2> Crear cuenta </h2>
-                <h3>Avisoo, todos los campos son obligatorios.</h3>
+                <h3>Aviso, todos los campos son obligatorios.</h3>
                 <form action="/beta_web/mvc/control/accesoController.jsp" method="POST">
                     Nombre<br>
                     <input type="text" placeholder="Introduce tu Nombre" name="nombre" required><br>
@@ -41,11 +41,11 @@
                     <input type="email" placeholder="Introduce tu Email" name="correoElectronico" required><br>
                     Contraseña <br>
                     <input type="password" placeholder="Introduce tu Contraseña" name="password" required><br>
-                    Edad )<br>
-                    <input type="text" name="edad" required><br>
+                    Edad<br>
+                    <input type="text" placeholder="Introduce tu Edad" name="edad" required><br>
                     Provincia <br>
                     <input type="text" placeholder="Introduce tu Provincia" name="provincia" required><br>
-                    Dirección )<br>
+                    Dirección<br>
                     <input type="text" placeholder="Introduce tu Direccion" name="direccion" required><br>
                     Codigo Postal <br>
                     <input type="text" placeholder="Introduce tu CP" name="CP" required><br>
