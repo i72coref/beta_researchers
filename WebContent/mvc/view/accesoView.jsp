@@ -27,48 +27,46 @@
                 <input type="password" placeholder="Introduce tu Contraseña" id="pass" name="password" required><br>
                 <input type="submit" value="Iniciar Sesión">
         </form>
-        <div class="olvido-password">
-            <a href="#">Olvidé mi contraseña</a>
-         </div>
         </div>
 
         <div class="formulario">
                 <h2> Crear cuenta </h2>
+                <h3>Avisoo, todos los campos son obligatorios.</h3>
                 <form action="/beta_web/mvc/control/accesoController.jsp" method="POST">
-                    Nombre (Obligatorio)<br>
+                    Nombre<br>
                     <input type="text" placeholder="Introduce tu Nombre" name="nombre" required><br>
-                    Apellidos (Obligatorio)<br>
+                    Apellidos<br>
                     <input type="text" placeholder="Introduce tus Apellidos" name="apellidos" required><br>
-                    Email (Obligatorio)<br>
+                    Email<br>
                     <input type="email" placeholder="Introduce tu Email" name="correoElectronico" required><br>
-                    Contraseña (Obligatorio)<br>
+                    Contraseña <br>
                     <input type="password" placeholder="Introduce tu Contraseña" name="password" required><br>
-                    Edad (Obligatorio)<br>
+                    Edad )<br>
                     <input type="text" name="edad" required><br>
-                    Provincia (Obligatorio)<br>
+                    Provincia <br>
                     <input type="text" placeholder="Introduce tu Provincia" name="provincia" required><br>
-                    Dirección (Obligatorio)<br>
+                    Dirección )<br>
                     <input type="text" placeholder="Introduce tu Direccion" name="direccion" required><br>
-                    Codigo Postal (Obligatorio)<br>
+                    Codigo Postal <br>
                     <input type="text" placeholder="Introduce tu CP" name="CP" required><br>
-                    Telefono (Obligatorio)<br>
+                    Telefono<br>
                     <input type="text" placeholder="Introduce tu Telefono" name="telefono" required><br>
                     Universidad<br>
                     <input type="text" placeholder="Introduce tu Universidad" name="universidad">
-                   	Curso<br>
-                    <input type="text" placeholder="Introduce tu último año de Matriculación" name="curso">
-                    Grado<br>
-                    <input type="text" placeholder="Introduce el título de tu Grado" name="carrera">
-         			Experiencia<br>
-					<input type="text" placeholder="Introduce tus Años de Experiencia" name="experiencia">
+                   	Último año de Matriculación<br>
+                    <input type="text" placeholder="Introduce tu último año de Matriculación" name="curso" required>
+                    Nombre de tu Grado<br>
+                    <input type="text" placeholder="Introduce el título de tu Grado" name="carrera" required>
+         			Años de Experiencia<br>
+					<input type="text" placeholder="Introduce tus Años de Experiencia" name="experiencia" required>
                     Redes Sociales<br>
-                    <input type="text" placeholder="Perfil de Facebook" name="facebook"><br>
-            		<input type="text" placeholder="Perfil de Google+" name="google"><br>
-            		<input type="text" placeholder="Perfil de GitHub" name="github"><br>
-           			<input type="text" placeholder="Perfil de Twitter" name="twitter"><br>
-            		<input type="text" placeholder="Nombre de Telegram" name="telegram"><br>
+                    <input type="text" placeholder="Perfil de Facebook" name="facebook" required><br>
+            		<input type="text" placeholder="Perfil de Google+" name="google" required><br>
+            		<input type="text" placeholder="Perfil de GitHub" name="github" required><br>
+           			<input type="text" placeholder="Perfil de Twitter" name="twitter" required><br>
+            		<input type="text" placeholder="Nombre de Telegram" name="telegram" required><br>
             		Más sobre mi<br>
-            		<input type="text" placeholder="Introduce Información relevante sobre ti" name="actividades"><br>
+            		<input type="text" placeholder="Introduce Información relevante sobre ti" name="actividades" required><br>
             		<input type="submit" value="Registrarse"><br>
                 </form>
                 <div class="acepta-terminos">

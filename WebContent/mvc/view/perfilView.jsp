@@ -23,9 +23,10 @@
         <meta name="author" content="Antonio Sanchez,Carlos Freire, Francisco Cordoba, Angel Cañuelo">
 </head>
 
-<body>
-       <%@include file="./../../include/header.jsp"%>
-        
+<body>	
+		
+	<%@include file="./../../include/header.jsp"%>
+      															
         <center>
             <p id="p0">Perfil</p>
             <p id="p1">Perfil ><p id="p2"><jsp:getProperty property="nombre" name="usuarioSession"/>
